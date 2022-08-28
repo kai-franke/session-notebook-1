@@ -90,16 +90,167 @@ You can include custom fonts in different ways:
 1. download font via [google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts) into folder "fonts"
 2. copy code from google webfonts helper and insert it into css
 
+## CSS Selectors
 
+## Id Selectors
+```css
+#title {
+	color: blue;
+}
+```
+
+## Attribute Selectors
+
+Attribute selectors are written inside `[...]` square brackets.
+
+- any element with the attribute hidden
+
+  ```css
+  [hidden] {
+  	...;
+  }
+  ```
+
+- all links which open a new tab:
+
+  ```css
+  [target='_blank'] {
+  	...;
+  }
+  ```
+
+- all elements with the class `card` and the attribute `role="list"`
+
+  ```css
+  .card[role='list'] {
+  	...;
+  }
+  ```
+
+[MDN web docs: Attribute-selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors).
+## Pseudo Classes
+
+Style an HTML element differently when it is in a specific state. These are added to a selector and start with a **:** colon. 
+
+- hovered elements
+
+  ```css
+  h2:hover {
+  	...;
+  }
+  ```
+
+- active elements like a pressed button
+
+  ```css
+  button:active {
+  	...;
+  }
+  ```
+
+- links that have been visited
+
+  ```css
+  a:visited {
+  	...;
+  }
+  ```
+
+- form input that has received focus.
+
+  ```css
+  input:focus {
+  	...;
+  }
+  ```
+
+- elements which are the first child in another element
+
+  ```css
+  li:first-child {
+  	...;
+  }
+  ```
+
+- elements which are the nth child in another element. **n** is the argument that you can replace
+  for example with a number or the words **even** and **odd**.
+
+  ```css
+  li:nth-child(n) {
+  	...;
+  }
+  ```
+
+[MDN web docs: Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes).
+## Pseudo Elements
+
+Pseudo elements let you style a specific part of the selected elements like the first line of a paragraph, the first-letter, the selection etc. They are written with **::** double colons directly after the original selector.
+
+- this selects the first line of paragraphs
+
+  ```css
+  p::first-line {
+  	...;
+  }
+  ```
+
+- this creates pseudo elements as the first child of the selected elements
+
+  ```css
+  a::before {
+  	content: '🌍'; // property needed, can be empty
+  }
+  ```
+
+- this creates pseudo elements as the last child of the selected elements
+
+  ```css
+  a::after {
+  	content: '📎'; // property needed, can be empty
+  }
+  ```
+
+[MDN dev docs: Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+## Combinators
+
+Sometimes it is more efficient to combine multiple selectors instead of defining yet another CSS
+class. You can chain together multiple selectors to form rather complex CSS selectors which apply
+only in specific cases. In the example above we already combined three selectors: `a`, `:hover` and
+`::after`. But there are also other ways to combine selectors:
+
+- `(space)` : a specific element somewhere inside another specific element (regardless of nesting
+  level)
+  - `h2 span`: any span inside an h2
+  - `.card button`: all buttons inside an element with the class "card"
+- `>` : targeting a direct descendant of another element
+  - `h2>span`: all spans which are direct children of an h2
+  - `.card>button`: all buttons which are direct children of an element with the class "card"
+- `~` : any later sibling element after another element
+  - `h2~span`: any span which is a later sibling of an h2
+- `+` : the direct sibling element after another element
+  - `.card+button`: a button coming directly after an element with the class "card"
+
+Many combinators can be chained. Can you figure out which element would be styled by the following
+selector?
+
+```css
+body section > ul[role='list'] > li::before {
+	...;
+}
+```
 
 
 ## Links
-- [**CSS properties** on mdw web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index)
+- [MDN web docs: CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index)
 - [google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts)
 
 - [Common CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
-- [MDN: CSS - First Steps](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps)
+- [MDN web docs: CSS - First Steps](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps)
 - [Styling text](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text)
 - [CSS Tricks: Box-sizing](https://css-tricks.com/box-sizing/)
 - [Josh Comeau: Surprising truth about pixels and accessibility](https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/)
 - [rem/px calculator](https://nekocalc.com/de/px-zu-rem-umrechner)
+
+- [MDN web docs: Attribute-selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+- [MDN web docs: Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
+- [MDN web docs: Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
