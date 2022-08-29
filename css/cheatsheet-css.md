@@ -1,3 +1,5 @@
+![Box-Model](../images/box-model.png)
+
 ## Linking Stylesheets
 
 ```html
