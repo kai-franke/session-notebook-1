@@ -16,7 +16,7 @@
 - [](#BEM)
 - [CSS Flexbox](#CSS-Flexbox)
 - [CSS Grid](#CSS-Grid)
-
+- [](#)
 - [Links](#Links)
 
 <a name="Linking-Stylesheets"></a>
@@ -451,6 +451,7 @@ defines the positioning on the cross axis, also changes with the definition of t
 ### 1. Defining the layout on a container element
 
 The display mode is defined on a container element that contains all the elements to be positioned as direct children in the grid.
+Columns and rows can be defined through
 
 ```
 .container {
