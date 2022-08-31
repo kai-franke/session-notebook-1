@@ -1,3 +1,24 @@
+- [Linking Stylesheets](#Linking-Stylesheets)
+- [CSS Syntax](#CSS-Syntax)
+- [CSS Properties](#CSS-Properties)
+- [Box Model](#Box-Model)
+- [Include Custom Fonts](#Include-Custom-Fonts)
+- [Google Fonts](#Google-Fonts)
+- [CSS-Selectors](#CSS-Selectors)
+- [Id-Selectors](#Id-Selectors)
+- [Attribute-Selectors](#Attribute-Selectors)
+- [Pseudo-Classes](#Pseudo-Classes)
+- [Pseudo-Elements](#Pseudo-Elements)
+- [Combinators](#Combinators)
+- [Positioning](#Positioning)
+- [Z-Index](#Z-Index)
+- [CSS Flexbox](#CSS-Flexbox)
+- [](#)
+- [](#)
+- [Links](#Links)
+
+<a name="Linking-Stylesheets"></a>
+
 ## Linking Stylesheets
 
 ```html
@@ -7,7 +28,9 @@
 </head>
 ```
 
-## CSS syntax
+<a name="CSS-Syntax"></a>
+
+## CSS Syntax
 
 | Part           | Description                                                                                       |
 | -------------- | ------------------------------------------------------------------------------------------------- |
@@ -15,6 +38,8 @@
 | Declaration    | Defines what to change and contains pairs of `property` and `property value`                      |
 | Property       | The name of the property to change                                                                |
 | Property Value | The value assigned to the property, e.g for the property `color` we use the property value `blue` |
+
+<a name="CSS-Properties"></a>
 
 ## CSS Properties
 
@@ -33,6 +58,8 @@
 | `font-family`      | grid/flex                                                                                                          |
 | `font-size`        | grid/flex                                                                                                          |
 | `font-weight`      | grid/flex                                                                                                          |
+
+<a name="Box-Model"></a>
 
 ## Box Model
 
@@ -58,6 +85,8 @@ box". With the value `border-box`, the size of the "border box" is set instead.
 
 Now, the `width` property defines the size of the border box, padding and border width are
 subtracted to calculate the available space for the content.
+
+<a name="Include-Custom-Fonts"></a>
 
 ## Include Custom Fonts
 
@@ -88,12 +117,18 @@ You can include custom fonts in different ways:
   }
   ```
 
+  <a name="Google-Fonts"></a>
+
 ## Google Fonts
 
 1. download font via [google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts) into folder "fonts"
 2. copy code from google webfonts helper and insert it into css
 
+<a name="CSS-Selectors"></a>
+
 ## CSS Selectors
+
+<a name="Id-Selectors"></a>
 
 ## Id Selectors
 
@@ -102,6 +137,8 @@ You can include custom fonts in different ways:
   color: blue;
 }
 ```
+
+<a name="Attribute-Selectors"></a>
 
 ## Attribute Selectors
 
@@ -132,6 +169,8 @@ Attribute selectors are written inside `[...]` square brackets.
   ```
 
 [MDN web docs: Attribute-selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors).
+
+<a name="Pseudo-Classes"></a>
 
 ## Pseudo Classes
 
@@ -188,6 +227,8 @@ Style an HTML element differently when it is in a specific state. These are adde
 
 [MDN web docs: Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes).
 
+<a name="Pseudo-Elements"></a>
+
 ## Pseudo Elements
 
 Pseudo elements let you style a specific part of the selected elements like the first line of a paragraph, the first-letter, the selection etc. They are written with **::** double colons directly after the original selector.
@@ -218,6 +259,8 @@ Pseudo elements let you style a specific part of the selected elements like the 
 
 [MDN dev docs: Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
 
+<a name="Combinators"></a>
+
 ## Combinators
 
 Sometimes it is more efficient to combine multiple selectors instead of defining yet another CSS
@@ -245,6 +288,8 @@ body section > ul[role="list"] > li::before {
   ...;
 }
 ```
+
+<a name="Positioning"></a>
 
 ## Positioning
 
@@ -318,6 +363,8 @@ like a fixed element.
 
 ---
 
+<a name="Z-Index"></a>
+
 ## Z - Index
 
 The z-index defines the stacking order of html elements. Elements with a higher stacking order
@@ -327,6 +374,8 @@ its parents. The z-index only effects positioned elements - that is elements wit
 position value.
 
 ---
+
+<a name="CSS-Flexbox"></a>
 
 # CSS Flexbox
 
@@ -348,6 +397,48 @@ position value.
   shrunk such that they all fit into the available space.
 
 ---
+
+## Important Flex Properties
+
+| property                                                                            | effect                                                                                                                                                       |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) | Defines the positioning of elements along the main axis. Useful values: `flex-start`, `flex-end`, `center` , `space-between`, `space-evenly`, `space-around` |
+| [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)         | Defines the positioning of elements along the cross axis. Useful values: `flex-start`, `flex-end`, `center`                                                  |
+| [gap](https://developer.mozilla.org/en-US/docs/Web/CSS/gap)                         | Defines the minimum spacing between elements.                                                                                                                |
+| [flex-direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)   | Sets the direction of the main axis. Useful values: `row`, `column`                                                                                          |
+| [flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)             | Modifies how elements can wrap into another row instead of being squashed into one row. Useful values: `wrap`, `no-wrap`                                     |
+| `gap` `column-gap` `row-gap`                                                        |                                                                                                                                                              |
+| [align-self](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)           | `auto` `flex-start` `flex-end` `center` `baseline` `stretch`                                                                                                 |
+
+- [Flexbox Cheat Sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+---
+
+## Flex-wrap
+
+This property is very useful for creating responsive layouts. With the property set to
+`flex-wrap: wrap` the elements flow into the next row when they wouldn't fit into the current row.
+Depending on the screen width, the content can align itself, as shown in the following example.
+
+![flex-wrap](assets/flex-wrap.png)
+
+---
+
+## Flex-direction
+
+This very fundamental property lets you define which axis should act as main axis. In this picture
+you can see its effect.
+
+![flex-direction](../images/flex-direction.png)
+
+It changes the layout completely. The property `align-items`, which
+defines the positioning on the cross axis, also changes with the definition of the flex-direction.
+
+---
+
+---
+
+<a name="Links"></a>
 
 ## Links
 
@@ -375,3 +466,9 @@ position value.
 - [MDN web docs: Using z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index)
 - [MDN web docs: Stacking context](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
 - [`z-index` and stacking context by Josh W. Comeau](https://www.joshwcomeau.com/css/stacking-contexts/)
+
+### Flexbox
+
+- [Flexbox Cheat Sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [MDN web docs: Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+- [CSS Battle](https://cssbattle.dev/)
