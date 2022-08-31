@@ -12,9 +12,11 @@
 - [Combinators](#Combinators)
 - [Positioning](#Positioning)
 - [Z-Index](#Z-Index)
+- [](#CSS-Structure)
+- [](#BEM)
 - [CSS Flexbox](#CSS-Flexbox)
-- [](#)
-- [](#)
+- [CSS Grid](#CSS-Grid)
+
 - [Links](#Links)
 
 <a name="Linking-Stylesheets"></a>
@@ -436,6 +438,86 @@ defines the positioning on the cross axis, also changes with the definition of t
 
 ---
 
+<a name="CSS-Grid"></a>
+
+# CSS Grid
+
+- positioning elements in Grid cells
+- aligning cells in a Grid
+
+1. Defining the layout on a container element
+2. Positioning the children on the grid cells
+
+### 1. Defining the layout on a container element
+
+The display mode is defined on a container element that contains all the elements to be positioned as direct children in the grid.
+
+```
+.container {
+  display: grid;
+  grid-template-columns: 50px 20% 2fr 10em;
+  grid-template-rows: 3fr 1fr 1fr;
+}
+```
+
+### 2. Positioning the children on the grid cells
+
+Positioning properties are set on the child elements, not on the container!
+
+After the grid is set up on the container element, its children are placed inside the grid cells from left to right, top to bottom. By default, the elements are stretched such that they take up all the available cell space.
+
+```
+.container__item {
+  grid-column: 2 / 4; /* beginning / end */
+  grid-row: 1 / 6; /* beginning / end */
+}
+```
+
+![grid-positioning](../images/element-positioning-2.png)
+
+### grid-area
+
+```
+.container {
+  display: grid;
+  grid-template-areas:
+	  'a a b c'
+	  'd d d c'
+	  'e e e e'; /* define names for grid-areas */
+}
+```
+
+```
+.element-a {
+	grid-area: a;
+}
+.element-b {
+	grid-area: b;
+}
+...
+```
+
+## Column and Row Alignment
+
+The combined size of the grid columns/rows you defined might be less than a given height/width of
+the grid container. In this case you can distribute the columns or rows inside the grid container.
+| Property | Effect |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------- |
+| [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) | Sets the alignment of the `columns`. |
+| [align-content](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) | Sets the alignment of the `rows`. |
+| [place-content](https://developer.mozilla.org/en-US/docs/Web/CSS/place-content) | Sets the alignment of the `rows` and `columns`. |
+
+## Cell Alignment
+
+The position of the elements _inside_ their cells can be specified on the grid container.
+| Property | Effect |
+| ------------------------------------------------------------------------------- | ----------------------------------------------- |
+| [justify-items](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items) | Sets the `horizontal` alignment. |
+| [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) | Sets the `vertical` alignment. |
+| [place-items](https://developer.mozilla.org/en-US/docs/Web/CSS/place-items) | Sets the `vertical` and `horizontal` alignment. |
+
+---
+
 ---
 
 <a name="Links"></a>
@@ -472,3 +554,7 @@ defines the positioning on the cross axis, also changes with the definition of t
 - [Flexbox Cheat Sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [MDN web docs: Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 - [CSS Battle](https://cssbattle.dev/)
+
+### Grid Layout
+
+- [MDN web docs: CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
