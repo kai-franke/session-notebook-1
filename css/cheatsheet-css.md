@@ -2,12 +2,13 @@
 
 ```html
 <head>
-	...
-	<link rel="stylesheet" href="styles.css" />
+  ...
+  <link rel="stylesheet" href="styles.css" />
 </head>
 ```
 
 ## CSS syntax
+
 | Part           | Description                                                                                       |
 | -------------- | ------------------------------------------------------------------------------------------------- |
 | Selector       | Addresses the element(s) to style                                                                 |
@@ -16,21 +17,22 @@
 | Property Value | The value assigned to the property, e.g for the property `color` we use the property value `blue` |
 
 ## CSS Properties
-| Property           | Effect                                         |
-| ------------------ | ---------------------------------------------- |
-| `color`            | Color of an element´s text                     |
-| `font-size`        | Defines the size of a font                     |
-| `text-align`       | Defines the alignment of text                  |
-| `background-color` | Background color of an element                 |
-| `border`           | Defines the border of an element.              |
-| `padding`          | Defines the padding of an element.             |
-| `margin`           | Defines the margin of an element.              |
-| `width`            | This property defines the width of an element. |
-| `box-sizing`            | The property changes the way how the width and height of an element is calculated.The default value is content-box |
-| `display`            | grid/flex |
-| `font-family`            | grid/flex |
-| `font-size`            | grid/flex |
-| `font-weight`            | grid/flex |
+
+| Property           | Effect                                                                                                             |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `color`            | Color of an element´s text                                                                                         |
+| `font-size`        | Defines the size of a font                                                                                         |
+| `text-align`       | Defines the alignment of text                                                                                      |
+| `background-color` | Background color of an element                                                                                     |
+| `border`           | Defines the border of an element.                                                                                  |
+| `padding`          | Defines the padding of an element.                                                                                 |
+| `margin`           | Defines the margin of an element.                                                                                  |
+| `width`            | This property defines the width of an element.                                                                     |
+| `box-sizing`       | The property changes the way how the width and height of an element is calculated.The default value is content-box |
+| `display`          | grid/flex                                                                                                          |
+| `font-family`      | grid/flex                                                                                                          |
+| `font-size`        | grid/flex                                                                                                          |
+| `font-weight`      | grid/flex                                                                                                          |
 
 ## Box Model
 
@@ -50,7 +52,7 @@ box". With the value `border-box`, the size of the "border box" is set instead.
 
 ```css
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 ```
 
@@ -64,7 +66,7 @@ You can include custom fonts in different ways:
 - find a font on [google fonts](fonts.google.com) and use the `@import` snippet and paste it to the
   top of your css file:
   ```css
-  @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300;			400;500;700&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300;			400;500;700&display=swap");
   ```
 - use the provided HTML code to add the font via the `link` element in the `head` of your HTML file:
 
@@ -72,8 +74,8 @@ You can include custom fonts in different ways:
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-  	href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap"
-  	rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap"
+    rel="stylesheet"
   />
   ```
 
@@ -81,21 +83,23 @@ You can include custom fonts in different ways:
 
   ```css
   @font-face {
-  	font-family: 'Name of the font';
-  	src: url('path/to-the/font.woff');
+    font-family: "Name of the font";
+    src: url("path/to-the/font.woff");
   }
   ```
 
 ## Google Fonts
+
 1. download font via [google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts) into folder "fonts"
 2. copy code from google webfonts helper and insert it into css
 
 ## CSS Selectors
 
 ## Id Selectors
+
 ```css
 #title {
-	color: blue;
+  color: blue;
 }
 ```
 
@@ -107,36 +111,37 @@ Attribute selectors are written inside `[...]` square brackets.
 
   ```css
   [hidden] {
-  	...;
+    ...;
   }
   ```
 
 - all links which open a new tab:
 
   ```css
-  [target='_blank'] {
-  	...;
+  [target="_blank"] {
+    ...;
   }
   ```
 
 - all elements with the class `card` and the attribute `role="list"`
 
   ```css
-  .card[role='list'] {
-  	...;
+  .card[role="list"] {
+    ...;
   }
   ```
 
 [MDN web docs: Attribute-selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors).
+
 ## Pseudo Classes
 
-Style an HTML element differently when it is in a specific state. These are added to a selector and start with a **:** colon. 
+Style an HTML element differently when it is in a specific state. These are added to a selector and start with a **:** colon.
 
 - hovered elements
 
   ```css
   h2:hover {
-  	...;
+    ...;
   }
   ```
 
@@ -144,7 +149,7 @@ Style an HTML element differently when it is in a specific state. These are adde
 
   ```css
   button:active {
-  	...;
+    ...;
   }
   ```
 
@@ -152,7 +157,7 @@ Style an HTML element differently when it is in a specific state. These are adde
 
   ```css
   a:visited {
-  	...;
+    ...;
   }
   ```
 
@@ -160,7 +165,7 @@ Style an HTML element differently when it is in a specific state. These are adde
 
   ```css
   input:focus {
-  	...;
+    ...;
   }
   ```
 
@@ -168,7 +173,7 @@ Style an HTML element differently when it is in a specific state. These are adde
 
   ```css
   li:first-child {
-  	...;
+    ...;
   }
   ```
 
@@ -177,11 +182,12 @@ Style an HTML element differently when it is in a specific state. These are adde
 
   ```css
   li:nth-child(n) {
-  	...;
+    ...;
   }
   ```
 
 [MDN web docs: Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes).
+
 ## Pseudo Elements
 
 Pseudo elements let you style a specific part of the selected elements like the first line of a paragraph, the first-letter, the selection etc. They are written with **::** double colons directly after the original selector.
@@ -190,7 +196,7 @@ Pseudo elements let you style a specific part of the selected elements like the 
 
   ```css
   p::first-line {
-  	...;
+    ...;
   }
   ```
 
@@ -198,7 +204,7 @@ Pseudo elements let you style a specific part of the selected elements like the 
 
   ```css
   a::before {
-  	content: '🌍'; // property needed, can be empty
+    content: "🌍"; // property needed, can be empty
   }
   ```
 
@@ -206,11 +212,12 @@ Pseudo elements let you style a specific part of the selected elements like the 
 
   ```css
   a::after {
-  	content: '📎'; // property needed, can be empty
+    content: "📎"; // property needed, can be empty
   }
   ```
 
 [MDN dev docs: Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+
 ## Combinators
 
 Sometimes it is more efficient to combine multiple selectors instead of defining yet another CSS
@@ -234,12 +241,13 @@ Many combinators can be chained. Can you figure out which element would be style
 selector?
 
 ```css
-body section > ul[role='list'] > li::before {
-	...;
+body section > ul[role="list"] > li::before {
+  ...;
 }
 ```
 
 ## Positioning
+
 There are 5
 different values to define the position:
 
@@ -254,14 +262,14 @@ different values to define the position:
 The position is then specified by the four position properties `top`, `bottom`, `right`, `left`.
 These work differently depending on the positioning method.
 
-## position: static
+### position: static
 
 Elements are positioned according to the normal document flow. The properties `top`, `bottom`,
 `right`, `left` have no effect. This is the default value.
 
 ---
 
-## position: relative
+### position: relative
 
 Elements are positioned according to the normal document flow and then displaced by the `top`,
 `bottom`, `right`, `left` properties. This method is also used to set the reference frame for an
@@ -270,7 +278,7 @@ this element.
 
 ![example for position relative](../images/position-relative.png)
 
-## position: absolute
+### position: absolute
 
 Elements are removed from the normal document flow and no space is created for them - so they leave
 no gap in the page. With position absolute you place an element (with the `top`, `bottom`, `right`,
@@ -289,7 +297,7 @@ the element is placed absolutely towards this element and not the entire page.
 
 ---
 
-## Position Fixed
+### Position Fixed
 
 Elements are removed from the normal document flow and no space is created for them - so they leave
 no gap in the page. An element with position fixed is not influenced by scrolling and therefore
@@ -299,7 +307,7 @@ stays at the specified position. This is often used for navigation bars or "back
 
 ---
 
-## Position Sticky
+### Position Sticky
 
 This is an unusual but very nifty positioning method. The element is not affected by the positioning
 until it comes near the border of its scrolling container (normally the page itself). When the user
@@ -320,8 +328,29 @@ position value.
 
 ---
 
+# CSS Flexbox
+
+- letting items fill out the possible space in their container
+- distributing elements for different screen sizes
+- making the website more responsive with flexbox
+
+1. Define a flex container:
+
+```css
+.container-element {
+  display: flex;
+}
+```
+
+- All child elements will be displayed next to each other along the main axis, the horizontal axis
+  by default. The perpendicular axis is called cross axis.
+- If the width of all child elements exceeds the container's width, the child elements will be
+  shrunk such that they all fit into the available space.
+
+---
 
 ## Links
+
 - [MDN web docs: CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index)
 - [google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts)
 
@@ -333,11 +362,13 @@ position value.
 - [rem/px calculator](https://nekocalc.com/de/px-zu-rem-umrechner)
 
 ### CSS Selectors
+
 - [MDN web docs: Attribute-selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 - [MDN web docs: Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
 - [MDN web docs: Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
 
 ### Positioning
+
 - [MDN web docs: position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 - [MDN web docs: Using positioning](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning)
 - [MDN web docs: z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)
