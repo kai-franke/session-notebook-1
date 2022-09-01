@@ -1,77 +1,40 @@
-<<<<<<< HEAD
-
 - [Linking Stylesheets](#Linking-Stylesheets)
-- [CSS Syntax](#CSS-Syntax)
-- [CSS Properties](#CSS-Properties)
 - [Box Model](#Box-Model)
-- [Include Custom Fonts](#Include-Custom-Fonts)
-- [Google Fonts](#Google-Fonts)
-- [CSS-Selectors](#CSS-Selectors)
-- [Id-Selectors](#Id-Selectors)
-- [Attribute-Selectors](#Attribute-Selectors)
-- [Pseudo-Classes](#Pseudo-Classes)
-- [Pseudo-Elements](#Pseudo-Elements)
-- [Combinators](#Combinators)
-- [Positioning](#Positioning)
-- [Z-Index](#Z-Index)
-- [](#CSS-Structure)
-- [](#BEM)
 - [CSS Flexbox](#CSS-Flexbox)
 - [CSS Grid](#CSS-Grid)
+- [CSS Properties](#CSS-Properties)
+- [CSS-Selectors](#CSS-Selectors)
+  - [Id-Selectors](#Id-Selectors)
+  - [Attribute-Selectors](#Attribute-Selectors)
+  - [Pseudo-Classes](#Pseudo-Classes)
+  - [Pseudo-Elements](#Pseudo-Elements)
+  - [Combinators](#Combinators)
+- [CSS Structure](#CSS-Structure)
+  - [BEM](#BEM)
+- [CSS Syntax](#CSS-Syntax)
+- [CSS Variables](#CSS-Variables)
+- [Google Fonts](#Google-Fonts)
+- [Include Custom Fonts](#Include-Custom-Fonts)
+
+- [Positioning](#Positioning)
+
+- [Z-Index](#Z-Index)
+
 - [](#)
 - [](#)
 - [Links](#Links)
 
-=======
-![Box-Model](../images/box-model.png)
+---
 
-> > > > > > > main
+---
 
-<a name="Linking-Stylesheets"></a>
-
-## Linking Stylesheets
-
-```html
-<head>
-  ...
-  <link rel="stylesheet" href="styles.css" />
-</head>
-```
-
-<a name="CSS-Syntax"></a>
-
-## CSS Syntax
-
-| Part           | Description                                                                                       |
-| -------------- | ------------------------------------------------------------------------------------------------- |
-| Selector       | Addresses the element(s) to style                                                                 |
-| Declaration    | Defines what to change and contains pairs of `property` and `property value`                      |
-| Property       | The name of the property to change                                                                |
-| Property Value | The value assigned to the property, e.g for the property `color` we use the property value `blue` |
-
-<a name="CSS-Properties"></a>
-
-## CSS Properties
-
-| Property           | Effect                                                                                                             |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `color`            | Color of an element´s text                                                                                         |
-| `font-size`        | Defines the size of a font                                                                                         |
-| `text-align`       | Defines the alignment of text                                                                                      |
-| `background-color` | Background color of an element                                                                                     |
-| `border`           | Defines the border of an element.                                                                                  |
-| `padding`          | Defines the padding of an element.                                                                                 |
-| `margin`           | Defines the margin of an element.                                                                                  |
-| `width`            | This property defines the width of an element.                                                                     |
-| `box-sizing`       | The property changes the way how the width and height of an element is calculated.The default value is content-box |
-| `display`          | grid/flex                                                                                                          |
-| `font-family`      | grid/flex                                                                                                          |
-| `font-size`        | grid/flex                                                                                                          |
-| `font-weight`      | grid/flex                                                                                                          |
+---
 
 <a name="Box-Model"></a>
 
 ## Box Model
+
+![Box-Model](../images/box-model.png)
 
 All elements of a website are wrapped in a **box model**. It's a way to define the size and position
 of an element. There are four different parts: `content`, `padding`, `border` and `margin`.
@@ -95,6 +58,72 @@ box". With the value `border-box`, the size of the "border box" is set instead.
 
 Now, the `width` property defines the size of the border box, padding and border width are
 subtracted to calculate the available space for the content.
+
+---
+
+---
+
+---
+
+<a name="Linking-Stylesheets"></a>
+
+## Linking Stylesheets
+
+```html
+<head>
+  ...
+  <link rel="stylesheet" href="styles.css" />
+</head>
+```
+
+---
+
+---
+
+---
+
+<a name="CSS-Syntax"></a>
+
+## CSS Syntax
+
+| Part           | Description                                                                                       |
+| -------------- | ------------------------------------------------------------------------------------------------- |
+| Selector       | Addresses the element(s) to style                                                                 |
+| Declaration    | Defines what to change and contains pairs of `property` and `property value`                      |
+| Property       | The name of the property to change                                                                |
+| Property Value | The value assigned to the property, e.g for the property `color` we use the property value `blue` |
+
+---
+
+---
+
+---
+
+<a name="CSS-Properties"></a>
+
+## CSS Properties
+
+| Property           | Effect                                                                                                             |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `color`            | Color of an element´s text                                                                                         |
+| `font-size`        | Defines the size of a font                                                                                         |
+| `text-align`       | Defines the alignment of text                                                                                      |
+| `background-color` | Background color of an element                                                                                     |
+| `border`           | Defines the border of an element.                                                                                  |
+| `padding`          | Defines the padding of an element.                                                                                 |
+| `margin`           | Defines the margin of an element.                                                                                  |
+| `width`            | This property defines the width of an element.                                                                     |
+| `box-sizing`       | The property changes the way how the width and height of an element is calculated.The default value is content-box |
+| `display`          | grid/flex                                                                                                          |
+| `font-family`      | grid/flex                                                                                                          |
+| `font-size`        | grid/flex                                                                                                          |
+| `font-weight`      | grid/flex                                                                                                          |
+
+---
+
+---
+
+---
 
 <a name="Include-Custom-Fonts"></a>
 
@@ -127,12 +156,24 @@ You can include custom fonts in different ways:
   }
   ```
 
-  <a name="Google-Fonts"></a>
+---
+
+---
+
+---
+
+<a name="Google-Fonts"></a>
 
 ## Google Fonts
 
 1. download font via [google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts) into folder "fonts"
 2. copy code from google webfonts helper and insert it into css
+
+---
+
+---
+
+---
 
 <a name="CSS-Selectors"></a>
 
@@ -179,6 +220,12 @@ Attribute selectors are written inside `[...]` square brackets.
   ```
 
 [MDN web docs: Attribute-selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors).
+
+---
+
+---
+
+---
 
 <a name="Pseudo-Classes"></a>
 
@@ -237,6 +284,12 @@ Style an HTML element differently when it is in a specific state. These are adde
 
 [MDN web docs: Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes).
 
+---
+
+---
+
+---
+
 <a name="Pseudo-Elements"></a>
 
 ## Pseudo Elements
@@ -269,6 +322,12 @@ Pseudo elements let you style a specific part of the selected elements like the 
 
 [MDN dev docs: Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
 
+---
+
+---
+
+---
+
 <a name="Combinators"></a>
 
 ## Combinators
@@ -298,6 +357,171 @@ body section > ul[role="list"] > li::before {
   ...;
 }
 ```
+
+---
+
+<a name="CSS-Structure"></a>
+
+## CSS Structure
+
+## Learning Objectives
+
+- Understanding how the browser decides which CSS property to use when there are conflicting rules,
+  regarding CSS cascade and CSS specificity
+- Structuring CSS to improve maintainability and readability
+- Organizing and naming CSS classes with BEM method
+- Creating and reusing Custom CSS properties, also called CSS variables
+
+---
+
+## CSS Cascade
+
+The cascade is the algorithm that defines which CSS rules are being applied when there are
+conflicting rules.
+
+When styling an element the browser:
+
+1. Searches for all rules with matching selectors
+2. Sorts the rules by their importance taking into account:
+   - Whether the declaration is followed by **!important**
+   - The rule's origin (Browser stylesheet, User stylesheet, Author stylesheet)
+3. Sorts rules by their [specificity](#specificity), if there are multiple rules with the same
+   importance according to no. 2.
+4. Chooses the last declaration over previous ones, if there are multiple rules with the same
+   importance and the same specificity.
+
+You can read about the details in the
+[CSS Cascade mdn docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade).
+
+> ❗️ We recommend never using !important unless you absolutely have to. It is almost impossible to
+> overwrite a CSS rule with !important.
+
+---
+
+## Specificity
+
+The specificity of a CSS selector tells the browser which rule is most relevant for an element. The
+more specific rules win over less specific ones.
+
+You can find a list of the specificity of different selectors on
+[specifishity.com](https://specifishity.com/).
+
+The **universal selector** is the lease specific one. It is overwritten by any other CSS rule with
+any other matching CSS selector.
+
+**type selectors** like `div` have a low specificity and can easily be overwritten.
+
+**class selectors** like `.bright` and **attribute selectors** like `[type=checkbox]` have a higher
+specificity.
+
+---
+
+## CSS Structure best practices
+
+- keep your CSS consistent throughout a project. In collaborative projects, there are often coding
+  style guidelines.
+- separate global and local styles into different files (or sections of files)
+- create multiple stylesheets for different parts of your application
+  - structure your code by thinking in reusable **components**. You can write your CSS for every
+    component in its own CSS file.
+
+### How to import one stylesheet or multiple stylesheets into another stylesheet
+
+You can import one stylesheet into another stylesheet using **@import**:
+
+```css
+@import "customer-card.css";
+```
+
+---
+
+<a name="BEM"></a>
+
+## BEM
+
+BEM is short for "Block, Element, Modifier". It is a method that allows you to craft reusable
+components through CSS class naming conventions.
+
+```css
+.block {
+  ...;
+}
+.block__element {
+  ...;
+}
+.block--modifier {
+  ...;
+}
+```
+
+A **block** is a standalone entity or component.
+
+An **element** is a part of your block (or component) that has no standalone meaning.
+
+A **modifier** is a flag on your block (or component) that is used to change its appearance or
+behavior. E.g. disabled, checked, bright, etc. .
+
+You can find an [introduction to BEM here](http://getbem.com/introduction/).
+
+### Kebab Case naming convention
+
+The kebab case naming convention defines to use hyphens to separate words in variables. Many
+developers use the kebab case convention to write css classes. In BEM we also use kebab case, for
+example:
+
+```css
+.customer-card {
+  ...;
+}
+.customer-card__button {
+  ...;
+}
+.customer-card--disabled {
+  ...;
+}
+```
+
+---
+
+<a name="CSS-Variables"></a>
+
+## Custom properties (CSS variables)
+
+You can store values in custom properties, so you can use them again multiple times without having
+to write the value.
+
+A common practice is to define variables in the `:root` pseudo class selector as follows:
+
+```css
+:root {
+  --primary-color: #ff00ff;
+  --secondary-color: #f00f0f;
+}
+```
+
+> ❗️ Custom properties have to be prefixed with `--`
+> You can use the custom properties as follows:
+
+```css
+.customer-card {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+```
+
+---
+
+## Resources
+
+- [MDN docs: CSS Cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade)
+- [specifishity.com](https://specifishity.com/)
+- [Introduction to BEM](http://getbem.com/introduction/)
+
+---
+
+---
+
+---
 
 <a name="Positioning"></a>
 
@@ -373,6 +597,10 @@ like a fixed element.
 
 ---
 
+---
+
+---
+
 <a name="Z-Index"></a>
 
 ## Z - Index
@@ -382,6 +610,10 @@ appear on top if they overlap with other elements. The z-index can be an integer
 numbers are possible) or it can have the default value `auto` which sets the stack order equal to
 its parents. The z-index only effects positioned elements - that is elements with a non-static
 position value.
+
+---
+
+---
 
 ---
 
@@ -443,6 +675,10 @@ you can see its effect.
 
 It changes the layout completely. The property `align-items`, which
 defines the positioning on the cross axis, also changes with the definition of the flex-direction.
+
+---
+
+---
 
 ---
 
@@ -524,6 +760,8 @@ The position of the elements _inside_ their cells can be specified on the grid c
 | [justify-items](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items) | Sets the `horizontal` alignment. |
 | [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) | Sets the `vertical` alignment. |
 | [place-items](https://developer.mozilla.org/en-US/docs/Web/CSS/place-items) | Sets the `vertical` and `horizontal` alignment. |
+
+---
 
 ---
 
