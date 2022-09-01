@@ -1,9 +1,12 @@
 - [JavaScript Basics](#JavaScript-Basics)
+
   - [Connect a JavaScript file](#Connect-a-JavaScript-file)
   - [Log to the console](#Log-to-the-console)
   - [Selecting HTML Elements: `.querySelector()`](#Selecting-HTML-Elements-querySelector)
   - [Add Interaction: `.addEventListener()`](#Add-Interaction-addEventListener)
   - [Add/remove & toggle classes: `.classList.`](#Add-remove-toggle-classes-classList)
+  - [Resources – JavaScript Basics](#Resources-JavaScript-Basics)
+
 - [JS Variables and Numbers](#JS-Variables-and-Numbers)
   - [Variable Declarations](#Variable-Declarations)
   - [Primitive Data Types](#Primitive-Data-Types)
@@ -13,6 +16,7 @@
   - [Assignment Operators](#Assignment-Operators)
   - [Type Conversion](#Type-Conversion)
   - [Number Systems](#Number-Systems)
+  - [Resources – JS Variables and Numbers](#Recources-JS-Variables-and-Numbers)
 - [JS Conditions and Booleans](#JS-Conditions-and-Booleans)
   - [Boolean Values](#Boolean-Values)
   - [Truthy and Falsy Values](#Truthy-and-Falsy-Values)
@@ -21,10 +25,7 @@
   - [Control Flow: `if` / `else`](#Control-Flow-if-else)
   - [Ternary Operator: `?` `:`](#Ternary-Operator)
   - [Advanced: The strangeness of boolean coercion and making use of non-strict equality](#Advanced)
-
----
-
----
+  - [Resources – JS Conditions and Booleans](#Resources-JS-Conditions-and-Booleans)
 
 ---
 
@@ -77,7 +78,6 @@ The `script` tag has two attributes:
 
 </details>
 
-[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Log-to-the-console"></a>
 
 ## Hello World: `console.log()`
@@ -94,7 +94,6 @@ console.error("Error!"); // logs as error into console
 
 </details>
 
-[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Selecting-HTML-Elements-querySelector"></a>
 
 ## Selecting HTML Elements: `.querySelector()`
@@ -132,7 +131,6 @@ const mainElement = document.querySelector("#main");
 
 </details>
 
-[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Add-Interaction-addEventListener"></a>
 
 ## Add Interaction: `.addEventListener()`
@@ -176,7 +174,6 @@ button.addEventListener("keydown", () => {});
 
 </details>
 
-[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Add-remove-toggle-classes-classList"></a>
 
 ## Add/remove & toggle classes: `.classList.`
@@ -220,6 +217,7 @@ main.classList.toggle("page--primary");
 ```
 
 </details>
+<a name="Resources-JavaScript-Basics"></a>
 
 ## Resources
 
@@ -258,13 +256,8 @@ main.classList.toggle("page--primary");
 
 ---
 
----
-
----
-
----
-
 [🌑👣🌕 Top 🌕👣🌑](#Top)
+
 <a name="JS-Variables-and-Numbers"></a>
 
 # JS Variables and Numbers
@@ -277,7 +270,6 @@ main.classList.toggle("page--primary");
 
 ---
 
-[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Variable-Declarations"></a>
 
 ## Variable Declarations
@@ -312,8 +304,6 @@ saved afterwards.
 
 </details>
 
-[🌑👣🌕 Top 🌕👣🌑](#Top)
-
 <a name="Primitive-Data-Types"></a>
 
 ## Primitive Data Types
@@ -336,8 +326,6 @@ There are 7 primitive data types:
 
 </details>
 
-[🌑👣🌕 Top 🌕👣🌑](#Top)
-
 <a name="Variable-Naming"></a>
 
 ## Variable Naming
@@ -352,8 +340,6 @@ naming a variable:
 - be very specific, longer names are better than shorter: `updatedFollowerCounter` instead of
 `counter`.
 </details>
-
-[🌑👣🌕 Top 🌕👣🌑](#Top)
 
 <a name="Math_and_Operators"></a>
 
@@ -393,8 +379,6 @@ This is also true for all odd numbers, because after this division you have alwa
 
 </details>
 
-[🌑👣🌕 Top 🌕👣🌑](#Top)
-
 <a name="Operator-Precedence"></a>
 
 ## Operator Precedence
@@ -404,8 +388,6 @@ In maths, some operators have a higher precedence than others. This means that t
 before operators with a lower precedence. For example, multiplication comes before addition. You can
 look up the precedence of the operators in the table above.
 </details>
-
-[🌑👣🌕 Top 🌕👣🌑](#Top)
 
 <a name="Assignment-Operators"></a>
 
@@ -429,8 +411,6 @@ increasing a variable by a fixed value.
 
 </details>
 
-[🌑👣🌕 Top 🌕👣🌑](#Top)
-
 <a name="Type-Conversion"></a>
 
 ## Type Conversion
@@ -452,8 +432,6 @@ This is also true for boolean operators which we will cover in a later session.
 
 </details>
 
-[🌑👣🌕 Top 🌕👣🌑](#Top)
-
 <a name="Number-Systems"></a>
 
 ## Number Systems
@@ -470,7 +448,7 @@ and 1. You don't have to learn these systems by heart, but it is good if you hea
 bigger than 15 you add another digit: 12 → "c" in hexadecimal.
 </details>
 
----
+<a name="Recources-JS-Variables-and-Numbers"></a>
 
 ## Resources
 
@@ -478,10 +456,6 @@ bigger than 15 you add another digit: 12 → "c" in hexadecimal.
 - [Operator Precedence MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
 
 ## </details>
-
----
-
----
 
 ---
 
@@ -502,8 +476,6 @@ bigger than 15 you add another digit: 12 → "c" in hexadecimal.
 
 ---
 
-[🌑👣🌕 Top 🌕👣🌑](#Top)
-
 <a name="Boolean-Values"></a>
 
 ## Boolean Values
@@ -513,8 +485,6 @@ A boolean value, named after George Boole, only has two states. It can either be
 **false**. Booleans are often used in conditional statements which can execute different code
 depending on their value.
 </details>
-
-[🌑👣🌕 Top 🌕👣🌑](#Top)
 
 <a name="Truthy-and-Falsy-Values"></a>
 
@@ -539,10 +509,6 @@ and others as if they were false: _Truthy_ values become true, _falsy_ values be
   - empty string: `""`
 
 </details>
-
----
-
-[🌑👣🌕 Top 🌕👣🌑](#Top)
 
 <a name="Comparison-Operators"></a>
 
@@ -571,8 +537,6 @@ Comparison operators produce boolean values by comparing two expressions:
 >   Strict equality checks if type _and_ value are the same: `"3" === 3` is `false`.
 
 </details>
-
-[🌑👣🌕 Top 🌕👣🌑](#Top)
 
 <a name="Logical-Operators"></a>
 
@@ -603,8 +567,6 @@ Logical operators combine up to two booleans into a new boolean.
 > - `null && "yet another string"` evaluates to `null`
 
 </details>
-
-[🌑👣🌕 Top 🌕👣🌑](#Top)
 
 <a name="Control-Flow-if-else"></a>
 
@@ -659,8 +621,6 @@ if (name) {
 
 </details>
 
-[🌑👣🌕 Top 🌕👣🌑](#Top)
-
 <a name="Ternary-Operator"></a>
 
 ## Ternary Operator: `? :`
@@ -697,8 +657,6 @@ moveElement(xPos > 300 ? 300 : xPos); // the element can't be moved further than
 > statements or multi-line code blocks.
 
 </details>
-
-[🌑👣🌕 Top 🌕👣🌑](#Top)
 
 <a name="Advanced"></a>
 
@@ -738,6 +696,8 @@ JavaScript tries to coerce the compared values into the same type. And just like
 > otherwise always be preferred.**
 
 </details>
+
+<a name="Resources-JS-Conditions-and-Booleans"></a>
 
 ## Resources
 
