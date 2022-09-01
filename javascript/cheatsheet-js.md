@@ -45,7 +45,6 @@
 
 ## Connect a JavaScript file
 
-<details>
 ```html
 <head>
   ...
