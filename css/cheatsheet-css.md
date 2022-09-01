@@ -1,15 +1,47 @@
+<<<<<<< HEAD
+
+- [Linking Stylesheets](#Linking-Stylesheets)
+- [CSS Syntax](#CSS-Syntax)
+- [CSS Properties](#CSS-Properties)
+- [Box Model](#Box-Model)
+- [Include Custom Fonts](#Include-Custom-Fonts)
+- [Google Fonts](#Google-Fonts)
+- [CSS-Selectors](#CSS-Selectors)
+- [Id-Selectors](#Id-Selectors)
+- [Attribute-Selectors](#Attribute-Selectors)
+- [Pseudo-Classes](#Pseudo-Classes)
+- [Pseudo-Elements](#Pseudo-Elements)
+- [Combinators](#Combinators)
+- [Positioning](#Positioning)
+- [Z-Index](#Z-Index)
+- [](#CSS-Structure)
+- [](#BEM)
+- [CSS Flexbox](#CSS-Flexbox)
+- [CSS Grid](#CSS-Grid)
+- [](#)
+- [](#)
+- [Links](#Links)
+
+=======
 ![Box-Model](../images/box-model.png)
+
+> > > > > > > main
+
+<a name="Linking-Stylesheets"></a>
 
 ## Linking Stylesheets
 
 ```html
 <head>
-	...
-	<link rel="stylesheet" href="styles.css" />
+  ...
+  <link rel="stylesheet" href="styles.css" />
 </head>
 ```
 
-## CSS syntax
+<a name="CSS-Syntax"></a>
+
+## CSS Syntax
+
 | Part           | Description                                                                                       |
 | -------------- | ------------------------------------------------------------------------------------------------- |
 | Selector       | Addresses the element(s) to style                                                                 |
@@ -17,22 +49,27 @@
 | Property       | The name of the property to change                                                                |
 | Property Value | The value assigned to the property, e.g for the property `color` we use the property value `blue` |
 
+<a name="CSS-Properties"></a>
+
 ## CSS Properties
-| Property           | Effect                                         |
-| ------------------ | ---------------------------------------------- |
-| `color`            | Color of an element´s text                     |
-| `font-size`        | Defines the size of a font                     |
-| `text-align`       | Defines the alignment of text                  |
-| `background-color` | Background color of an element                 |
-| `border`           | Defines the border of an element.              |
-| `padding`          | Defines the padding of an element.             |
-| `margin`           | Defines the margin of an element.              |
-| `width`            | This property defines the width of an element. |
-| `box-sizing`            | The property changes the way how the width and height of an element is calculated.The default value is content-box |
-| `display`            | grid/flex |
-| `font-family`            | grid/flex |
-| `font-size`            | grid/flex |
-| `font-weight`            | grid/flex |
+
+| Property           | Effect                                                                                                             |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `color`            | Color of an element´s text                                                                                         |
+| `font-size`        | Defines the size of a font                                                                                         |
+| `text-align`       | Defines the alignment of text                                                                                      |
+| `background-color` | Background color of an element                                                                                     |
+| `border`           | Defines the border of an element.                                                                                  |
+| `padding`          | Defines the padding of an element.                                                                                 |
+| `margin`           | Defines the margin of an element.                                                                                  |
+| `width`            | This property defines the width of an element.                                                                     |
+| `box-sizing`       | The property changes the way how the width and height of an element is calculated.The default value is content-box |
+| `display`          | grid/flex                                                                                                          |
+| `font-family`      | grid/flex                                                                                                          |
+| `font-size`        | grid/flex                                                                                                          |
+| `font-weight`      | grid/flex                                                                                                          |
+
+<a name="Box-Model"></a>
 
 ## Box Model
 
@@ -52,12 +89,14 @@ box". With the value `border-box`, the size of the "border box" is set instead.
 
 ```css
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 ```
 
 Now, the `width` property defines the size of the border box, padding and border width are
 subtracted to calculate the available space for the content.
+
+<a name="Include-Custom-Fonts"></a>
 
 ## Include Custom Fonts
 
@@ -66,7 +105,7 @@ You can include custom fonts in different ways:
 - find a font on [google fonts](fonts.google.com) and use the `@import` snippet and paste it to the
   top of your css file:
   ```css
-  @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300;			400;500;700&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300;			400;500;700&display=swap");
   ```
 - use the provided HTML code to add the font via the `link` element in the `head` of your HTML file:
 
@@ -74,8 +113,8 @@ You can include custom fonts in different ways:
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-  	href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap"
-  	rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap"
+    rel="stylesheet"
   />
   ```
 
@@ -83,23 +122,33 @@ You can include custom fonts in different ways:
 
   ```css
   @font-face {
-  	font-family: 'Name of the font';
-  	src: url('path/to-the/font.woff');
+    font-family: "Name of the font";
+    src: url("path/to-the/font.woff");
   }
   ```
 
+  <a name="Google-Fonts"></a>
+
 ## Google Fonts
+
 1. download font via [google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts) into folder "fonts"
 2. copy code from google webfonts helper and insert it into css
 
+<a name="CSS-Selectors"></a>
+
 ## CSS Selectors
 
+<a name="Id-Selectors"></a>
+
 ## Id Selectors
+
 ```css
 #title {
-	color: blue;
+  color: blue;
 }
 ```
+
+<a name="Attribute-Selectors"></a>
 
 ## Attribute Selectors
 
@@ -109,36 +158,39 @@ Attribute selectors are written inside `[...]` square brackets.
 
   ```css
   [hidden] {
-  	...;
+    ...;
   }
   ```
 
 - all links which open a new tab:
 
   ```css
-  [target='_blank'] {
-  	...;
+  [target="_blank"] {
+    ...;
   }
   ```
 
 - all elements with the class `card` and the attribute `role="list"`
 
   ```css
-  .card[role='list'] {
-  	...;
+  .card[role="list"] {
+    ...;
   }
   ```
 
 [MDN web docs: Attribute-selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors).
+
+<a name="Pseudo-Classes"></a>
+
 ## Pseudo Classes
 
-Style an HTML element differently when it is in a specific state. These are added to a selector and start with a **:** colon. 
+Style an HTML element differently when it is in a specific state. These are added to a selector and start with a **:** colon.
 
 - hovered elements
 
   ```css
   h2:hover {
-  	...;
+    ...;
   }
   ```
 
@@ -146,7 +198,7 @@ Style an HTML element differently when it is in a specific state. These are adde
 
   ```css
   button:active {
-  	...;
+    ...;
   }
   ```
 
@@ -154,7 +206,7 @@ Style an HTML element differently when it is in a specific state. These are adde
 
   ```css
   a:visited {
-  	...;
+    ...;
   }
   ```
 
@@ -162,7 +214,7 @@ Style an HTML element differently when it is in a specific state. These are adde
 
   ```css
   input:focus {
-  	...;
+    ...;
   }
   ```
 
@@ -170,7 +222,7 @@ Style an HTML element differently when it is in a specific state. These are adde
 
   ```css
   li:first-child {
-  	...;
+    ...;
   }
   ```
 
@@ -179,11 +231,14 @@ Style an HTML element differently when it is in a specific state. These are adde
 
   ```css
   li:nth-child(n) {
-  	...;
+    ...;
   }
   ```
 
 [MDN web docs: Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes).
+
+<a name="Pseudo-Elements"></a>
+
 ## Pseudo Elements
 
 Pseudo elements let you style a specific part of the selected elements like the first line of a paragraph, the first-letter, the selection etc. They are written with **::** double colons directly after the original selector.
@@ -192,7 +247,7 @@ Pseudo elements let you style a specific part of the selected elements like the 
 
   ```css
   p::first-line {
-  	...;
+    ...;
   }
   ```
 
@@ -200,7 +255,7 @@ Pseudo elements let you style a specific part of the selected elements like the 
 
   ```css
   a::before {
-  	content: '🌍'; // property needed, can be empty
+    content: "🌍"; // property needed, can be empty
   }
   ```
 
@@ -208,11 +263,14 @@ Pseudo elements let you style a specific part of the selected elements like the 
 
   ```css
   a::after {
-  	content: '📎'; // property needed, can be empty
+    content: "📎"; // property needed, can be empty
   }
   ```
 
 [MDN dev docs: Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+
+<a name="Combinators"></a>
+
 ## Combinators
 
 Sometimes it is more efficient to combine multiple selectors instead of defining yet another CSS
@@ -236,12 +294,15 @@ Many combinators can be chained. Can you figure out which element would be style
 selector?
 
 ```css
-body section > ul[role='list'] > li::before {
-	...;
+body section > ul[role="list"] > li::before {
+  ...;
 }
 ```
 
+<a name="Positioning"></a>
+
 ## Positioning
+
 There are 5
 different values to define the position:
 
@@ -256,14 +317,14 @@ different values to define the position:
 The position is then specified by the four position properties `top`, `bottom`, `right`, `left`.
 These work differently depending on the positioning method.
 
-## position: static
+### position: static
 
 Elements are positioned according to the normal document flow. The properties `top`, `bottom`,
 `right`, `left` have no effect. This is the default value.
 
 ---
 
-## position: relative
+### position: relative
 
 Elements are positioned according to the normal document flow and then displaced by the `top`,
 `bottom`, `right`, `left` properties. This method is also used to set the reference frame for an
@@ -272,7 +333,7 @@ this element.
 
 ![example for position relative](../images/position-relative.png)
 
-## position: absolute
+### position: absolute
 
 Elements are removed from the normal document flow and no space is created for them - so they leave
 no gap in the page. With position absolute you place an element (with the `top`, `bottom`, `right`,
@@ -291,7 +352,7 @@ the element is placed absolutely towards this element and not the entire page.
 
 ---
 
-## Position Fixed
+### Position Fixed
 
 Elements are removed from the normal document flow and no space is created for them - so they leave
 no gap in the page. An element with position fixed is not influenced by scrolling and therefore
@@ -301,7 +362,7 @@ stays at the specified position. This is often used for navigation bars or "back
 
 ---
 
-## Position Sticky
+### Position Sticky
 
 This is an unusual but very nifty positioning method. The element is not affected by the positioning
 until it comes near the border of its scrolling container (normally the page itself). When the user
@@ -311,6 +372,8 @@ like a fixed element.
 ![example for position absolute](../images/position-sticky.png)
 
 ---
+
+<a name="Z-Index"></a>
 
 ## Z - Index
 
@@ -322,8 +385,154 @@ position value.
 
 ---
 
+<a name="CSS-Flexbox"></a>
+
+# CSS Flexbox
+
+- letting items fill out the possible space in their container
+- distributing elements for different screen sizes
+- making the website more responsive with flexbox
+
+1. Define a flex container:
+
+```css
+.container-element {
+  display: flex;
+}
+```
+
+- All child elements will be displayed next to each other along the main axis, the horizontal axis
+  by default. The perpendicular axis is called cross axis.
+- If the width of all child elements exceeds the container's width, the child elements will be
+  shrunk such that they all fit into the available space.
+
+---
+
+## Important Flex Properties
+
+| property                                                                            | effect                                                                                                                                                       |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) | Defines the positioning of elements along the main axis. Useful values: `flex-start`, `flex-end`, `center` , `space-between`, `space-evenly`, `space-around` |
+| [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)         | Defines the positioning of elements along the cross axis. Useful values: `flex-start`, `flex-end`, `center`                                                  |
+| [gap](https://developer.mozilla.org/en-US/docs/Web/CSS/gap)                         | Defines the minimum spacing between elements.                                                                                                                |
+| [flex-direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)   | Sets the direction of the main axis. Useful values: `row`, `column`                                                                                          |
+| [flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)             | Modifies how elements can wrap into another row instead of being squashed into one row. Useful values: `wrap`, `no-wrap`                                     |
+| `gap` `column-gap` `row-gap`                                                        |                                                                                                                                                              |
+| [align-self](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)           | `auto` `flex-start` `flex-end` `center` `baseline` `stretch`                                                                                                 |
+
+- [Flexbox Cheat Sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+---
+
+## Flex-wrap
+
+This property is very useful for creating responsive layouts. With the property set to
+`flex-wrap: wrap` the elements flow into the next row when they wouldn't fit into the current row.
+Depending on the screen width, the content can align itself, as shown in the following example.
+
+![flex-wrap](assets/flex-wrap.png)
+
+---
+
+## Flex-direction
+
+This very fundamental property lets you define which axis should act as main axis. In this picture
+you can see its effect.
+
+![flex-direction](../images/flex-direction.png)
+
+It changes the layout completely. The property `align-items`, which
+defines the positioning on the cross axis, also changes with the definition of the flex-direction.
+
+---
+
+<a name="CSS-Grid"></a>
+
+# CSS Grid
+
+- positioning elements in Grid cells
+- aligning cells in a Grid
+
+1. Defining the layout on a container element
+2. Positioning the children on the grid cells
+
+### 1. Defining the layout on a container element
+
+The display mode is defined on a container element that contains all the elements to be positioned as direct children in the grid.
+Columns and rows can be defined through
+
+```
+.container {
+  display: grid;
+  grid-template-columns: 50px 20% 2fr 10em;
+  grid-template-rows: 3fr 1fr 1fr;
+}
+```
+
+### 2. Positioning the children on the grid cells
+
+Positioning properties are set on the child elements, not on the container!
+
+After the grid is set up on the container element, its children are placed inside the grid cells from left to right, top to bottom. By default, the elements are stretched such that they take up all the available cell space.
+
+```
+.container__item {
+  grid-column: 2 / 4; /* beginning / end */
+  grid-row: 1 / 6; /* beginning / end */
+}
+```
+
+![grid-positioning](../images/element-positioning-2.png)
+
+### grid-area
+
+```
+.container {
+  display: grid;
+  grid-template-areas:
+	  'a a b c'
+	  'd d d c'
+	  'e e e e'; /* define names for grid-areas */
+}
+```
+
+```
+.element-a {
+	grid-area: a;
+}
+.element-b {
+	grid-area: b;
+}
+...
+```
+
+## Column and Row Alignment
+
+The combined size of the grid columns/rows you defined might be less than a given height/width of
+the grid container. In this case you can distribute the columns or rows inside the grid container.
+| Property | Effect |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------- |
+| [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) | Sets the alignment of the `columns`. |
+| [align-content](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) | Sets the alignment of the `rows`. |
+| [place-content](https://developer.mozilla.org/en-US/docs/Web/CSS/place-content) | Sets the alignment of the `rows` and `columns`. |
+
+## Cell Alignment
+
+The position of the elements _inside_ their cells can be specified on the grid container.
+| Property | Effect |
+| ------------------------------------------------------------------------------- | ----------------------------------------------- |
+| [justify-items](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items) | Sets the `horizontal` alignment. |
+| [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) | Sets the `vertical` alignment. |
+| [place-items](https://developer.mozilla.org/en-US/docs/Web/CSS/place-items) | Sets the `vertical` and `horizontal` alignment. |
+
+---
+
+---
+
+<a name="Links"></a>
 
 ## Links
+
 - [MDN web docs: CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index)
 - [google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts)
 
@@ -335,14 +544,26 @@ position value.
 - [rem/px calculator](https://nekocalc.com/de/px-zu-rem-umrechner)
 
 ### CSS Selectors
+
 - [MDN web docs: Attribute-selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 - [MDN web docs: Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
 - [MDN web docs: Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
 
 ### Positioning
+
 - [MDN web docs: position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 - [MDN web docs: Using positioning](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning)
 - [MDN web docs: z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)
 - [MDN web docs: Using z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index)
 - [MDN web docs: Stacking context](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
 - [`z-index` and stacking context by Josh W. Comeau](https://www.joshwcomeau.com/css/stacking-contexts/)
+
+### Flexbox
+
+- [Flexbox Cheat Sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [MDN web docs: Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+- [CSS Battle](https://cssbattle.dev/)
+
+### Grid Layout
+
+- [MDN web docs: CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
