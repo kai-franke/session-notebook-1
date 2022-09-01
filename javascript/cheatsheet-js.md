@@ -19,7 +19,7 @@
   - [Comparison Operators](#Comparison-Operators)
   - [Logical Operators](#Logical-Operators)
   - [Control Flow: `if` / `else`](#Control-Flow-if-else)
-  - [Ternary Operator: `?` `:`](#Ternary-Operator-?-:)
+  - [Ternary Operator: `?` `:`](#Ternary-Operator)
   - [Advanced: The strangeness of boolean coercion and making use of non-strict equality](#Advanced)
 
 ---
@@ -617,7 +617,7 @@ if (name) {
 ---
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
-<a name="Ternary-Operator-?-:"></a>
+<a name="Ternary-Operator"></a>
 
 ## Ternary Operator: `? :`
 
