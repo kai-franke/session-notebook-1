@@ -45,6 +45,7 @@
 
 ## Connect a JavaScript file
 
+<details>
 ```html
 <head>
   ...
@@ -74,7 +75,7 @@ The `script` tag has two attributes:
 </body>
 ```
 
-##
+<details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Log-to-the-console"></a>
