@@ -1,3 +1,5 @@
+<a name="Top"></a>
+
 - [Linking Stylesheets](#Linking-Stylesheets)
 - [Box Model](#Box-Model)
 - [CSS Flexbox](#CSS-Flexbox)
@@ -44,6 +46,8 @@
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
+
 <a name="Box-Model"></a>
 
 ## Box Model
@@ -79,6 +83,7 @@ subtracted to calculate the available space for the content.
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Linking-Stylesheets"></a>
 
 ## Linking Stylesheets
@@ -96,6 +101,7 @@ subtracted to calculate the available space for the content.
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="CSS-Syntax"></a>
 
 ## CSS Syntax
@@ -113,6 +119,7 @@ subtracted to calculate the available space for the content.
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="CSS-Properties"></a>
 
 ## CSS Properties
@@ -139,6 +146,7 @@ subtracted to calculate the available space for the content.
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Include-Custom-Fonts"></a>
 
 ## Include Custom Fonts
@@ -176,6 +184,7 @@ You can include custom fonts in different ways:
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Google-Fonts"></a>
 
 ## Google Fonts
@@ -189,6 +198,7 @@ You can include custom fonts in different ways:
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="CSS-Selectors"></a>
 
 ## CSS Selectors
@@ -203,6 +213,7 @@ You can include custom fonts in different ways:
 }
 ```
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Attribute-Selectors"></a>
 
 ## Attribute Selectors
@@ -241,6 +252,7 @@ Attribute selectors are written inside `[...]` square brackets.
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Pseudo-Classes"></a>
 
 ## Pseudo Classes
@@ -304,6 +316,7 @@ Style an HTML element differently when it is in a specific state. These are adde
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Pseudo-Elements"></a>
 
 ## Pseudo Elements
@@ -342,6 +355,7 @@ Pseudo elements let you style a specific part of the selected elements like the 
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Combinators"></a>
 
 ## Combinators
@@ -374,6 +388,7 @@ body section > ul[role="list"] > li::before {
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="CSS-Structure"></a>
 
 ## CSS Structure
@@ -387,6 +402,8 @@ body section > ul[role="list"] > li::before {
 - Creating and reusing Custom CSS properties, also called CSS variables
 
 ---
+
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 
 ## CSS Cascade
 
@@ -439,6 +456,7 @@ specificity.
   - structure your code by thinking in reusable **components**. You can write your CSS for every
     component in its own CSS file.
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Import-Stylesheets-to-stylesheet"></a>
 
 ### How to import one stylesheet or multiple stylesheets into another stylesheet
@@ -451,6 +469,7 @@ You can import one stylesheet into another stylesheet using **@import**:
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="BEM"></a>
 
 ## BEM
@@ -503,6 +522,7 @@ example:
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="CSS-Responsive"></a>
 
 # CSS Responsive
@@ -529,6 +549,7 @@ to structure it in a way that makes sense for mobile users.
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Relative-Units"></a>
 
 ## Relative Units
@@ -548,6 +569,7 @@ the size of their parent element.
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Media-Queries"></a>
 
 ## Media Queries
@@ -562,6 +584,7 @@ They follow the following syntax:
 }
 ```
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Screen-Size"></a>
 
 ### Media Types
@@ -577,6 +600,7 @@ You can target a specific media type with the `screen` and `print` media types.
 }
 ```
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Screen-Size"></a>
 
 ### Screen Size
@@ -594,8 +618,7 @@ You can target specific screen sizes with the `min-width` and `max-width` media 
 
 > 💡 Avoid `max-width` media queries, because they are harder to reason about. It's easier to think
 > about the smallest screen size first, and then add media queries for larger screens.
-
-<a name="Orientation"></a>
+> [🌑👣🌕 Top 🌕👣🌑](#Top) > <a name="Orientation"></a>
 
 ### Orientation
 
@@ -612,8 +635,7 @@ You can target specific orientations with the `orientation` media feature.
 
 > 💡 You can also target a specific aspect ratio with the
 > [`aspect-ratio` media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/aspect-ratio).
-
-<a name="Pointer"></a>
+> [🌑👣🌕 Top 🌕👣🌑](#Top) > <a name="Pointer"></a>
 
 ### Pointer
 
@@ -640,6 +662,7 @@ You can target specific pointer types with the `any-pointer` media feature.
 }
 ```
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Device-Pixel-Ratio"></a>
 
 ### Device Pixel Ratio (Pixel Density)
@@ -667,6 +690,7 @@ You can target specific device pixel ratios with the `device-pixel-ratio` media 
 }
 ```
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Color-Scheme"></a>
 
 ### Color Scheme
@@ -700,8 +724,7 @@ accordingly) with the `prefers-reduced-motion` media feature.
 
 > 💡 You can change your preferred reduced motion setting in your operating system settings. On
 > macOS, you can do this in System Preferences > Accessibility > Display > Reduce motion.
-
-<a name="High-Contrast"></a>
+> [🌑👣🌕 Top 🌕👣🌑](#Top) > <a name="High-Contrast"></a>
 
 ### High Contrast
 
@@ -715,8 +738,7 @@ You can target users who prefer a higher contrast with the `prefers-contrast` me
 
 > 💡 You can change your preferred contrast setting in your operating system settings. On macOS, you
 > can do this in System Preferences > Accessibility > Display > Increase contrast.
-
-<a name="Other-Media-Features"></a>
+> [🌑👣🌕 Top 🌕👣🌑](#Top) > <a name="Other-Media-Features"></a>
 
 ### Other Media Features
 
@@ -724,7 +746,7 @@ There are also media features for other (accessibility) features, like
 [`inverted-colors`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/inverted-colors). The
 list of all media features is always growing. Check out
 [the full list](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features) on mdn.
-
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Combining-Media-Features"></a>
 
 ### Combining Media Features
@@ -737,13 +759,14 @@ You can combine multiple media features with `and`.
 }
 ```
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Simulating-Media-Features"></a>
 
 ### Simulating Media Features
 
 You can simulate media features in the browser devtools. For example, you can change your screen
 size in the devtools by clicking the device icon in the top left corner of the devtools.
-
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Common-Breakpoints"></a>
 
 ### Common Breakpoints
@@ -785,6 +808,7 @@ body {
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="image-change-based-on-media-queries"></a>
 
 ## Showing different images based on media queries
@@ -832,6 +856,7 @@ The `img` element is required, so that there is always a fallback.
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="CSS-Variables"></a>
 
 ## Custom properties (CSS variables)
@@ -872,6 +897,7 @@ A common practice is to define variables in the `:root` pseudo class selector as
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Positioning"></a>
 
 ## Positioning
@@ -950,6 +976,7 @@ like a fixed element.
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Z-Index"></a>
 
 ## Z - Index
@@ -966,6 +993,7 @@ position value.
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="CSS-Flexbox"></a>
 
 # CSS Flexbox
@@ -1031,6 +1059,7 @@ defines the positioning on the cross axis, also changes with the definition of t
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="CSS-Grid"></a>
 
 # CSS Grid
@@ -1116,6 +1145,7 @@ The position of the elements _inside_ their cells can be specified on the grid c
 
 ---
 
+[🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Links"></a>
 
 ## Links
