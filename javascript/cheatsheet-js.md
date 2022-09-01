@@ -734,5 +734,3 @@ JavaScript tries to coerce the compared values into the same type. And just like
 ### Ternary Operator
 
 [MDN Ternary Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
-
-</details>
