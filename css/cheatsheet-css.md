@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 - [Linking Stylesheets](#Linking-Stylesheets)
 - [CSS Syntax](#CSS-Syntax)
 - [CSS Properties](#CSS-Properties)
@@ -19,6 +21,11 @@
 - [](#)
 - [](#)
 - [Links](#Links)
+
+=======
+![Box-Model](../images/box-model.png)
+
+> > > > > > > main
 
 <a name="Linking-Stylesheets"></a>
 
