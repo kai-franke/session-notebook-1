@@ -75,7 +75,7 @@ The `script` tag has two attributes:
 </body>
 ```
 
-<details>
+</details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Log-to-the-console"></a>
@@ -719,6 +719,7 @@ JavaScript tries to coerce the compared values into the same type. And just like
 ## Resources
 
 <details>
+
 ### Operators
 
 [MDN Comparison Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators)
