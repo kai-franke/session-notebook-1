@@ -30,8 +30,6 @@
 
 # JavaScript Basics
 
-<details>
-
 <a name="JavaScript-Basics"></a>
 
 ## Learning Objectives
@@ -47,6 +45,7 @@
 
 ## Connect a JavaScript file
 
+<details>
 ```html
 <head>
   ...
@@ -93,7 +92,7 @@ console.clear(); // clears console
 console.error("Error!"); // logs as error into console
 ```
 
-## </details>
+</details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Selecting-HTML-Elements-querySelector"></a>
@@ -131,7 +130,7 @@ const mainElement = document.querySelector("#main");
 
 > 💡 We try to separate our concerns: Classes are for CSS and data-\* attributes are for JavaScript
 
-## </details>
+</details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Add-Interaction-addEventListener"></a>
@@ -175,7 +174,7 @@ button.addEventListener("keydown", () => {});
 > [list of event types](https://developer.mozilla.org/en-US/docs/Web/Events#event_listing).
 > 💡 You don't have to understand the syntax for now, we will cover this in a later session.
 
-## </details>
+</details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Add-remove-toggle-classes-classList"></a>
@@ -220,7 +219,7 @@ main.classList.remove("page--primary");
 main.classList.toggle("page--primary");
 ```
 
-## </details>
+</details>
 
 ## Resources
 
@@ -269,8 +268,6 @@ main.classList.toggle("page--primary");
 <a name="JS-Variables-and-Numbers"></a>
 
 # JS Variables and Numbers
-
-<details>
 
 ## Learning Objectives
 
@@ -522,7 +519,8 @@ and others as if they were false: _Truthy_ values become true, _falsy_ values be
   - `false`
   - `undefined`
   - empty string: `""`
-  </details>
+
+</details>
 
 ---
 
@@ -553,7 +551,7 @@ Comparison operators produce boolean values by comparing two expressions:
 > - `===` and `!==` are strict equality operators. **This is what you need almost always**.  
 >   Strict equality checks if type _and_ value are the same: `"3" === 3` is `false`.
 
-## </details>
+</details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Logical-Operators"></a>
@@ -584,7 +582,7 @@ Logical operators combine up to two booleans into a new boolean.
 > - `0 || 100` evaluates to `100`
 > - `null && "yet another string"` evaluates to `null`
 
-## </details>
+</details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Control-Flow-if-else"></a>
@@ -638,7 +636,7 @@ if (name) {
 }
 ```
 
-## </details>
+</details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Ternary-Operator"></a>
@@ -676,7 +674,7 @@ moveElement(xPos > 300 ? 300 : xPos); // the element can't be moved further than
 > operations or function calls, not between _statements_ like variable declarations, if / else
 > statements or multi-line code blocks.
 
-## </details>
+</details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Advanced"></a>
@@ -716,7 +714,7 @@ JavaScript tries to coerce the compared values into the same type. And just like
 > ⚠️ Remember that this is an exception for using non-strict equality. **Strict equality should
 > otherwise always be preferred.**
 
-## </details>
+</details>
 
 ## Resources
 
@@ -734,3 +732,5 @@ JavaScript tries to coerce the compared values into the same type. And just like
 ### Ternary Operator
 
 [MDN Ternary Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+
+</details>
