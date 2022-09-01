@@ -83,6 +83,7 @@ The `script` tag has two attributes:
 
 ## Hello World: `console.log()`
 
+<details>
 In Javascript we can print text to the console of the web browser. We can use this for debugging or
 error logging for example.
 
@@ -92,13 +93,14 @@ console.clear(); // clears console
 console.error("Error!"); // logs as error into console
 ```
 
----
+## </details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Selecting-HTML-Elements-querySelector"></a>
 
 ## Selecting HTML Elements: `.querySelector()`
 
+<details>
 Before we can add interactivity, we need to select the necessary HTML-Elements:
 
 ```html
@@ -129,13 +131,14 @@ const mainElement = document.querySelector("#main");
 
 > 💡 We try to separate our concerns: Classes are for CSS and data-\* attributes are for JavaScript
 
----
+## </details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Add-Interaction-addEventListener"></a>
 
 ## Add Interaction: `.addEventListener()`
 
+<details>
 We can listen to **events** like **clicks** on an Element and execute code when the event is
 triggered. The method `addEventListener` is used to react to events.
 
@@ -172,13 +175,14 @@ button.addEventListener("keydown", () => {});
 > [list of event types](https://developer.mozilla.org/en-US/docs/Web/Events#event_listing).
 > 💡 You don't have to understand the syntax for now, we will cover this in a later session.
 
----
+## </details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Add-remove-toggle-classes-classList"></a>
 
 ## Add/remove & toggle classes: `.classList.`
 
+<details>
 You can add, remove and toggle classes, e.g. to change the styling of an element.
 
 ```html
@@ -216,10 +220,11 @@ main.classList.remove("page--primary");
 main.classList.toggle("page--primary");
 ```
 
----
+## </details>
 
 ## Resources
 
+<details>
 ### Connect a JavaScript file
 
 [The Script element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
@@ -280,6 +285,7 @@ main.classList.toggle("page--primary");
 
 ## Variable Declarations
 
+<details>
 Variables are a `reference` or `alias` for data stored in memory. You can access this data by using
 this variable. You can use three different keywords to declare a variable:
 
@@ -307,11 +313,13 @@ remember from school. It means: "the value of the item on the right of the equal
 the item on the left of it". What the item on the right actually represents is calculated first and
 saved afterwards.
 
+</details>
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Primitive-Data-Types"></a>
 
 ## Primitive Data Types
 
+<details>
 Javascript is a dynamically typed language, which means, that you don't have to specify what kind of
 value you want to store, JavaScript detects this automatically.
 
@@ -327,11 +335,13 @@ There are 7 primitive data types:
 | `BigInt`    | uncommon, used for integers larger than 9007199254740991                                                                    |
 | `Symbol`    | uncommon, used for creating unique elements                                                                                 |
 
+</details>
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Variable-Naming"></a>
 
 ## Variable Naming
 
+<details>
 Expressive variable names are very important for the `readability of the code`. The Code becomes
 easier to understand and needs less comments. There are some key guidelines you should follow when
 naming a variable:
@@ -339,13 +349,14 @@ naming a variable:
 - use camel case: `socialFeedEntry` instead of `socialfeedentry`
 - write out all words: `error` instead of `e`, `followerButton` instead of `flBtn`
 - be very specific, longer names are better than shorter: `updatedFollowerCounter` instead of
-  `counter`.
-
+`counter`.
+</details>
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Math_and_Operators"></a>
 
 ## Math & Operators
 
+<details>
 As a programmer you sometimes have to use mathematical operations to calculate certain widths or
 positions of elements. Operators calculate values based on one or two expressions.
 
@@ -377,20 +388,23 @@ This is always true for even numbers, because after dividing an even number by 2
 
 This is also true for all odd numbers, because after this division you have always 1 left over.
 
+</details>
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Operator-Precedence"></a>
 
 ## Operator Precedence
 
+<details>
 In maths, some operators have a higher precedence than others. This means that they are performed
 before operators with a lower precedence. For example, multiplication comes before addition. You can
 look up the precedence of the operators in the table above.
-
+</details>
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Assignment-Operators"></a>
 
 ## Assignment Operators
 
+<details>
 You already know the default assignment operator `=`. This operator just assigns the value on the
 right to the element on the left. There are more assignment operators for very common actions like
 increasing a variable by a fixed value.
@@ -406,11 +420,13 @@ increasing a variable by a fixed value.
 
 > 💡 The precedence of each assignment operator is 2.
 
+</details>
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Type-Conversion"></a>
 
 ## Type Conversion
 
+<details>
 When you use an operator with a variable with an unfitting type, javascript will automatically
 convert this variable into a fitting type. For example:
 
@@ -425,11 +441,13 @@ This is also true for boolean operators which we will cover in a later session.
 > "ab". When 'adding' a number and a string, the number is converted to a string: "a" + 6 → "a6".
 > Make sure that both variables are numbers if you want to add them.
 
+</details>
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Number-Systems"></a>
 
 ## Number Systems
 
+<details>
 When working with computers, it is sometimes useful to work with a different number system than the
 standard 10 digit system, since a computer only understands `binary` numbers composed of only 0
 and 1. You don't have to learn these systems by heart, but it is good if you heard about them.
@@ -438,12 +456,14 @@ and 1. You don't have to learn these systems by heart, but it is good if you hea
 - `binary system`: only has 2 symbols "0" and "1". If you want to write a bigger number than 1, you
   add another digit: 2 → "10" in binary.
 - `hexadecimal system`: has 16 symbols "0" to "9" and "a" to "f". If you want to write a number
-  bigger than 15 you add another digit: 12 → "c" in hexadecimal.
+bigger than 15 you add another digit: 12 → "c" in hexadecimal.
+</details>
 
 ---
 
 ## Resources
 
+<details>
 - [Operator Precedence MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
 
 ## </details>
@@ -461,8 +481,6 @@ and 1. You don't have to learn these systems by heart, but it is good if you hea
 
 # JS Conditions and Booleans
 
-<details>
-
 ## Learning Objectives
 
 - using conditions to control the program flow
@@ -477,15 +495,17 @@ and 1. You don't have to learn these systems by heart, but it is good if you hea
 
 ## Boolean Values
 
+<details>
 A boolean value, named after George Boole, only has two states. It can either be **true** or
 **false**. Booleans are often used in conditional statements which can execute different code
 depending on their value.
-
+</details>
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Truthy-and-Falsy-Values"></a>
 
 ## Truthy and Falsy Values
 
+<details>
 Sometimes you want to have a condition depending on another type of value. JavaScript can transform
 any value into a boolean with _type coercion_. That means that some values act as if they were true
 and others as if they were false: _Truthy_ values become true, _falsy_ values become false.
@@ -502,6 +522,7 @@ and others as if they were false: _Truthy_ values become true, _falsy_ values be
   - `false`
   - `undefined`
   - empty string: `""`
+  </details>
 
 ---
 
@@ -510,6 +531,7 @@ and others as if they were false: _Truthy_ values become true, _falsy_ values be
 
 ## Comparison Operators
 
+<details>
 Comparison operators produce boolean values by comparing two expressions:
 
 | Operator  | Effect                                                                           |
@@ -531,13 +553,14 @@ Comparison operators produce boolean values by comparing two expressions:
 > - `===` and `!==` are strict equality operators. **This is what you need almost always**.  
 >   Strict equality checks if type _and_ value are the same: `"3" === 3` is `false`.
 
----
+## </details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Logical-Operators"></a>
 
 ## Logical Operators
 
+<details>
 Logical operators combine up to two booleans into a new boolean.
 
 | Operator                      | Effect                                                 |
@@ -561,13 +584,14 @@ Logical operators combine up to two booleans into a new boolean.
 > - `0 || 100` evaluates to `100`
 > - `null && "yet another string"` evaluates to `null`
 
----
+## </details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Control-Flow-if-else"></a>
 
 ## Control Flow: `if / else`
 
+<details>
 With an if statement we can control whether a part of our code is executed or not, based on a
 condition.
 
@@ -614,13 +638,14 @@ if (name) {
 }
 ```
 
----
+## </details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Ternary-Operator"></a>
 
 ## Ternary Operator: `? :`
 
+<details>
 With if / else statements whole blocks of code can be controlled. The ternary operator can be used
 if you want to decide between two _expressions_, e.g. which value should be stored in a variable:
 
@@ -651,7 +676,7 @@ moveElement(xPos > 300 ? 300 : xPos); // the element can't be moved further than
 > operations or function calls, not between _statements_ like variable declarations, if / else
 > statements or multi-line code blocks.
 
----
+## </details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 <a name="Advanced"></a>
@@ -691,10 +716,11 @@ JavaScript tries to coerce the compared values into the same type. And just like
 > ⚠️ Remember that this is an exception for using non-strict equality. **Strict equality should
 > otherwise always be preferred.**
 
----
+## </details>
 
 ## Resources
 
+<details>
 ### Operators
 
 [MDN Comparison Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators)
