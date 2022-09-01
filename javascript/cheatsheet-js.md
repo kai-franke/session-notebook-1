@@ -1,9 +1,9 @@
 - [JavaScript Basics](#JavaScript-Basics)
   - [Connect a JavaScript file](#Connect-a-JavaScript-file)
-    - [Log to the console](#Log-to-the-console)
-    - [Selecting HTML Elements: `.querySelector()`](#Selecting-HTML-Elements-querySelector)
-    - [Add Interaction: .addEventListener()](#Add-Interaction-addEventListener)
-    - [Add/remove & toggle classes: .classList.](#Add-remove-toggle-classes-classList)
+  - [Log to the console](#Log-to-the-console)
+  - [Selecting HTML Elements: `.querySelector()`](#Selecting-HTML-Elements-querySelector)
+  - [Add Interaction: .addEventListener()](#Add-Interaction-addEventListener)
+  - [Add/remove & toggle classes: .classList.](#Add-remove-toggle-classes-classList)
 - [JS Variables and Numbers](#JS-Variables-and-Numbers)
   - [Variable Declarations](#Variable-Declarations)
   - [Primitive Data Types](#Primitive-Data-Types)
@@ -14,13 +14,13 @@
   - [Type Conversion](#Type-Conversion)
   - [Number Systems](#Number-Systems)
 - [JS Conditions and Booleans](#JS-Conditions-and-Booleans)
-- [Boolean Values](#Boolean-Values)
-- [Truthy and Falsy Values](#Truthy-and-Falsy-Values)
-- [Comparison Operators](#Comparison-Operators)
-- [Logical Operators](#Logical-Operators)
-- [Control Flow: `if` / `else`](#Control-Flow-if-else)
-- [Ternary Operator: `?` `:`](#Ternary-Operator-?-:)
-- [Advanced: The strangeness of boolean coercion and making use of non-strict equality](#Advanced)
+  - [Boolean Values](#Boolean-Values)
+  - [Truthy and Falsy Values](#Truthy-and-Falsy-Values)
+  - [Comparison Operators](#Comparison-Operators)
+  - [Logical Operators](#Logical-Operators)
+  - [Control Flow: `if` / `else`](#Control-Flow-if-else)
+  - [Ternary Operator: `?` `:`](#Ternary-Operator-?-:)
+  - [Advanced: The strangeness of boolean coercion and making use of non-strict equality](#Advanced)
 
 ---
 
@@ -617,7 +617,7 @@ if (name) {
 ---
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
-<a name="Ternary Operator-?-:"></a>
+<a name="Ternary-Operator-?-:"></a>
 
 ## Ternary Operator: `? :`
 
