@@ -100,9 +100,17 @@ console.error("Error!"); // logs as error into console
 
 [Challenge Console Methods b](https://codesandbox.io/s/js-console-01-b-o275lh)
 
+##### Challenge Fix the errors in a Survey App
+
 [Fix the errors in a Survey App a](https://codesandbox.io/s/js-errors-01-a-rhntrf)
 
 [Fix the errors in a Survey App b](https://codesandbox.io/s/js-errors-01-b-1teglv)
+
+##### Challenge Dark Mode
+
+[Dark Mode a](https://codesandbox.io/s/js-darkmode-01-b-9iniru)
+
+[Dark Mode b](https://codesandbox.io/s/js-darkmode-01-b-9iniru)
 
 <a name="Selecting-HTML-Elements-querySelector"></a>
 
