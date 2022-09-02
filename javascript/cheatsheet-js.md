@@ -20,6 +20,7 @@
   - [Resources – JS Variables and Numbers](#Recources-JS-Variables-and-Numbers)
   - [Challenges](#Challenges-JS-Variables-and-Numbers)
 - [JS Conditions and Booleans](#JS-Conditions-and-Booleans)
+
   - [Boolean Values](#Boolean-Values)
   - [Truthy and Falsy Values](#Truthy-and-Falsy-Values)
   - [Comparison Operators](#Comparison-Operators)
@@ -29,6 +30,17 @@
   - [Advanced: The strangeness of boolean coercion and making use of non-strict equality](#Advanced)
   - [Resources – JS Conditions and Booleans](#Resources-JS-Conditions-and-Booleans)
   - [Challenges](#Challenges-JS-Conditions-and-Booleans)
+
+- [JS Functions](#JS-Functions)
+  - [Functions](#Functions)
+  - [Function Declarations](#Function-Declarations)
+  - [Parameters](#Parameters)
+  - [Function Calls](#Function-Calls)
+  - [Scope](#Scope)
+  - [Function scope](#Function-scope)
+  - [Global scope](#Global-scope)
+  - [Resources](#Resources-Functions)
+  - [JS Functions](#Challenges-JS-Functions)
 
 ---
 
@@ -768,12 +780,189 @@ JavaScript tries to coerce the compared values into the same type. And just like
 - [Converting boolean values to strings a](https://www.codewars.com/kata/53369039d7ab3ac506000467/train/javascript)
 - [Converting boolean values to strings b](https://www.codewars.com/kata/53369039d7ab3ac506000467/solutions/javascript)
 - [Grasshopper - If/else syntax debug a](https://www.codewars.com/kata/53369039d7ab3ac506000467/train/javascript)
-- [Grasshopper - If/else syntax debug b]()
+- [Grasshopper - If/else syntax debug b](https://www.codewars.com/kata/57089707fe2d01529f00024a/solutions/javascript)
 - [Grasshopper - Personalized Message a](https://www.codewars.com/kata/5772da22b89313a4d50012f7/train/javascript)
-- [Grasshopper - Personalized Message b]()
+- [Grasshopper - Personalized Message b](https://www.codewars.com/kata/5772da22b89313a4d50012f7/solutions/javascript)
 - [Drink about a](https://www.codewars.com/kata/56170e844da7c6f647000063/train/javascript)
-- [Drink about b]()
+- [Drink about b](https://www.codewars.com/kata/56170e844da7c6f647000063/solutions/javascript)
 - [Teenager check a](https://codesandbox.io/s/js-teenager-check-01a-nsnre7)
 - [Teenager check b](https://codesandbox.io/s/js-teenager-check-01b-wop7vo)
 
 </details>
+
+---
+
+---
+
+[🌑👣🌕 Top 🌕👣🌑](#Top)
+
+<a name="JS-Functions"></a>
+
+# JS Functions
+
+## Learning Objectives
+
+- writing functions in JavaScript
+- calling functions
+- using function parameters
+- learning what 'scope' is
+
+---
+
+## Functions
+
+<details>
+
+Functions are a fundamental concept in Javascript. They contain a set of statements - in other
+words: They contain Javascript code. Functions have to be defined. When a function is defined it can
+be called an arbitrary number of times.
+
+</details>
+
+<a name="Function-Declarations"></a>
+
+## Function Declarations
+
+<details>
+
+You can define a function using a **function declaration** which consists of:
+
+- the function keyword
+- the function name
+- the function body (Javascript statements / Javascript code)
+
+```js
+function greet() {
+  console.log("Hi Friends!");
+  console.log("Nice to be here.");
+}
+```
+
+> ❗️ Defining a function does not cause the Javascript code in the function body to be executed.
+> You have to call the function for the code to be executed.
+
+</details>
+
+<a name="Parameters"></a>
+
+### Parameters
+
+<details>
+Functions can accept parameters. Parameters can be used like predefined variables inside the
+function body. When declaring a function we are free to choose a name for the parameters , but
+descriptive, short names should be chosen.
+
+```js
+function printLetter(name) {
+  console.log("Hi " + name + ", hope you are fine. Love, Johnny");
+}
+function printSum(first, second, third) {
+  const sum = first + second + third;
+  console.log("The sum of your numbers is: " + sum);
+}
+```
+
+</details>
+
+<a name="Function-Calls"></a>
+
+## Function Calls
+
+<details>
+When functions are defined you can call them by writing their name, followed by parentheses
+("rounded brackets"). If the functions consume parameters you can pass them as arguments in the
+brackets.
+
+```js
+greet();
+/*
+This will cause the following to be logged into the console:
+Hi Friends!
+Nice to be here.
+*/
+printLetter("Max");
+printLetter("Jordan");
+/*
+This will cause the following to be logged into the console:
+Hi Max, hope you are fine. Love, Johnny
+Hi Jordan, hope you are fine. Love, Johnny
+*/
+printSum(1, 2, 3);
+printSum(3, 4, 5);
+/*
+This will cause the following to be logged into the console:
+The sum of your numbers is: 6
+The sum of your numbers is: 12
+*/
+```
+
+</details>
+
+<a name="Scope"></a>
+
+## Scope
+
+<details>
+The scope defines where variables are visible and where they can be referenced. In Javascript there
+are different kinds of scope, for example:
+
+- global scope
+- function scope
+</details>
+
+<a name="Function-scope"></a>
+
+### Function scope
+
+<details>
+Variables defined **inside a function** are not accessible from outside. But all variables **outside
+of the function** can be accessed from inside the function body:
+
+```js
+const globalVariable = "some Text";
+function myFunction() {
+  const localVariable = true;
+  console.log(globalVariable);
+  console.log(localVariable);
+}
+myFunction();
+// logs:
+// some Text
+// true
+console.log(localVariable); // Error! Variable not available outside of function
+```
+
+</details>
+
+<a name="Global-scope"></a>
+
+### Global scope
+
+<details>
+A variable is in the **global scope** when it is declared outside of any function, in a Javascript
+file. Global variables are visible and can be accessed from anywhere in that Javascript file after
+declaration.
+
+</details>
+
+<a name="Resources-Functions"></a>
+
+## Resources
+
+<details>
+[MDN docs: Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+[MDN docs: Scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
+</details>
+
+<a name="Challenges-JS-Functions"></a>
+
+## Challenges
+
+- [Basic functions a](https://codesandbox.io/s/js-basic-functions-01a-d6j9pr)
+- [Basic functions b](https://codesandbox.io/s/js-basic-functions-01b-7tydx3)
+- [Functions with parameters 01 a]()
+- [Functions with parameters 01 b]()
+- [Functions with parameters 02 a]()
+- [Functions with parameters 02 b]()
+- [Functions and DOM manipulation a]()
+- [Functions and DOM manipulation b]()
