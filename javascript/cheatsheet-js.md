@@ -96,9 +96,9 @@ console.error("Error!"); // logs as error into console
 
 ##### Challenge `console.log()`
 
-[Challenge Console Methods a](#https://codesandbox.io/s/js-console-01-a-yriwbj)
+[Challenge Console Methods a](https://codesandbox.io/s/js-console-01-a-yriwbj)
 
-[Challenge Console Methods b](#https://codesandbox.io/s/js-console-01-b-o275lh)
+[Challenge Console Methods b](https://codesandbox.io/s/js-console-01-b-o275lh)
 
 <a name="https://codesandbox.io/s/js-console-01-a-yriwbj>Challenge Console Methods a</a>
 
