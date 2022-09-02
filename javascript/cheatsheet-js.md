@@ -6,6 +6,7 @@
   - [Add Interaction: `.addEventListener()`](#Add-Interaction-addEventListener)
   - [Add/remove & toggle classes: `.classList.`](#Add-remove-toggle-classes-classList)
   - [Resources – JavaScript Basics](#Resources-JavaScript-Basics)
+  - [Challenges](#Challenges-JS-Basics)
 
 - [JS Variables and Numbers](#JS-Variables-and-Numbers)
   - [Variable Declarations](#Variable-Declarations)
@@ -17,6 +18,7 @@
   - [Type Conversion](#Type-Conversion)
   - [Number Systems](#Number-Systems)
   - [Resources – JS Variables and Numbers](#Recources-JS-Variables-and-Numbers)
+  - [Challenges](#Challenges-JS-Variables-and-Numbers)
 - [JS Conditions and Booleans](#JS-Conditions-and-Booleans)
   - [Boolean Values](#Boolean-Values)
   - [Truthy and Falsy Values](#Truthy-and-Falsy-Values)
@@ -26,6 +28,7 @@
   - [Ternary Operator: `?` `:`](#Ternary-Operator)
   - [Advanced: The strangeness of boolean coercion and making use of non-strict equality](#Advanced)
   - [Resources – JS Conditions and Booleans](#Resources-JS-Conditions-and-Booleans)
+  - [Challenges](#Challenges-JS-Conditions-and-Booleans)
 
 ---
 
@@ -93,24 +96,6 @@ console.error("Error!"); // logs as error into console
 ```
 
 </details>
-
-##### Challenge `console.log()`
-
-[Challenge Console Methods a](https://codesandbox.io/s/js-console-01-a-yriwbj)
-
-[Challenge Console Methods b](https://codesandbox.io/s/js-console-01-b-o275lh)
-
-##### Challenge Fix the errors in a Survey App
-
-[Fix the errors in a Survey App a](https://codesandbox.io/s/js-errors-01-a-rhntrf)
-
-[Fix the errors in a Survey App b](https://codesandbox.io/s/js-errors-01-b-1teglv)
-
-##### Challenge Dark Mode
-
-[Dark Mode a](https://codesandbox.io/s/js-darkmode-01-b-9iniru)
-
-[Dark Mode b](https://codesandbox.io/s/js-darkmode-01-b-9iniru)
 
 <a name="Selecting-HTML-Elements-querySelector"></a>
 
@@ -267,6 +252,26 @@ main.classList.toggle("page--primary");
 ### Add/remove & toggle classes
 
 [classList](https://developer.mozilla.org/de/docs/Web/API/Element/classList)
+
+</details>
+
+<a name="Challenges-JS-Basics"></a>
+
+## Challenges
+
+<details>
+
+- [Console Methods `console.log()` a](https://codesandbox.io/s/js-console-01-a-yriwbj)
+
+- [Console Methods `console.log()` b](https://codesandbox.io/s/js-console-01-b-o275lh)
+
+- [Fix the errors in a Survey App a](https://codesandbox.io/s/js-errors-01-a-rhntrf)
+
+- [Fix the errors in a Survey App b](https://codesandbox.io/s/js-errors-01-b-1teglv)
+
+- [Dark Mode a](https://codesandbox.io/s/js-darkmode-01-b-9iniru)
+
+- [Dark Mode b](https://codesandbox.io/s/js-darkmode-01-b-9iniru)
 
 </details>
 
@@ -475,7 +480,22 @@ bigger than 15 you add another digit: 12 → "c" in hexadecimal.
 
 ## </details>
 
----
+<a name="Challenges-JS-Variables-and-Numbers"></a>
+
+## Challenges
+
+<details>
+
+- [Data for a social media post a](https://codesandbox.io/s/js-variables-numbers-sm-post-01a-9skjpx)
+- [Data for a social media post b](https://codesandbox.io/s/js-variables-numbers-sm-post-01b-0ed6mi)
+- [Simple calculator a](https://codesandbox.io/s/js-operators-calculator-01a-x2y180)
+- [Simple calculator b](https://codesandbox.io/s/js-operators-calculator-01b-dzku84)
+- [Counter a](https://codesandbox.io/s/js-counter-01a-p7q2o4)
+- [Counter b](https://codesandbox.io/s/js-counter-01b-h9nr4b)
+- [Calculator a](https://codesandbox.io/s/js-calculator-01a-cuzd43)
+- [Calculator a]()
+
+</details>
 
 ---
 
@@ -734,5 +754,26 @@ JavaScript tries to coerce the compared values into the same type. And just like
 ### Ternary Operator
 
 [MDN Ternary Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+
+</details>
+
+<a name="Challenges-JS-Conditions-and-Booleans"></a>
+
+## Challenges
+
+<details>
+
+- [Truthy and Falsy values a](https://codesandbox.io/s/truthy-and-falsy-01a-rui6pk)
+- [Truthy and Falsy values b](https://codesandbox.io/s/truthy-and-falsy-01b-b62tpj)
+- [Converting boolean values to strings a](https://www.codewars.com/kata/53369039d7ab3ac506000467/train/javascript)
+- [Converting boolean values to strings b](https://www.codewars.com/kata/53369039d7ab3ac506000467/solutions/javascript)
+- [Grasshopper - If/else syntax debug a](https://www.codewars.com/kata/53369039d7ab3ac506000467/train/javascript)
+- [Grasshopper - If/else syntax debug b]()
+- [Grasshopper - Personalized Message a](https://www.codewars.com/kata/5772da22b89313a4d50012f7/train/javascript)
+- [Grasshopper - Personalized Message b]()
+- [Drink about a](https://www.codewars.com/kata/56170e844da7c6f647000063/train/javascript)
+- [Drink about b]()
+- [Teenager check a](https://codesandbox.io/s/js-teenager-check-01a-nsnre7)
+- [Teenager check b](https://codesandbox.io/s/js-teenager-check-01b-wop7vo)
 
 </details>
