@@ -9,6 +9,7 @@
   - [Challenges](#Challenges-JS-Basics)
 
 - [JS Variables and Numbers](#JS-Variables-and-Numbers)
+
   - [Variable Declarations](#Variable-Declarations)
   - [Primitive Data Types](#Primitive-Data-Types)
   - [Variable Naming](#Variable-Naming)
@@ -19,6 +20,7 @@
   - [Number Systems](#Number-Systems)
   - [Resources – JS Variables and Numbers](#Recources-JS-Variables-and-Numbers)
   - [Challenges](#Challenges-JS-Variables-and-Numbers)
+
 - [JS Conditions and Booleans](#JS-Conditions-and-Booleans)
 
   - [Boolean Values](#Boolean-Values)
@@ -32,6 +34,7 @@
   - [Challenges](#Challenges-JS-Conditions-and-Booleans)
 
 - [JS Functions](#JS-Functions)
+
   - [Functions](#Functions)
   - [Function Declarations](#Function-Declarations)
   - [Parameters](#Parameters)
@@ -41,6 +44,13 @@
   - [Global scope](#Global-scope)
   - [Resources](#Resources-Functions)
   - [JS Functions](#Challenges-JS-Functions)
+
+- [JS Functions 2](#JS-Functions-2)
+  - [Return Statements](#Return-Statements)
+  - [Early Return Statements](#Early-Return-Statements)
+  - [Arrow Function Expressions](#Arrow-Function-Expressions)
+  - [Resources](#Resources-JS-Functions-2)
+  - [Challenges](#Challenges-JS-Functions-2)
 
 ---
 
@@ -958,11 +968,216 @@ declaration.
 
 ## Challenges
 
+<details>
+
 - [Basic functions a](https://codesandbox.io/s/js-basic-functions-01a-d6j9pr)
 - [Basic functions b](https://codesandbox.io/s/js-basic-functions-01b-7tydx3)
-- [Functions with parameters 01 a]()
-- [Functions with parameters 01 b]()
-- [Functions with parameters 02 a]()
-- [Functions with parameters 02 b]()
-- [Functions and DOM manipulation a]()
-- [Functions and DOM manipulation b]()
+- [Functions with parameters 01 a](https://codesandbox.io/s/js-functions-with-parameters-01a-nt8m1q)
+- [Functions with parameters 01 b](https://codesandbox.io/s/js-functions-with-parameters-01b-9lu4n4)
+- [Functions with parameters 02 a](https://codesandbox.io/s/js-variables-numbers-sm-post-01a-9skjpx)
+- [Functions with parameters 02 b](https://codesandbox.io/s/js-functions-with-parameters-02b-ru361m)
+- [Functions and DOM manipulation a](https://codesandbox.io/s/functions-and-dom-manipulation-01a-jm46ly)
+- [Functions and DOM manipulation b](https://codesandbox.io/s/functions-and-dom-manipulation-01b-skdtys)
+
+## </details>
+
+---
+
+[🌑👣🌕 Top 🌕👣🌑](#Top)
+
+<a name="JS-Functions-2"></a>
+
+# JS Functions 2
+
+## Learning Objectives
+
+- What a return statement of a function is and how to use it in your JavaScript functions
+- What an `early return` is
+- How to write functions with the `fat arrow notation`
+
+---
+
+<a name="Return-Statements"></a>
+
+## Return Statements
+
+<details>
+Functions are an incredible versatile and central tool in most programming languages. We already
+learned how to pass values into a function with input parameters. But a function can also return a
+value back to the place where it was called. This is done via a `return statement`.
+
+```js
+function add3Numbers(first, second, third) {
+  const sum = first + second + third;
+  return sum;
+}
+```
+
+The `return statement` begins with the keyword `return` followed by an expression. This this case,
+the expression is the variable sum. Its value is returned by the function and can be stored when the
+function is called:
+
+```js
+const firstSum = add3Numbers(1, 2, 3);
+// the return value is stored in "firstSum", namely 6
+const secondSum = add3Numbers(4, 123, 33);
+// the return value is now stored in "secondSum", namely 160
+```
+
+> 💡 An expression is anything that produces a value: a variable, a hardcoded value like `true` or
+> `6`, a math operation like `2 + 3` or even another function call!
+> [This article](https://www.joshwcomeau.com/javascript/statements-vs-expressions/) explains this in
+> greater depth.
+> By this, we can outsource computations and / or decision processes and continue using the returned
+> value in the program.
+
+A function can return only one expression value, but can have multiple return statements, in
+combination with if else statements for example:
+
+```js
+function checkInputLength(inputString) {
+  if (inputString.length > 3) {
+    return true;
+  } else {
+    return false;
+  }
+}
+```
+
+</details>
+
+<a name="Early-Return-Statements"></a>
+
+## Early Return Statements
+
+<details>
+As soon as a return statement is reached in a function call, the function execution is ended. The
+following `console.log()` is therefore never reached:
+
+```js
+function testFunction() {
+  return "a returned string";
+  console.log("I am never logged in the console.");
+}
+```
+
+This behavior can be used to our advantage as early return statements. Sometimes we want to execute
+certain parts of our code only if a condition applies. We can check this with an if else statement.
+When multiple conditions are in place, the code becomes harder to read and to understand:
+
+```js
+function setBackgroundColor(color) {
+  if (typeof color === "String") {
+    if (color.startsWith("#")) {
+      if (color.length >= 7) {
+        body.style.backgroundColor = color;
+      }
+    }
+  }
+}
+```
+
+An alternative approach is to terminate the function with early return statements:
+
+```js
+function setBackgroundColor(color) {
+	// first condition
+	if(typeOf color !== 'String') {
+		return;
+	}
+	// second condition
+	if(!color.startsWith('#')) {
+		return;
+	}
+	// third condition
+	if(color.length < 7) {
+		return;
+	}
+	// only if all 3 conditions are passed the final line of code is executed.
+	body.style.backgroundColor = color;
+}
+```
+
+This way of writing the code is more readable
+
+💡 Hint: A return statement can be left empty, the returned value is then `undefined`.
+
+</details>
+
+<a name="Arrow-Function-Expressions"></a>
+
+## Arrow Function Expressions
+
+<details>
+Next to the classic function declaration, JavaScript has a second way to write functions as
+`arrow function expressions`:
+
+```js
+const addNumbers = (first, second) => {
+  return first + second;
+};
+```
+
+The function is saved like a variable with the keyword `const`. The parameters are written normally
+in round brackets followed by an fat arrow `=>`. Then the function body is written in curly
+brackets.
+
+### Implicit Return Statements
+
+The advantage of arrow functions are possible shorter notations when certain criteria apply:
+
+1. Omit the round brackets around the parameters: This is possible, if there is only one input:
+   ```js
+   const addOne = (number) => {
+     return number + 1;
+   };
+   ```
+2. Implicit return statements: If the function consists only of a return statement, the curly
+   brackets and the return keyword can be omitted:
+   ```js
+   const addNumbers = (first, second) => {
+     return first + second;
+   };
+   ```
+   can be rewritten as:
+   ```js
+   const addNumbers = (first, second) => first + second;
+   ```
+
+> 💡 This shorthand notation comes in handy as soon as we work with callback functions in a few
+> days. So try to remember this feature.
+> 💡 Maybe you remember the syntax of the `addEventListener` method. We encountered these arrow
+> functions there already!
+>
+> ```js
+> button.addEventListener('click',() => {
+> 	...
+> })
+> ```
+
+</details>
+
+<a name="Resources-JS-Functions-2"></a>
+
+## Resources
+
+<details>
+
+- [Statements vs Expressions by Josh Comeau](https://www.joshwcomeau.com/javascript/statements-vs-expressions/)
+
+</details>
+
+<a name="Challenges-JS-Functions-2"></a>
+
+## Challenges
+
+<details>
+- [Calculations a](https://codesandbox.io/s/js-functions-2-calculations-01a-43zhms)
+- [Calculations b](https://codesandbox.io/s/js-functions-2-calculations-01b-3krtc4)
+- [Greeting Page a](https://codesandbox.io/s/js-functions-2-greeting-page-01a-fhkpm9)
+- [Greeting Page b](https://codesandbox.io/s/js-functions-2-greeting-page-01b-ryxy58)
+- [Progress Bar a](https://codesandbox.io/s/js-functions-2-progress-bar-01a-ctkeo2)
+- [Progress Bar b](https://codesandbox.io/s/js-functions-2-progress-bar-01b-ceg30l)
+- [Convert Arrow Functions a](https://codesandbox.io/s/js-functions-2-convert-arrow-functions-01a-n0ydj9)
+- [Convert Arrow Functions b](https://codesandbox.io/s/js-functions-2-convert-arrow-functions-01b-qlrnyo)
+</details>
