@@ -521,6 +521,8 @@ bigger than 15 you add another digit: 12 → "c" in hexadecimal.
 
 ---
 
+---
+
 [🌑👣🌕 Top 🌕👣🌑](#Top)
 
 <a name="JS-Conditions-and-Booleans"></a>
@@ -980,6 +982,8 @@ declaration.
 - [Functions and DOM manipulation b](https://codesandbox.io/s/functions-and-dom-manipulation-01b-skdtys)
 
 ## </details>
+
+---
 
 ---
 
