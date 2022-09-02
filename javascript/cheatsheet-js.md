@@ -100,9 +100,9 @@ console.error("Error!"); // logs as error into console
 
 [Challenge Console Methods b](https://codesandbox.io/s/js-console-01-b-o275lh)
 
-<a name="https://codesandbox.io/s/js-console-01-a-yriwbj>Challenge Console Methods a</a>
+[Fix the errors in a Survey App a](https://codesandbox.io/s/js-errors-01-a-rhntrf)
 
-<a name="https://codesandbox.io/s/js-console-01-b-o275lh>Challenge Console Methods b</a>
+[Fix the errors in a Survey App b](https://codesandbox.io/s/js-errors-01-b-1teglv)
 
 <a name="Selecting-HTML-Elements-querySelector"></a>
 
