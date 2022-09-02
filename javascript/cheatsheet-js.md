@@ -1172,6 +1172,7 @@ The advantage of arrow functions are possible shorter notations when certain cri
 ## Challenges
 
 <details>
+
 - [Calculations a](https://codesandbox.io/s/js-functions-2-calculations-01a-43zhms)
 - [Calculations b](https://codesandbox.io/s/js-functions-2-calculations-01b-3krtc4)
 - [Greeting Page a](https://codesandbox.io/s/js-functions-2-greeting-page-01a-fhkpm9)
