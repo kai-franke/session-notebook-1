@@ -94,6 +94,20 @@ console.error("Error!"); // logs as error into console
 
 </details>
 
+##### Challenge `console.log()`
+
+<details>
+
+[Challenge Console Methods a](#https://codesandbox.io/s/js-console-01-a-yriwbj)
+
+[Challenge Console Methods b](#https://codesandbox.io/s/js-console-01-b-o275lh)
+
+<a name="https://codesandbox.io/s/js-console-01-a-yriwbj>Challenge Console Methods a</a>
+
+<a name="https://codesandbox.io/s/js-console-01-b-o275lh>Challenge Console Methods b</a>
+
+</details>
+
 <a name="Selecting-HTML-Elements-querySelector"></a>
 
 ## Selecting HTML Elements: `.querySelector()`
