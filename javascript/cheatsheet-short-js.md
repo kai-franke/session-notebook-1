@@ -72,6 +72,7 @@
 ## Connect a JavaScript file
 
 <details>
+
 ```html
 <head>
   ...
@@ -82,25 +83,6 @@
 </body>
 ```
 
-The `script` tag has two attributes:
-
-`src="./index.js"` sets the URL to our JavaScript file
-
-`defer` tells the browser to delay the loading of the script until all HTML elements are loaded.
-
-> 💡 Alternative: `script` tag at the end of the body element, so `defer` attribute is not
-> necessary. Less modern.
-
-```html
-<head>
-  ...
-</head>
-<body>
-  ...
-  <script src="./index.js"></script>
-</body>
-```
-
 </details>
 
 <a name="Log-to-the-console"></a>
@@ -108,8 +90,6 @@ The `script` tag has two attributes:
 ## Hello World: `console.log()`
 
 <details>
-In Javascript we can print text to the console of the web browser. We can use this for debugging or
-error logging for example.
 
 ```js
 console.log("Hello World!"); // logs into console
@@ -132,16 +112,9 @@ Before we can add interactivity, we need to select the necessary HTML-Elements:
 </body>
 ```
 
-There are multiple ways to select the above main section within our JavaScript. A good practice is
-to use a
-[data-\* attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*),
-like the **data-js** in the following example:
-
 ```js
 const mainElement = document.querySelector('[data-js="main"]');
 ```
-
-Other css selectors work as well, but the data-\* attribute selectors should be preferred.
 
 ```js
 // tag as identifier
@@ -152,8 +125,6 @@ const mainElement = document.querySelector(".main");
 const mainElement = document.querySelector("#main");
 ```
 
-> 💡 We try to separate our concerns: Classes are for CSS and data-\* attributes are for JavaScript
-
 </details>
 
 <a name="Add-Interaction-addEventListener"></a>
@@ -161,16 +132,10 @@ const mainElement = document.querySelector("#main");
 ## Add Interaction: `.addEventListener()`
 
 <details>
-We can listen to **events** like **clicks** on an Element and execute code when the event is
-triggered. The method `addEventListener` is used to react to events.
+The method `addEventListener` is used to react to events.
 
 ```html
 <button type="button" data-js="button">Log into console</button>
-```
-
-```js
-const button = document.querySelector('[data-js="button"]');
-button.addEventListener("click", () => {});
 ```
 
 First you specify the kind of event, e.g. **click**, then you define what code should be executed
@@ -193,9 +158,7 @@ button.addEventListener("mouseover", () => {});
 button.addEventListener("keydown", () => {});
 ```
 
-> 💡 Here you can find a
 > [list of event types](https://developer.mozilla.org/en-US/docs/Web/Events#event_listing).
-> 💡 You don't have to understand the syntax for now, we will cover this in a later session.
 
 </details>
 
