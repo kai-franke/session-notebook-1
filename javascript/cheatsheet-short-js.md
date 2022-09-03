@@ -12,21 +12,13 @@
 
   - [Variable Declarations](#Variable-Declarations)
   - [Primitive Data Types](#Primitive-Data-Types)
-  - [Variable Naming](#Variable-Naming)
   - [Math & Operators](#Math_and_Operators)
-  - [Operator Precedence](#Operator_Precedence)
   - [Assignment Operators](#Assignment-Operators)
-  - [Type Conversion](#Type-Conversion)
-  - [Number Systems](#Number-Systems)
   - [Resources – JS Variables and Numbers](#Recources-JS-Variables-and-Numbers)
   - [Challenges](#Challenges-JS-Variables-and-Numbers)
 
 - [JS Conditions and Booleans](#JS-Conditions-and-Booleans)
 
-  - [Boolean Values](#Boolean-Values)
-  - [Truthy and Falsy Values](#Truthy-and-Falsy-Values)
-  - [Comparison Operators](#Comparison-Operators)
-  - [Logical Operators](#Logical-Operators)
   - [Control Flow: `if` / `else`](#Control-Flow-if-else)
   - [Ternary Operator: `?` `:`](#Ternary-Operator)
   - [Advanced: The strangeness of boolean coercion and making use of non-strict equality](#Advanced)
@@ -298,24 +290,6 @@ counter = counter + 1; // reassigning the value of counter
 
 </details>
 
-<a name="Primitive-Data-Types"></a>
-
-## Primitive Data Types
-
-<details>
-
-| type        | represents                                                                                                                  |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `string`    | a sequence of characters: "abcd"                                                                                            |
-| `number`    | a number: 1234                                                                                                              |
-| `boolean`   | a binary statement, can be `true` or `false`                                                                                |
-| `null`      | represents "nothing", is typically set by developers                                                                        |
-| `undefined` | represents the state of "not existing". Anything not specified or not found in JavaScript defaults to the value `undefined` |
-| `BigInt`    | uncommon, used for integers larger than 9007199254740991                                                                    |
-| `Symbol`    | uncommon, used for creating unique elements                                                                                 |
-
-</details>
-
 <a name="Math_and_Operators"></a>
 
 ## Math & Operators
@@ -326,10 +300,7 @@ positions of elements. Operators calculate values based on one or two expression
 
 | operator | precedence | effect                                                                                       |
 | -------- | ---------- | -------------------------------------------------------------------------------------------- |
-| `+`      | 11         | adds two numbers together.                                                                   |
-| `-`      | 11         | subtracts two numbers                                                                        |
-| `*`      | 12         | multiplies two numbers                                                                       |
-| `/`      | 12         | divides two numbers                                                                          |
+| numbers  |
 | `**`     | 13         | potentiates two numbers: `2 ** 4 → 16`                                                       |
 | `%`      | 12         | The remainder or modulus. Gives you what remains after a whole number division: `8 % 3 → 2`. |
 
@@ -351,25 +322,6 @@ This is always true for even numbers, because after dividing an even number by 2
 ```
 
 This is also true for all odd numbers, because after this division you have always 1 left over.
-
-</details>
-
-<a name="Assignment-Operators"></a>
-
-## Assignment Operators
-
-<details>
-
-| operator | effect                                                                                                                |
-| -------- | --------------------------------------------------------------------------------------------------------------------- |
-| `+=`     | Increases the value of the variable on the left about the value on the right: `count += 6` → count is increased by 6. |
-| `-=`     | Decreases the value of the variable on the left about the value on the right.                                         |
-| `*=`     | Multiplies the variable on the left with the value on the right.                                                      |
-| `/=`     | Divides the variable on the left with the value on the right.                                                         |
-| `++`     | Increments the value of a variable by one: `count++` → count is increased by one                                      |
-| `--`     | Decrements the value of a variable by one: `count--` → count is decreased by one                                      |
-
-> 💡 The precedence of each assignment operator is 2.
 
 </details>
 
@@ -417,98 +369,6 @@ This is also true for all odd numbers, because after this division you have alwa
 - writing ternary expressions
 
 ---
-
-<a name="Boolean-Values"></a>
-
-## Boolean Values
-
-<details>
-A boolean value, named after George Boole, only has two states. It can either be **true** or
-**false**. Booleans are often used in conditional statements which can execute different code
-depending on their value.
-</details>
-
-<a name="Truthy-and-Falsy-Values"></a>
-
-## Truthy and Falsy Values
-
-<details>
-Sometimes you want to have a condition depending on another type of value. JavaScript can transform
-any value into a boolean with _type coercion_. That means that some values act as if they were true
-and others as if they were false: _Truthy_ values become true, _falsy_ values become false.
-
-- _truthy_ values:
-
-  - non zero numbers: `1`, `2`, `-3`, etc.
-  - non empty strings: `"hello"`
-  - `true`
-
-- _falsy_ values:
-  - `0` / `-0`
-  - `null`
-  - `false`
-  - `undefined`
-  - empty string: `""`
-
-</details>
-
-<a name="Comparison-Operators"></a>
-
-## Comparison Operators
-
-<details>
-Comparison operators produce boolean values by comparing two expressions:
-
-| Operator  | Effect                                                                           |
-| --------- | -------------------------------------------------------------------------------- |
-| A `===` B | strict equal: is `true` if both values are equal (including their type).         |
-| A `!==` B | strict not equal: is `true` if both values are not equal (including their type). |
-| A `>` B   | strictly greater than: is `true` if A is greater than B.                         |
-| A `<` B   | strictly less than: is `true` if A is less than B.                               |
-| A `>=` B  | greater than or equal: is `true` if A is greater than or equal B.                |
-| A `<=` B  | less than or equal: is `true` if A is less than or equal B.                      |
-
-> 💡 You might notice that JavaScript uses three equal signs (`===`) to check for equality. This can
-> seem very strange at first.
->
-> - `=` (`const x = 0`) is the assignment operator and has nothing to do with comparison.
-> - `==` and `!=` are non-strict equality operators. You should **avoid them 99% of the time**.  
->   Non-strict equality tries to use type coercion to convert both values to the same type:
->   `"3" == 3` is `true`, which is seldomly what you want.
-> - `===` and `!==` are strict equality operators. **This is what you need almost always**.  
->   Strict equality checks if type _and_ value are the same: `"3" === 3` is `false`.
-
-</details>
-
-<a name="Logical-Operators"></a>
-
-## Logical Operators
-
-<details>
-Logical operators combine up to two booleans into a new boolean.
-
-| Operator                      | Effect                                                 |
-| ----------------------------- | ------------------------------------------------------ |
-| `!`A                          | `not`: flips a `true` value to `false` and vice versa. |
-| A <code>&#124;&#124;</code> B | `or`: is `true` if either A `or` B is true.            |
-| A `&&` B                      | `and`: is `true` if both A `and` B is true.            |
-
-> 💡 You can combine logical operators with brackets to define which operator should be evaluated
-> first, e.g:
->
-> - `(A || B) && (C || D)`
-> - `!(A || B)`
->   💡 Be careful when using `&&` or `||` with non-boolean values. They actually return one of the
->   original values. That can be useful, but can also quickly lead to confusion. This behaviour is
->   called
->   [short-circut evaluation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND#short-circuit_evaluation)
->   and is a more advanced topic.
->
-> - `"some string" || "some other string"` evaluates to `"some string"`
-> - `0 || 100` evaluates to `100`
-> - `null && "yet another string"` evaluates to `null`
-
-</details>
 
 <a name="Control-Flow-if-else"></a>
 
