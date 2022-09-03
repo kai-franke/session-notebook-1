@@ -283,15 +283,6 @@ main.classList.toggle("page--primary");
 ## Variable Declarations
 
 <details>
-Variables are a `reference` or `alias` for data stored in memory. You can access this data by using
-this variable. You can use three different keywords to declare a variable:
-
-- `const` - declares a constant, the value can't be changed. Default way to declare variables.
-- `let` - declares a variable, the value can be changed. Only used when reassigning a new value is
-  necessary.
-- `var` - outdated, not used anymore.
-
-Normally the keyword `const` is used to declare a variable.
 
 ```js
 const aNewVariable = 1234;
@@ -305,11 +296,6 @@ let counter = 0;
 counter = counter + 1; // reassigning the value of counter
 ```
 
-The `=` sign in programming doesn't quite work like the mathematical equality that you (maybe)
-remember from school. It means: "the value of the item on the right of the equal sign is saved in
-the item on the left of it". What the item on the right actually represents is calculated first and
-saved afterwards.
-
 </details>
 
 <a name="Primitive-Data-Types"></a>
@@ -317,10 +303,6 @@ saved afterwards.
 ## Primitive Data Types
 
 <details>
-Javascript is a dynamically typed language, which means, that you don't have to specify what kind of
-value you want to store, JavaScript detects this automatically.
-
-There are 7 primitive data types:
 
 | type        | represents                                                                                                                  |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -332,21 +314,6 @@ There are 7 primitive data types:
 | `BigInt`    | uncommon, used for integers larger than 9007199254740991                                                                    |
 | `Symbol`    | uncommon, used for creating unique elements                                                                                 |
 
-</details>
-
-<a name="Variable-Naming"></a>
-
-## Variable Naming
-
-<details>
-Expressive variable names are very important for the `readability of the code`. The Code becomes
-easier to understand and needs less comments. There are some key guidelines you should follow when
-naming a variable:
-
-- use camel case: `socialFeedEntry` instead of `socialfeedentry`
-- write out all words: `error` instead of `e`, `followerButton` instead of `flBtn`
-- be very specific, longer names are better than shorter: `updatedFollowerCounter` instead of
-`counter`.
 </details>
 
 <a name="Math_and_Operators"></a>
@@ -387,24 +354,11 @@ This is also true for all odd numbers, because after this division you have alwa
 
 </details>
 
-<a name="Operator-Precedence"></a>
-
-## Operator Precedence
-
-<details>
-In maths, some operators have a higher precedence than others. This means that they are performed
-before operators with a lower precedence. For example, multiplication comes before addition. You can
-look up the precedence of the operators in the table above.
-</details>
-
 <a name="Assignment-Operators"></a>
 
 ## Assignment Operators
 
 <details>
-You already know the default assignment operator `=`. This operator just assigns the value on the
-right to the element on the left. There are more assignment operators for very common actions like
-increasing a variable by a fixed value.
 
 | operator | effect                                                                                                                |
 | -------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -417,43 +371,6 @@ increasing a variable by a fixed value.
 
 > 💡 The precedence of each assignment operator is 2.
 
-</details>
-
-<a name="Type-Conversion"></a>
-
-## Type Conversion
-
-<details>
-When you use an operator with a variable with an unfitting type, javascript will automatically
-convert this variable into a fitting type. For example:
-
-```js
-4 / "2" → 4 / 2
-```
-
-There is no "/" operator for strings, so JavaScript converts the string into a number if possible.
-This is also true for boolean operators which we will cover in a later session.
-
-> ❗️ There is another `+` operator in JavaScript, that links two strings together: "a" + "b" →
-> "ab". When 'adding' a number and a string, the number is converted to a string: "a" + 6 → "a6".
-> Make sure that both variables are numbers if you want to add them.
-
-</details>
-
-<a name="Number-Systems"></a>
-
-## Number Systems
-
-<details>
-When working with computers, it is sometimes useful to work with a different number system than the
-standard 10 digit system, since a computer only understands `binary` numbers composed of only 0
-and 1. You don't have to learn these systems by heart, but it is good if you heard about them.
-
-- `decimal system`: the standard numbers, has 10 symbols "0" to "9".
-- `binary system`: only has 2 symbols "0" and "1". If you want to write a bigger number than 1, you
-  add another digit: 2 → "10" in binary.
-- `hexadecimal system`: has 16 symbols "0" to "9" and "a" to "f". If you want to write a number
-bigger than 15 you add another digit: 12 → "c" in hexadecimal.
 </details>
 
 <a name="Recources-JS-Variables-and-Numbers"></a>
