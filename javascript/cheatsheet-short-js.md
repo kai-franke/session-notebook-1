@@ -9,9 +9,6 @@
 - [JS Variables and Numbers](#JS-Variables-and-Numbers)
 
   - [Variable Declarations](#Variable-Declarations)
-  - [Primitive Data Types](#Primitive-Data-Types)
-  - [Math & Operators](#Math_and_Operators)
-  - [Assignment Operators](#Assignment-Operators)
   - [Resources – JS Variables and Numbers](#Recources-JS-Variables-and-Numbers)
   - [Challenges](#Challenges-JS-Variables-and-Numbers)
 
@@ -25,13 +22,9 @@
 
 - [JS Functions](#JS-Functions)
 
-  - [Functions](#Functions)
   - [Function Declarations](#Function-Declarations)
   - [Parameters](#Parameters)
   - [Function Calls](#Function-Calls)
-  - [Scope](#Scope)
-  - [Function scope](#Function-scope)
-  - [Global scope](#Global-scope)
   - [Resources](#Resources-Functions)
   - [JS Functions](#Challenges-JS-Functions)
 
@@ -160,6 +153,76 @@ main.classList.remove("page--primary");
 
 ```js
 main.classList.toggle("page--primary");
+```
+
+[Fix the errors in a Survey App b](https://codesandbox.io/s/js-errors-01-b-1teglv)
+
+```js
+firstChoiceButton.addEventListener("click", () => {
+  firstChoiceButton.classList.add("active-choice");
+  secondChoiceButton.classList.remove("active-choice");
+  console.log("Selected first choice");
+});
+```
+
+[Dark Mode b](https://codesandbox.io/s/js-darkmode-01-b-9iniru)
+
+```js
+toggleButton.addEventListener("click", () => {
+  bodyElement.classList.toggle("dark");
+});
+```
+
+[Simple calculator b](https://codesandbox.io/s/js-operators-calculator-01b-dzku84)
+
+```js
+addButton.addEventListener("click", () => {
+  myResult = operand1 + operand2;
+  console.log(myResult);
+  /* 1. Add the two operands and store the result in a variable. 
+  Log the variable's value to the console. */
+});
+```
+
+[Counter b](https://codesandbox.io/s/js-counter-01b-h9nr4b)
+[Counter b2](https://codesandbox.io/s/js-counter-01b2-6e64wt)
+
+```js
+addButton.addEventListener("click", () => {
+  counter++;
+  console.log(counter);
+  resultOutput.textContent = counter;
+});
+```
+
+[Simple calculator b](https://codesandbox.io/s/js-operators-calculator-01b-dzku84)
+
+```js
+decreaseByFiveButton.addEventListener("click", () => {
+  myResult = operand1 - 5;
+  console.log(myResult);
+  // 8. Decrease the value of "operand1" by 5. Log the new value to the console.
+});
+```
+
+[Functions and DOM manipulation b2](https://codesandbox.io/s/functions-and-dom-manipulation-01b2-r2jr07)
+
+```js
+function removeAllColors(classname) {
+  box.classList.remove("red", "blue", "green", "gray");
+}
+
+function addColor(className) {
+  box.classList.add(className);
+}
+```
+
+```js
+redButton.addEventListener("click", () => {
+  removeAllColors();
+  addColor("red");
+  // Code here
+});
 ```
 
 </details>
@@ -343,6 +406,19 @@ if (hour < 12) {
 }
 ```
 
+[Grasshopper - If/else syntax debug b](https://www.codewars.com/kata/57089707fe2d01529f00024a/solutions/javascript)
+
+```js
+function checkAlive(health) {
+  if (health > 0) {
+    return true;
+  } else health <= 0;
+  {
+    return false;
+  }
+}
+```
+
 If the condition is not a boolean, it is converted into one by type coercion. This can be used to
 check whether a value is not 0 or an empty string:
 
@@ -351,6 +427,25 @@ const name = "Alex";
 if (name) {
   console.log("Hi " + name + "!"); // only executed if name is not an empty string
 }
+```
+
+[Teenager check b](https://codesandbox.io/s/js-teenager-check-01b-wop7vo)
+
+```js
+button.addEventListener("click", () => {
+  // Number(x) converts the string from the input to a number
+  // Beware: input values are *always* strings!
+  const age = Number(input.value);
+
+  // Exercise:
+  // Use conditions and the logical AND operator to write
+  // "You are a teen." or "You are not a teen." into the output.
+  if (age > 12 && age < 20) {
+    output.textContent = "You are a teen.";
+  } else {
+    output.textContent = "You are not a teen.";
+  }
+});
 ```
 
 </details>
@@ -365,6 +460,23 @@ if you want to decide between two _expressions_, e.g. which value should be stor
 
 ```js
 const greetingText = time < 12 ? "Good morning." : "Good afternoon.";
+```
+
+[Grasshopper - Personalized Message b](https://www.codewars.com/kata/5772da22b89313a4d50012f7/solutions/javascript)
+
+```js
+function greet(name, owner) {
+  return name === owner ? "Hello boss" : "Hello guest";
+}
+```
+
+```js
+function greet(name, owner) {
+  if (name === owner) {
+    return "Hello boss";
+  }
+  return "Hello guest";
+}
 ```
 
 The ternary operator has the following structure:
@@ -531,6 +643,44 @@ function printSum(first, second, third) {
   const sum = first + second + third;
   console.log("The sum of your numbers is: " + sum);
 }
+```
+
+[Functions with parameters 01 b](https://codesandbox.io/s/js-functions-with-parameters-01b-9lu4n4)
+
+```js
+function greetMary() {
+  console.log("Welcome Mary, good to see you again!");
+}
+```
+
+```js
+function greet(name) {
+  console.log("Welcome " + name + " , good to see you again!");
+}
+
+greet("Alice");
+```
+
+[Functions with parameters 02 b](https://codesandbox.io/s/js-functions-with-parameters-02b-ru361m)
+
+```js
+function printSquare(number) {
+  const square = number * number;
+  console.log(square);
+}
+
+printSquare(3);
+printSquare(5);
+```
+
+```js
+function printRectangleArea(widthRect, lengthRect) {
+  const area = widthRect * lengthRect;
+  console.log("The area of the rectangle is " + area);
+}
+
+printRectangleArea(5, 7);
+printRectangleArea(3, 4);
 ```
 
 </details>
@@ -737,6 +887,65 @@ const addNumbers = (first, second) => {
 The function is saved like a variable with the keyword `const`. The parameters are written normally
 in round brackets followed by an fat arrow `=>`. Then the function body is written in curly
 brackets.
+
+[Drink about b](https://www.codewars.com/kata/56170e844da7c6f647000063/solutions/javascript)
+
+```js
+const peopleWithAgeDrink = (age) =>
+  age < 14
+    ? "drink toddy"
+    : age < 18
+    ? "drink coke"
+    : age < 21
+    ? "drink beer"
+    : "drink whisky";
+```
+
+```js
+var peopleWithAgeDrink = function (old) {
+  if (old < 14) {
+    return "drink toddy";
+  } else if (old < 18) {
+    return "drink coke";
+  } else if (old < 21) {
+    return "drink beer";
+  } else {
+    return "drink whisky";
+  }
+};
+```
+
+[Calculations b](https://codesandbox.io/s/js-functions-2-calculations-01b-3krtc4)
+
+```js
+function add(a, b) {
+  const sum = a + b;
+  return sum;
+  // Code here
+}
+```
+
+[Greeting Page b](https://codesandbox.io/s/js-functions-2-greeting-page-01b-ryxy58)
+
+```js
+const display = document.querySelector('[data-js="display"]');
+
+function getGreeting() {
+  if (new Date().getHours() > 5 && new Date().getHours() < 12) {
+    return "Good Morning";
+  } else if (new Date().getHours() > 12 && new Date().getHours() < 19) {
+    return "Good Afternoon";
+  } else if (new Date().getHours() > 18 && new Date().getHours() < 23) {
+    return "Good Evening";
+  } else if (new Date().getHours() > 22 && new Date().getHours() < 6) {
+    return "Good Night";
+  }
+  // Code here
+}
+
+display.textContent = getGreeting();
+document.body.style.backgroundColor = getDayColor();
+```
 
 ### Implicit Return Statements
 
