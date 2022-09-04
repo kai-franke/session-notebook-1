@@ -947,6 +947,9 @@ var peopleWithAgeDrink = function (old) {
 };
 ```
 
+![click event](../images/2022-09-02_162158_JS-functions-2_Arrow-Function-Expressions.png)
+![click event](../images/2022-09-02_161900_JS-functions-2_Arrow-Function-Expressions.png)
+
 ### Implicit Return Statements
 
 The advantage of arrow functions are possible shorter notations when certain criteria apply:
