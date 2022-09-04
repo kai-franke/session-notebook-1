@@ -109,6 +109,38 @@ button.addEventListener("mouseover", () => {});
 button.addEventListener("keydown", () => {});
 ```
 
+[Simple calculator b](https://codesandbox.io/s/js-operators-calculator-01b-dzku84)
+
+```js
+addButton.addEventListener("click", () => {
+  myResult = operand1 + operand2;
+  console.log(myResult);
+  /* 1. Add the two operands and store the result in a variable. 
+  Log the variable's value to the console. */
+});
+```
+
+[Counter b](https://codesandbox.io/s/js-counter-01b-h9nr4b)
+[Counter b2](https://codesandbox.io/s/js-counter-01b2-6e64wt)
+
+```js
+addButton.addEventListener("click", () => {
+  counter++;
+  console.log(counter);
+  resultOutput.textContent = counter;
+});
+```
+
+[Simple calculator b](https://codesandbox.io/s/js-operators-calculator-01b-dzku84)
+
+```js
+decreaseByFiveButton.addEventListener("click", () => {
+  myResult = operand1 - 5;
+  console.log(myResult);
+  // 8. Decrease the value of "operand1" by 5. Log the new value to the console.
+});
+```
+
 > [list of event types](https://developer.mozilla.org/en-US/docs/Web/Events#event_listing).
 
 </details>
@@ -170,38 +202,6 @@ firstChoiceButton.addEventListener("click", () => {
 ```js
 toggleButton.addEventListener("click", () => {
   bodyElement.classList.toggle("dark");
-});
-```
-
-[Simple calculator b](https://codesandbox.io/s/js-operators-calculator-01b-dzku84)
-
-```js
-addButton.addEventListener("click", () => {
-  myResult = operand1 + operand2;
-  console.log(myResult);
-  /* 1. Add the two operands and store the result in a variable. 
-  Log the variable's value to the console. */
-});
-```
-
-[Counter b](https://codesandbox.io/s/js-counter-01b-h9nr4b)
-[Counter b2](https://codesandbox.io/s/js-counter-01b2-6e64wt)
-
-```js
-addButton.addEventListener("click", () => {
-  counter++;
-  console.log(counter);
-  resultOutput.textContent = counter;
-});
-```
-
-[Simple calculator b](https://codesandbox.io/s/js-operators-calculator-01b-dzku84)
-
-```js
-decreaseByFiveButton.addEventListener("click", () => {
-  myResult = operand1 - 5;
-  console.log(myResult);
-  // 8. Decrease the value of "operand1" by 5. Log the new value to the console.
 });
 ```
 
@@ -448,6 +448,28 @@ button.addEventListener("click", () => {
 });
 ```
 
+[Greeting Page b](https://codesandbox.io/s/js-functions-2-greeting-page-01b-ryxy58)
+
+```js
+const display = document.querySelector('[data-js="display"]');
+
+function getGreeting() {
+  if (new Date().getHours() > 5 && new Date().getHours() < 12) {
+    return "Good Morning";
+  } else if (new Date().getHours() > 12 && new Date().getHours() < 19) {
+    return "Good Afternoon";
+  } else if (new Date().getHours() > 18 && new Date().getHours() < 23) {
+    return "Good Evening";
+  } else if (new Date().getHours() > 22 && new Date().getHours() < 6) {
+    return "Good Night";
+  }
+  // Code here
+}
+
+display.textContent = getGreeting();
+document.body.style.backgroundColor = getDayColor();
+```
+
 </details>
 
 <a name="Ternary-Operator"></a>
@@ -683,6 +705,16 @@ printRectangleArea(5, 7);
 printRectangleArea(3, 4);
 ```
 
+[Calculations b](https://codesandbox.io/s/js-functions-2-calculations-01b-3krtc4)
+
+```js
+function add(a, b) {
+  const sum = a + b;
+  return sum;
+  // Code here
+}
+```
+
 </details>
 
 <a name="Function-Calls"></a>
@@ -913,38 +945,6 @@ var peopleWithAgeDrink = function (old) {
     return "drink whisky";
   }
 };
-```
-
-[Calculations b](https://codesandbox.io/s/js-functions-2-calculations-01b-3krtc4)
-
-```js
-function add(a, b) {
-  const sum = a + b;
-  return sum;
-  // Code here
-}
-```
-
-[Greeting Page b](https://codesandbox.io/s/js-functions-2-greeting-page-01b-ryxy58)
-
-```js
-const display = document.querySelector('[data-js="display"]');
-
-function getGreeting() {
-  if (new Date().getHours() > 5 && new Date().getHours() < 12) {
-    return "Good Morning";
-  } else if (new Date().getHours() > 12 && new Date().getHours() < 19) {
-    return "Good Afternoon";
-  } else if (new Date().getHours() > 18 && new Date().getHours() < 23) {
-    return "Good Evening";
-  } else if (new Date().getHours() > 22 && new Date().getHours() < 6) {
-    return "Good Night";
-  }
-  // Code here
-}
-
-display.textContent = getGreeting();
-document.body.style.backgroundColor = getDayColor();
 ```
 
 ### Implicit Return Statements
