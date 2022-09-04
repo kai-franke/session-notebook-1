@@ -1,7 +1,5 @@
 - [JavaScript Basics](#JavaScript-Basics)
 
-  - [Connect a JavaScript file](#Connect-a-JavaScript-file)
-  - [Log to the console](#Log-to-the-console)
   - [Selecting HTML Elements: `.querySelector()`](#Selecting-HTML-Elements-querySelector)
   - [Add Interaction: `.addEventListener()`](#Add-Interaction-addEventListener)
   - [Add/remove & toggle classes: `.classList.`](#Add-remove-toggle-classes-classList)
@@ -52,44 +50,12 @@
 
 ## Learning Objectives
 
-- Connect a JavaScript file with `<script>`
+- Connect a JavaScript file with `<script src="./index.js" defer></script>`
 - Log to the console
 - Select elements with `querySelector`
 - Add, remove and toggle CSS classes on `click` with `addEventListener`
 
 ---
-
-<a name="Connect-a-JavaScript-file"></a>
-
-## Connect a JavaScript file
-
-<details>
-
-```html
-<head>
-  ...
-  <script src="./index.js" defer></script>
-</head>
-<body>
-  ...
-</body>
-```
-
-</details>
-
-<a name="Log-to-the-console"></a>
-
-## Hello World: `console.log()`
-
-<details>
-
-```js
-console.log("Hello World!"); // logs into console
-console.clear(); // clears console
-console.error("Error!"); // logs as error into console
-```
-
-</details>
 
 <a name="Selecting-HTML-Elements-querySelector"></a>
 
