@@ -346,6 +346,7 @@ This is also true for all odd numbers, because after this division you have alwa
 - [Simple calculator b](https://codesandbox.io/s/js-operators-calculator-01b-dzku84)
 - [Counter a](https://codesandbox.io/s/js-counter-01a-p7q2o4)
 - [Counter b](https://codesandbox.io/s/js-counter-01b-h9nr4b)
+- [Counter b2](https://codesandbox.io/s/js-counter-01b2-6e64wt)
 - [Calculator a](https://codesandbox.io/s/js-calculator-01a-cuzd43)
 - [Calculator a]()
 
