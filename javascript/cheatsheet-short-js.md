@@ -527,23 +527,13 @@ JavaScript tries to coerce the compared values into the same type. And just like
 
 ---
 
-## Functions
-
-<details>
-
-Functions are a fundamental concept in Javascript. They contain a set of statements - in other
-words: They contain Javascript code. Functions have to be defined. When a function is defined it can
-be called an arbitrary number of times.
-
-</details>
-
 <a name="Function-Declarations"></a>
 
 ## Function Declarations
 
 <details>
 
-You can define a function using a **function declaration** which consists of:
+The **function declaration** consists of:
 
 - the function keyword
 - the function name
@@ -556,9 +546,6 @@ function greet() {
 }
 ```
 
-> ❗️ Defining a function does not cause the Javascript code in the function body to be executed.
-> You have to call the function for the code to be executed.
-
 </details>
 
 <a name="Parameters"></a>
@@ -566,7 +553,7 @@ function greet() {
 ### Parameters
 
 <details>
-Functions can accept parameters. Parameters can be used like predefined variables inside the
+Parameters can be used like predefined variables inside the
 function body. When declaring a function we are free to choose a name for the parameters , but
 descriptive, short names should be chosen.
 
@@ -616,53 +603,6 @@ The sum of your numbers is: 12
 
 </details>
 
-<a name="Scope"></a>
-
-## Scope
-
-<details>
-The scope defines where variables are visible and where they can be referenced. In Javascript there
-are different kinds of scope, for example:
-
-- global scope
-- function scope
-</details>
-
-<a name="Function-scope"></a>
-
-### Function scope
-
-<details>
-Variables defined **inside a function** are not accessible from outside. But all variables **outside
-of the function** can be accessed from inside the function body:
-
-```js
-const globalVariable = "some Text";
-function myFunction() {
-  const localVariable = true;
-  console.log(globalVariable);
-  console.log(localVariable);
-}
-myFunction();
-// logs:
-// some Text
-// true
-console.log(localVariable); // Error! Variable not available outside of function
-```
-
-</details>
-
-<a name="Global-scope"></a>
-
-### Global scope
-
-<details>
-A variable is in the **global scope** when it is declared outside of any function, in a Javascript
-file. Global variables are visible and can be accessed from anywhere in that Javascript file after
-declaration.
-
-</details>
-
 <a name="Resources-Functions"></a>
 
 ## Resources
@@ -682,10 +622,11 @@ declaration.
 - [Basic functions b](https://codesandbox.io/s/js-basic-functions-01b-7tydx3)
 - [Functions with parameters 01 a](https://codesandbox.io/s/js-functions-with-parameters-01a-nt8m1q)
 - [Functions with parameters 01 b](https://codesandbox.io/s/js-functions-with-parameters-01b-9lu4n4)
-- [Functions with parameters 02 a](https://codesandbox.io/s/js-variables-numbers-sm-post-01a-9skjpx)
+- [Functions with parameters 02 a](https://codesandbox.io/s/js-functions-with-parameters-02a-4q1qwz)
 - [Functions with parameters 02 b](https://codesandbox.io/s/js-functions-with-parameters-02b-ru361m)
 - [Functions and DOM manipulation a](https://codesandbox.io/s/functions-and-dom-manipulation-01a-jm46ly)
 - [Functions and DOM manipulation b](https://codesandbox.io/s/functions-and-dom-manipulation-01b-skdtys)
+- [Functions and DOM manipulation b2](https://codesandbox.io/s/functions-and-dom-manipulation-01b2-r2jr07)
 
 ## </details>
 
@@ -712,9 +653,8 @@ declaration.
 ## Return Statements
 
 <details>
-Functions are an incredible versatile and central tool in most programming languages. We already
-learned how to pass values into a function with input parameters. But a function can also return a
-value back to the place where it was called. This is done via a `return statement`.
+A function can return a value back to the place where it was called. 
+This is done via a `return statement`.
 
 ```js
 function add3Numbers(first, second, third) {
@@ -723,7 +663,7 @@ function add3Numbers(first, second, third) {
 }
 ```
 
-The `return statement` begins with the keyword `return` followed by an expression. This this case,
+The `return statement` begins with the keyword `return` followed by an expression. In this case,
 the expression is the variable sum. Its value is returned by the function and can be stored when the
 function is called:
 
