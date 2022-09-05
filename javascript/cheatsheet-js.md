@@ -1349,11 +1349,13 @@ textInput.addEventListener("input", () => {
 ## Resources
 
 <details>
+
 ### String Methods
 
 [MDN Docs: String Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#instance_properties)
 
 </details>
+
 <a name="Challenges-Inputs-and-Strings"></a>
 
 ## Challenges
