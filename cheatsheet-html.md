@@ -23,10 +23,6 @@
     - [Reset button](#Reset-button)
     - [Other buttons](#Other-buttons)
   - [Form structure and a11y](#Form-structure-and-a11y)
-    - [Fieldset and Legend](#Fieldset-and-Legend)
-    - [aria-label](#aria-label)
-    - [aria-labelledby](#aria-labelledby)
-    - [aria-describedby](#aria-describedby)
   - [Resources](#Resources)
   - [Challenges](#Challenges)
 
@@ -359,8 +355,6 @@ This also applies to buttons with diverging functionality within a form.
 
 ## Form structure and a11y
 
-<a name="Fieldset-and-Legend"></a>
-
 ### Fieldset and Legend
 
 The `<fieldset>` element is used to group multiple fields together. Use the `<legend>` element to
@@ -380,8 +374,6 @@ provide a caption for such a group.
 
 ### `aria` labels
 
-<a name="aria-label"></a>
-
 #### aria-label
 
 The `aria-label` attribute defines a label for an interactive element. Use it when the accessible
@@ -394,8 +386,6 @@ name is missing and there is no content visible in the DOM that can be reference
 </button>
 ```
 
-<a name="aria-labelledby"></a>
-
 #### aria-labelledby
 
 The `aria-labelledby` attribute identifies which element labels the element it is applied to. Use
@@ -405,8 +395,6 @@ the `id` attribute to create the connection:
 <h2 id="title">Personal Information Form</h2>
 <form aria-labelledby="title">...</form>
 ```
-
-<a name="aria-describedby"></a>
 
 #### aria-describedby
 
