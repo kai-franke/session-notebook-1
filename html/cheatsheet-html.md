@@ -1,3 +1,33 @@
+- [HTML structure](#HTML-structure)
+  - [List of common HTML elements](#List-of-common-HTML-elements)
+  - [List of Semantic HTML elements](#List-of-Semantic-HTML-elements)
+  - [Recources](#Recources)
+- [HTML Forms](#HTML-Forms)
+  - [Basic form setup](#Basic-form-setup)
+    - [`<form>` tag](#formtag)
+    - [Form field names](#Form-field-names)
+    - [Labels](#Labels)
+  - [Different types of form fields](#Different-types-of-form-fields)
+    - [Text](#Text)
+    - [Email](#Email)
+    - [Number](#Number)
+    - [Date](#Date)
+    - [Color](#Color)
+    - [Multi-line text](#Multi-line-text)
+    - [Select / dropdown menu](#Select-dropdown-menu)
+    - [Radio elements](#Radio-elements)
+    - [Checkboxes](#Checkboxes)
+    - [More form field types](#More-form-field-types)
+  - [Buttons](#Buttons)
+    - [Submit button](#Submit-button)
+    - [Reset button](#Reset-button)
+    - [Other buttons](#Other-buttons)
+  - [Form structure and a11y](#Form-structure-and-a11y)
+  - [Resources](#Resources)
+  - [Challenges](#Challenges)
+
+<a name="HTML-structure"></a>
+
 ## HTML structure
 
 ```html
@@ -11,6 +41,8 @@
   </body>
 </html>
 ```
+
+<a name="List-of-common-HTML-elements"></a>
 
 ## List of common HTML elements
 
@@ -27,6 +59,8 @@
 | `<input>`           | an input field (self-closing / empty)                        |
 | `<button></button>` | a clickable element equipped with some kind of functionality |
 
+<a name="List-of-Semantic-HTML-elements"></a>
+
 ## List of Semantic HTML elements
 
 | element                 | meaning                                                                                                             |
@@ -40,6 +74,8 @@
 | `<header></header>`     | representing introductory content, typically a group of introductory or navigational aids                           |
 | `<footer></footer>`     | typically contains information about the author of the section, copyright data or links to related documents        |
 
+<a name="Recources"></a>
+
 ## Links
 
 - [MDN: Introduction to HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
@@ -48,6 +84,8 @@
 - [HTML **attribute** reference on mdn web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
 - [**semantic HTML elements** on mdn web docs](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
 - [Emmet cheatsheet](https://coolcheatsheet.com/toolkit/emmet)
+
+<a name="HTML-Forms"></a>
 
 # HTML Forms
 
@@ -60,7 +98,11 @@
 
 ---
 
+<a name="Basic-form-setup"></a>
+
 ## Basic form setup
+
+<a name="formtag"></a>
 
 ### `<form>` tag
 
@@ -73,6 +115,8 @@ form controls to the user.
 </form>
 ```
 
+<a name="Form-field-names"></a>
+
 ### Form field names
 
 Forms are created to request information from the user. Each fragment of information (each form
@@ -82,6 +126,8 @@ data, when submitting the form.
 ```html
 <input name="first-name" />
 ```
+
+<a name="Labels"></a>
 
 ### Labels
 
@@ -102,7 +148,11 @@ It is required to define, which label and form field belong together. Use the `f
 
 ---
 
+<a name="Different-types-of-form-fields"></a>
+
 ## Different types of form fields
+
+<a name="Text"></a>
 
 ### Text
 
@@ -114,6 +164,8 @@ user is requested to enter. Use `type="text"` when none of the other types is a 
 <input type="text" name="first-name" id="first-name" />
 ```
 
+<a name="Email"></a>
+
 ### Email
 
 Use `type="email"` to let the user enter an email address. The browser can check automatically,
@@ -124,6 +176,8 @@ whether the entered text is a valid email address. .
 <input type="email" name="email-address" id="email-address" />
 ```
 
+<a name="Number"></a>
+
 ### Number
 
 Use `type="number"` to let the user enter a number.
@@ -131,6 +185,8 @@ Use `type="number"` to let the user enter a number.
 ```html
 <label for="age">Age</label> <input type="age" name="age" id="age" />
 ```
+
+<a name="Date"></a>
 
 ### Date
 
@@ -142,6 +198,8 @@ the browser.
 <input type="date" name="date-of-birth" id="date-of-birth" />
 ```
 
+<a name="Color"></a>
+
 ### Color
 
 Use `type="color"` to let the user enter a color with the help of a color picker tool provided by
@@ -151,6 +209,8 @@ the browser.
 <label for="favorite-color">Favorite color</label>
 <input type="color" name="favorite-color" id="favorite-color" />
 ```
+
+<a name="Multi-line-text"></a>
 
 ### Multi-line text
 
@@ -162,6 +222,8 @@ Use the tag `<textarea>` to let the user enter longer text with multiple lines.
 ```
 
 > ❗️ Please be aware that the `<textarea>` tag is not a self-closing as the `<input>` tag
+
+<a name="Select-dropdown-menu"></a>
 
 ### Select / dropdown menu
 
@@ -178,6 +240,8 @@ defined between the opening and closing tag
   <option value="yearly">Monthly billing</option>
 </select>
 ```
+
+<a name="Radio-elements"></a>
 
 ### Radio elements
 
@@ -213,6 +277,8 @@ the user. In many situations it can be used as an alternative to `<select>`.
 > ❗️ The `name` attribute must be equal among all radio elements that refer to the same choice. The
 > browser groups them together and ensures only one radio element can be selected at the same time.
 
+<a name="Checkboxes"></a>
+
 ### Checkboxes
 
 In contrast to the radio element, `<input type="checkbox" />` presents individual choices, that are
@@ -232,6 +298,7 @@ not related to each other. Each choice can either be "on" ("true") or "off" ("fa
 
 > ❗️ The `name` attribute must not be equal among the checkbox elements. They are used to represent
 > individual choices.
+> <a name="More-form-field-types"></a>
 
 ### More form field types
 
@@ -241,7 +308,11 @@ complete list of all types with examples.
 
 ---
 
+<a name="Buttons"></a>
+
 ## Buttons
+
+<a name="Submit-button"></a>
 
 ### Submit button
 
@@ -254,6 +325,7 @@ data after they filled out all fields.
 
 > 💡 Since it's the default, it would work the same without the type attribute:
 > `<button>Send</button>`.
+> <a name="Reset-button"></a>
 
 ### Reset button
 
@@ -263,6 +335,8 @@ click.
 ```html
 <button type="reset">Reset all fields</button>
 ```
+
+<a name="Other-buttons"></a>
 
 ### Other buttons
 
@@ -276,6 +350,8 @@ should be defined with `type="button"` to be semantically correct.
 This also applies to buttons with diverging functionality within a form.
 
 ---
+
+<a name="Form-structure-and-a11y"></a>
 
 ## Form structure and a11y
 
@@ -333,7 +409,7 @@ attribute to create the connection:
 <fieldset aria-describedby="description">...</fieldset>
 ```
 
----
+<a name="Resources"></a>
 
 ## Resources
 
@@ -341,6 +417,8 @@ attribute to create the connection:
 - [`<input>`: The Input (Form Input) element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 - [Forms Tutorial W3C](https://www.w3.org/WAI/tutorials/forms/)
 - [Forms (Web Accessibility Guidelines)](http://web-accessibility.carnegiemuseums.org/code/forms/)
+
+<a name="Challenges"></a>
 
 ## Challenges
 
