@@ -1355,6 +1355,9 @@ textInput.addEventListener("input", () => {
 
 </details>
 <a name="Challenges-Inputs-and-Strings"></a>
+
+## Challenges
+
 <details>
 
 - [Thomas Example](https://codesandbox.io/s/js-inputs-strings-input-to-uppercase-example-7xw9ou)
