@@ -1,7 +1,5 @@
 - [JavaScript Basics](#JavaScript-Basics)
 
-  - [Connect a JavaScript file](#Connect-a-JavaScript-file)
-  - [Log to the console](#Log-to-the-console)
   - [Selecting HTML Elements: `.querySelector()`](#Selecting-HTML-Elements-querySelector)
   - [Add Interaction: `.addEventListener()`](#Add-Interaction-addEventListener)
   - [Add/remove & toggle classes: `.classList.`](#Add-remove-toggle-classes-classList)
@@ -11,22 +9,11 @@
 - [JS Variables and Numbers](#JS-Variables-and-Numbers)
 
   - [Variable Declarations](#Variable-Declarations)
-  - [Primitive Data Types](#Primitive-Data-Types)
-  - [Variable Naming](#Variable-Naming)
-  - [Math & Operators](#Math_and_Operators)
-  - [Operator Precedence](#Operator_Precedence)
-  - [Assignment Operators](#Assignment-Operators)
-  - [Type Conversion](#Type-Conversion)
-  - [Number Systems](#Number-Systems)
   - [Resources – JS Variables and Numbers](#Recources-JS-Variables-and-Numbers)
   - [Challenges](#Challenges-JS-Variables-and-Numbers)
 
 - [JS Conditions and Booleans](#JS-Conditions-and-Booleans)
 
-  - [Boolean Values](#Boolean-Values)
-  - [Truthy and Falsy Values](#Truthy-and-Falsy-Values)
-  - [Comparison Operators](#Comparison-Operators)
-  - [Logical Operators](#Logical-Operators)
   - [Control Flow: `if` / `else`](#Control-Flow-if-else)
   - [Ternary Operator: `?` `:`](#Ternary-Operator)
   - [Advanced: The strangeness of boolean coercion and making use of non-strict equality](#Advanced)
@@ -35,13 +22,9 @@
 
 - [JS Functions](#JS-Functions)
 
-  - [Functions](#Functions)
   - [Function Declarations](#Function-Declarations)
   - [Parameters](#Parameters)
   - [Function Calls](#Function-Calls)
-  - [Scope](#Scope)
-  - [Function scope](#Function-scope)
-  - [Global scope](#Global-scope)
   - [Resources](#Resources-Functions)
   - [JS Functions](#Challenges-JS-Functions)
 
@@ -60,64 +43,12 @@
 
 ## Learning Objectives
 
-- Connect a JavaScript file with `<script>`
+- Connect a JavaScript file with `<script src="./index.js" defer></script>`
 - Log to the console
 - Select elements with `querySelector`
 - Add, remove and toggle CSS classes on `click` with `addEventListener`
 
 ---
-
-<a name="Connect-a-JavaScript-file"></a>
-
-## Connect a JavaScript file
-
-<details>
-```html
-<head>
-  ...
-  <script src="./index.js" defer></script>
-</head>
-<body>
-  ...
-</body>
-```
-
-The `script` tag has two attributes:
-
-`src="./index.js"` sets the URL to our JavaScript file
-
-`defer` tells the browser to delay the loading of the script until all HTML elements are loaded.
-
-> 💡 Alternative: `script` tag at the end of the body element, so `defer` attribute is not
-> necessary. Less modern.
-
-```html
-<head>
-  ...
-</head>
-<body>
-  ...
-  <script src="./index.js"></script>
-</body>
-```
-
-</details>
-
-<a name="Log-to-the-console"></a>
-
-## Hello World: `console.log()`
-
-<details>
-In Javascript we can print text to the console of the web browser. We can use this for debugging or
-error logging for example.
-
-```js
-console.log("Hello World!"); // logs into console
-console.clear(); // clears console
-console.error("Error!"); // logs as error into console
-```
-
-</details>
 
 <a name="Selecting-HTML-Elements-querySelector"></a>
 
@@ -132,16 +63,9 @@ Before we can add interactivity, we need to select the necessary HTML-Elements:
 </body>
 ```
 
-There are multiple ways to select the above main section within our JavaScript. A good practice is
-to use a
-[data-\* attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*),
-like the **data-js** in the following example:
-
 ```js
 const mainElement = document.querySelector('[data-js="main"]');
 ```
-
-Other css selectors work as well, but the data-\* attribute selectors should be preferred.
 
 ```js
 // tag as identifier
@@ -152,8 +76,6 @@ const mainElement = document.querySelector(".main");
 const mainElement = document.querySelector("#main");
 ```
 
-> 💡 We try to separate our concerns: Classes are for CSS and data-\* attributes are for JavaScript
-
 </details>
 
 <a name="Add-Interaction-addEventListener"></a>
@@ -161,16 +83,10 @@ const mainElement = document.querySelector("#main");
 ## Add Interaction: `.addEventListener()`
 
 <details>
-We can listen to **events** like **clicks** on an Element and execute code when the event is
-triggered. The method `addEventListener` is used to react to events.
+The method `addEventListener` is used to react to events.
 
 ```html
 <button type="button" data-js="button">Log into console</button>
-```
-
-```js
-const button = document.querySelector('[data-js="button"]');
-button.addEventListener("click", () => {});
 ```
 
 First you specify the kind of event, e.g. **click**, then you define what code should be executed
@@ -193,9 +109,39 @@ button.addEventListener("mouseover", () => {});
 button.addEventListener("keydown", () => {});
 ```
 
-> 💡 Here you can find a
+[Simple calculator b](https://codesandbox.io/s/js-operators-calculator-01b-dzku84)
+
+```js
+addButton.addEventListener("click", () => {
+  myResult = operand1 + operand2;
+  console.log(myResult);
+  /* 1. Add the two operands and store the result in a variable. 
+  Log the variable's value to the console. */
+});
+```
+
+[Counter b](https://codesandbox.io/s/js-counter-01b-h9nr4b)
+[Counter b2](https://codesandbox.io/s/js-counter-01b2-6e64wt)
+
+```js
+addButton.addEventListener("click", () => {
+  counter++;
+  console.log(counter);
+  resultOutput.textContent = counter;
+});
+```
+
+[Simple calculator b](https://codesandbox.io/s/js-operators-calculator-01b-dzku84)
+
+```js
+decreaseByFiveButton.addEventListener("click", () => {
+  myResult = operand1 - 5;
+  console.log(myResult);
+  // 8. Decrease the value of "operand1" by 5. Log the new value to the console.
+});
+```
+
 > [list of event types](https://developer.mozilla.org/en-US/docs/Web/Events#event_listing).
-> 💡 You don't have to understand the syntax for now, we will cover this in a later session.
 
 </details>
 
@@ -239,6 +185,44 @@ main.classList.remove("page--primary");
 
 ```js
 main.classList.toggle("page--primary");
+```
+
+[Fix the errors in a Survey App b](https://codesandbox.io/s/js-errors-01-b-1teglv)
+
+```js
+firstChoiceButton.addEventListener("click", () => {
+  firstChoiceButton.classList.add("active-choice");
+  secondChoiceButton.classList.remove("active-choice");
+  console.log("Selected first choice");
+});
+```
+
+[Dark Mode b](https://codesandbox.io/s/js-darkmode-01-b-9iniru)
+
+```js
+toggleButton.addEventListener("click", () => {
+  bodyElement.classList.toggle("dark");
+});
+```
+
+[Functions and DOM manipulation b2](https://codesandbox.io/s/functions-and-dom-manipulation-01b2-r2jr07)
+
+```js
+function removeAllColors(classname) {
+  box.classList.remove("red", "blue", "green", "gray");
+}
+
+function addColor(className) {
+  box.classList.add(className);
+}
+```
+
+```js
+redButton.addEventListener("click", () => {
+  removeAllColors();
+  addColor("red");
+  // Code here
+});
 ```
 
 </details>
@@ -320,15 +304,6 @@ main.classList.toggle("page--primary");
 ## Variable Declarations
 
 <details>
-Variables are a `reference` or `alias` for data stored in memory. You can access this data by using
-this variable. You can use three different keywords to declare a variable:
-
-- `const` - declares a constant, the value can't be changed. Default way to declare variables.
-- `let` - declares a variable, the value can be changed. Only used when reassigning a new value is
-  necessary.
-- `var` - outdated, not used anymore.
-
-Normally the keyword `const` is used to declare a variable.
 
 ```js
 const aNewVariable = 1234;
@@ -342,155 +317,6 @@ let counter = 0;
 counter = counter + 1; // reassigning the value of counter
 ```
 
-The `=` sign in programming doesn't quite work like the mathematical equality that you (maybe)
-remember from school. It means: "the value of the item on the right of the equal sign is saved in
-the item on the left of it". What the item on the right actually represents is calculated first and
-saved afterwards.
-
-</details>
-
-<a name="Primitive-Data-Types"></a>
-
-## Primitive Data Types
-
-<details>
-Javascript is a dynamically typed language, which means, that you don't have to specify what kind of
-value you want to store, JavaScript detects this automatically.
-
-There are 7 primitive data types:
-
-| type        | represents                                                                                                                  |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `string`    | a sequence of characters: "abcd"                                                                                            |
-| `number`    | a number: 1234                                                                                                              |
-| `boolean`   | a binary statement, can be `true` or `false`                                                                                |
-| `null`      | represents "nothing", is typically set by developers                                                                        |
-| `undefined` | represents the state of "not existing". Anything not specified or not found in JavaScript defaults to the value `undefined` |
-| `BigInt`    | uncommon, used for integers larger than 9007199254740991                                                                    |
-| `Symbol`    | uncommon, used for creating unique elements                                                                                 |
-
-</details>
-
-<a name="Variable-Naming"></a>
-
-## Variable Naming
-
-<details>
-Expressive variable names are very important for the `readability of the code`. The Code becomes
-easier to understand and needs less comments. There are some key guidelines you should follow when
-naming a variable:
-
-- use camel case: `socialFeedEntry` instead of `socialfeedentry`
-- write out all words: `error` instead of `e`, `followerButton` instead of `flBtn`
-- be very specific, longer names are better than shorter: `updatedFollowerCounter` instead of
-`counter`.
-</details>
-
-<a name="Math_and_Operators"></a>
-
-## Math & Operators
-
-<details>
-As a programmer you sometimes have to use mathematical operations to calculate certain widths or
-positions of elements. Operators calculate values based on one or two expressions.
-
-| operator | precedence | effect                                                                                       |
-| -------- | ---------- | -------------------------------------------------------------------------------------------- |
-| `+`      | 11         | adds two numbers together.                                                                   |
-| `-`      | 11         | subtracts two numbers                                                                        |
-| `*`      | 12         | multiplies two numbers                                                                       |
-| `/`      | 12         | divides two numbers                                                                          |
-| `**`     | 13         | potentiates two numbers: `2 ** 4 → 16`                                                       |
-| `%`      | 12         | The remainder or modulus. Gives you what remains after a whole number division: `8 % 3 → 2`. |
-
-The remainder is a very useful operator, but might be difficult to understand at first. A real life
-example would be time on a clock. After noon, you don't reach 13am but you start over at 1pm. 3
-hours after midnight you don't have 15pm (or 27h in the 24h format), but 3am. It is whatever hour we
-have mod 12.
-
-You can use this operator to determine if a number is even or odd:
-
-```js
-6 % 2 === 0;
-```
-
-This is always true for even numbers, because after dividing an even number by 2 nothing remains.
-
-```js
-5 % 2 === 1;
-```
-
-This is also true for all odd numbers, because after this division you have always 1 left over.
-
-</details>
-
-<a name="Operator-Precedence"></a>
-
-## Operator Precedence
-
-<details>
-In maths, some operators have a higher precedence than others. This means that they are performed
-before operators with a lower precedence. For example, multiplication comes before addition. You can
-look up the precedence of the operators in the table above.
-</details>
-
-<a name="Assignment-Operators"></a>
-
-## Assignment Operators
-
-<details>
-You already know the default assignment operator `=`. This operator just assigns the value on the
-right to the element on the left. There are more assignment operators for very common actions like
-increasing a variable by a fixed value.
-
-| operator | effect                                                                                                                |
-| -------- | --------------------------------------------------------------------------------------------------------------------- |
-| `+=`     | Increases the value of the variable on the left about the value on the right: `count += 6` → count is increased by 6. |
-| `-=`     | Decreases the value of the variable on the left about the value on the right.                                         |
-| `*=`     | Multiplies the variable on the left with the value on the right.                                                      |
-| `/=`     | Divides the variable on the left with the value on the right.                                                         |
-| `++`     | Increments the value of a variable by one: `count++` → count is increased by one                                      |
-| `--`     | Decrements the value of a variable by one: `count--` → count is decreased by one                                      |
-
-> 💡 The precedence of each assignment operator is 2.
-
-</details>
-
-<a name="Type-Conversion"></a>
-
-## Type Conversion
-
-<details>
-When you use an operator with a variable with an unfitting type, javascript will automatically
-convert this variable into a fitting type. For example:
-
-```js
-4 / "2" → 4 / 2
-```
-
-There is no "/" operator for strings, so JavaScript converts the string into a number if possible.
-This is also true for boolean operators which we will cover in a later session.
-
-> ❗️ There is another `+` operator in JavaScript, that links two strings together: "a" + "b" →
-> "ab". When 'adding' a number and a string, the number is converted to a string: "a" + 6 → "a6".
-> Make sure that both variables are numbers if you want to add them.
-
-</details>
-
-<a name="Number-Systems"></a>
-
-## Number Systems
-
-<details>
-When working with computers, it is sometimes useful to work with a different number system than the
-standard 10 digit system, since a computer only understands `binary` numbers composed of only 0
-and 1. You don't have to learn these systems by heart, but it is good if you heard about them.
-
-- `decimal system`: the standard numbers, has 10 symbols "0" to "9".
-- `binary system`: only has 2 symbols "0" and "1". If you want to write a bigger number than 1, you
-  add another digit: 2 → "10" in binary.
-- `hexadecimal system`: has 16 symbols "0" to "9" and "a" to "f". If you want to write a number
-bigger than 15 you add another digit: 12 → "c" in hexadecimal.
 </details>
 
 <a name="Recources-JS-Variables-and-Numbers"></a>
@@ -514,6 +340,7 @@ bigger than 15 you add another digit: 12 → "c" in hexadecimal.
 - [Simple calculator b](https://codesandbox.io/s/js-operators-calculator-01b-dzku84)
 - [Counter a](https://codesandbox.io/s/js-counter-01a-p7q2o4)
 - [Counter b](https://codesandbox.io/s/js-counter-01b-h9nr4b)
+- [Counter b2](https://codesandbox.io/s/js-counter-01b2-6e64wt)
 - [Calculator a](https://codesandbox.io/s/js-calculator-01a-cuzd43)
 - [Calculator a]()
 
@@ -537,98 +364,6 @@ bigger than 15 you add another digit: 12 → "c" in hexadecimal.
 - writing ternary expressions
 
 ---
-
-<a name="Boolean-Values"></a>
-
-## Boolean Values
-
-<details>
-A boolean value, named after George Boole, only has two states. It can either be **true** or
-**false**. Booleans are often used in conditional statements which can execute different code
-depending on their value.
-</details>
-
-<a name="Truthy-and-Falsy-Values"></a>
-
-## Truthy and Falsy Values
-
-<details>
-Sometimes you want to have a condition depending on another type of value. JavaScript can transform
-any value into a boolean with _type coercion_. That means that some values act as if they were true
-and others as if they were false: _Truthy_ values become true, _falsy_ values become false.
-
-- _truthy_ values:
-
-  - non zero numbers: `1`, `2`, `-3`, etc.
-  - non empty strings: `"hello"`
-  - `true`
-
-- _falsy_ values:
-  - `0` / `-0`
-  - `null`
-  - `false`
-  - `undefined`
-  - empty string: `""`
-
-</details>
-
-<a name="Comparison-Operators"></a>
-
-## Comparison Operators
-
-<details>
-Comparison operators produce boolean values by comparing two expressions:
-
-| Operator  | Effect                                                                           |
-| --------- | -------------------------------------------------------------------------------- |
-| A `===` B | strict equal: is `true` if both values are equal (including their type).         |
-| A `!==` B | strict not equal: is `true` if both values are not equal (including their type). |
-| A `>` B   | strictly greater than: is `true` if A is greater than B.                         |
-| A `<` B   | strictly less than: is `true` if A is less than B.                               |
-| A `>=` B  | greater than or equal: is `true` if A is greater than or equal B.                |
-| A `<=` B  | less than or equal: is `true` if A is less than or equal B.                      |
-
-> 💡 You might notice that JavaScript uses three equal signs (`===`) to check for equality. This can
-> seem very strange at first.
->
-> - `=` (`const x = 0`) is the assignment operator and has nothing to do with comparison.
-> - `==` and `!=` are non-strict equality operators. You should **avoid them 99% of the time**.  
->   Non-strict equality tries to use type coercion to convert both values to the same type:
->   `"3" == 3` is `true`, which is seldomly what you want.
-> - `===` and `!==` are strict equality operators. **This is what you need almost always**.  
->   Strict equality checks if type _and_ value are the same: `"3" === 3` is `false`.
-
-</details>
-
-<a name="Logical-Operators"></a>
-
-## Logical Operators
-
-<details>
-Logical operators combine up to two booleans into a new boolean.
-
-| Operator                      | Effect                                                 |
-| ----------------------------- | ------------------------------------------------------ |
-| `!`A                          | `not`: flips a `true` value to `false` and vice versa. |
-| A <code>&#124;&#124;</code> B | `or`: is `true` if either A `or` B is true.            |
-| A `&&` B                      | `and`: is `true` if both A `and` B is true.            |
-
-> 💡 You can combine logical operators with brackets to define which operator should be evaluated
-> first, e.g:
->
-> - `(A || B) && (C || D)`
-> - `!(A || B)`
->   💡 Be careful when using `&&` or `||` with non-boolean values. They actually return one of the
->   original values. That can be useful, but can also quickly lead to confusion. This behaviour is
->   called
->   [short-circut evaluation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND#short-circuit_evaluation)
->   and is a more advanced topic.
->
-> - `"some string" || "some other string"` evaluates to `"some string"`
-> - `0 || 100` evaluates to `100`
-> - `null && "yet another string"` evaluates to `null`
-
-</details>
 
 <a name="Control-Flow-if-else"></a>
 
@@ -671,6 +406,19 @@ if (hour < 12) {
 }
 ```
 
+[Grasshopper - If/else syntax debug b](https://www.codewars.com/kata/57089707fe2d01529f00024a/solutions/javascript)
+
+```js
+function checkAlive(health) {
+  if (health > 0) {
+    return true;
+  } else health <= 0;
+  {
+    return false;
+  }
+}
+```
+
 If the condition is not a boolean, it is converted into one by type coercion. This can be used to
 check whether a value is not 0 or an empty string:
 
@@ -679,6 +427,47 @@ const name = "Alex";
 if (name) {
   console.log("Hi " + name + "!"); // only executed if name is not an empty string
 }
+```
+
+[Teenager check b](https://codesandbox.io/s/js-teenager-check-01b-wop7vo)
+
+```js
+button.addEventListener("click", () => {
+  // Number(x) converts the string from the input to a number
+  // Beware: input values are *always* strings!
+  const age = Number(input.value);
+
+  // Exercise:
+  // Use conditions and the logical AND operator to write
+  // "You are a teen." or "You are not a teen." into the output.
+  if (age > 12 && age < 20) {
+    output.textContent = "You are a teen.";
+  } else {
+    output.textContent = "You are not a teen.";
+  }
+});
+```
+
+[Greeting Page b](https://codesandbox.io/s/js-functions-2-greeting-page-01b-ryxy58)
+
+```js
+const display = document.querySelector('[data-js="display"]');
+
+function getGreeting() {
+  if (new Date().getHours() > 5 && new Date().getHours() < 12) {
+    return "Good Morning";
+  } else if (new Date().getHours() > 12 && new Date().getHours() < 19) {
+    return "Good Afternoon";
+  } else if (new Date().getHours() > 18 && new Date().getHours() < 23) {
+    return "Good Evening";
+  } else if (new Date().getHours() > 22 && new Date().getHours() < 6) {
+    return "Good Night";
+  }
+  // Code here
+}
+
+display.textContent = getGreeting();
+document.body.style.backgroundColor = getDayColor();
 ```
 
 </details>
@@ -693,6 +482,23 @@ if you want to decide between two _expressions_, e.g. which value should be stor
 
 ```js
 const greetingText = time < 12 ? "Good morning." : "Good afternoon.";
+```
+
+[Grasshopper - Personalized Message b](https://www.codewars.com/kata/5772da22b89313a4d50012f7/solutions/javascript)
+
+```js
+function greet(name, owner) {
+  return name === owner ? "Hello boss" : "Hello guest";
+}
+```
+
+```js
+function greet(name, owner) {
+  if (name === owner) {
+    return "Hello boss";
+  }
+  return "Hello guest";
+}
 ```
 
 The ternary operator has the following structure:
@@ -821,23 +627,13 @@ JavaScript tries to coerce the compared values into the same type. And just like
 
 ---
 
-## Functions
-
-<details>
-
-Functions are a fundamental concept in Javascript. They contain a set of statements - in other
-words: They contain Javascript code. Functions have to be defined. When a function is defined it can
-be called an arbitrary number of times.
-
-</details>
-
 <a name="Function-Declarations"></a>
 
 ## Function Declarations
 
 <details>
 
-You can define a function using a **function declaration** which consists of:
+The **function declaration** consists of:
 
 - the function keyword
 - the function name
@@ -850,9 +646,6 @@ function greet() {
 }
 ```
 
-> ❗️ Defining a function does not cause the Javascript code in the function body to be executed.
-> You have to call the function for the code to be executed.
-
 </details>
 
 <a name="Parameters"></a>
@@ -860,7 +653,7 @@ function greet() {
 ### Parameters
 
 <details>
-Functions can accept parameters. Parameters can be used like predefined variables inside the
+Parameters can be used like predefined variables inside the
 function body. When declaring a function we are free to choose a name for the parameters , but
 descriptive, short names should be chosen.
 
@@ -871,6 +664,54 @@ function printLetter(name) {
 function printSum(first, second, third) {
   const sum = first + second + third;
   console.log("The sum of your numbers is: " + sum);
+}
+```
+
+[Functions with parameters 01 b](https://codesandbox.io/s/js-functions-with-parameters-01b-9lu4n4)
+
+```js
+function greetMary() {
+  console.log("Welcome Mary, good to see you again!");
+}
+```
+
+```js
+function greet(name) {
+  console.log("Welcome " + name + " , good to see you again!");
+}
+
+greet("Alice");
+```
+
+[Functions with parameters 02 b](https://codesandbox.io/s/js-functions-with-parameters-02b-ru361m)
+
+```js
+function printSquare(number) {
+  const square = number * number;
+  console.log(square);
+}
+
+printSquare(3);
+printSquare(5);
+```
+
+```js
+function printRectangleArea(widthRect, lengthRect) {
+  const area = widthRect * lengthRect;
+  console.log("The area of the rectangle is " + area);
+}
+
+printRectangleArea(5, 7);
+printRectangleArea(3, 4);
+```
+
+[Calculations b](https://codesandbox.io/s/js-functions-2-calculations-01b-3krtc4)
+
+```js
+function add(a, b) {
+  const sum = a + b;
+  return sum;
+  // Code here
 }
 ```
 
@@ -910,53 +751,6 @@ The sum of your numbers is: 12
 
 </details>
 
-<a name="Scope"></a>
-
-## Scope
-
-<details>
-The scope defines where variables are visible and where they can be referenced. In Javascript there
-are different kinds of scope, for example:
-
-- global scope
-- function scope
-</details>
-
-<a name="Function-scope"></a>
-
-### Function scope
-
-<details>
-Variables defined **inside a function** are not accessible from outside. But all variables **outside
-of the function** can be accessed from inside the function body:
-
-```js
-const globalVariable = "some Text";
-function myFunction() {
-  const localVariable = true;
-  console.log(globalVariable);
-  console.log(localVariable);
-}
-myFunction();
-// logs:
-// some Text
-// true
-console.log(localVariable); // Error! Variable not available outside of function
-```
-
-</details>
-
-<a name="Global-scope"></a>
-
-### Global scope
-
-<details>
-A variable is in the **global scope** when it is declared outside of any function, in a Javascript
-file. Global variables are visible and can be accessed from anywhere in that Javascript file after
-declaration.
-
-</details>
-
 <a name="Resources-Functions"></a>
 
 ## Resources
@@ -976,10 +770,11 @@ declaration.
 - [Basic functions b](https://codesandbox.io/s/js-basic-functions-01b-7tydx3)
 - [Functions with parameters 01 a](https://codesandbox.io/s/js-functions-with-parameters-01a-nt8m1q)
 - [Functions with parameters 01 b](https://codesandbox.io/s/js-functions-with-parameters-01b-9lu4n4)
-- [Functions with parameters 02 a](https://codesandbox.io/s/js-variables-numbers-sm-post-01a-9skjpx)
+- [Functions with parameters 02 a](https://codesandbox.io/s/js-functions-with-parameters-02a-4q1qwz)
 - [Functions with parameters 02 b](https://codesandbox.io/s/js-functions-with-parameters-02b-ru361m)
 - [Functions and DOM manipulation a](https://codesandbox.io/s/functions-and-dom-manipulation-01a-jm46ly)
 - [Functions and DOM manipulation b](https://codesandbox.io/s/functions-and-dom-manipulation-01b-skdtys)
+- [Functions and DOM manipulation b2](https://codesandbox.io/s/functions-and-dom-manipulation-01b2-r2jr07)
 
 ## </details>
 
@@ -1006,9 +801,8 @@ declaration.
 ## Return Statements
 
 <details>
-Functions are an incredible versatile and central tool in most programming languages. We already
-learned how to pass values into a function with input parameters. But a function can also return a
-value back to the place where it was called. This is done via a `return statement`.
+A function can return a value back to the place where it was called. 
+This is done via a `return statement`.
 
 ```js
 function add3Numbers(first, second, third) {
@@ -1017,7 +811,7 @@ function add3Numbers(first, second, third) {
 }
 ```
 
-The `return statement` begins with the keyword `return` followed by an expression. This this case,
+The `return statement` begins with the keyword `return` followed by an expression. In this case,
 the expression is the variable sum. Its value is returned by the function and can be stored when the
 function is called:
 
@@ -1125,6 +919,36 @@ const addNumbers = (first, second) => {
 The function is saved like a variable with the keyword `const`. The parameters are written normally
 in round brackets followed by an fat arrow `=>`. Then the function body is written in curly
 brackets.
+
+[Drink about b](https://www.codewars.com/kata/56170e844da7c6f647000063/solutions/javascript)
+
+```js
+const peopleWithAgeDrink = (age) =>
+  age < 14
+    ? "drink toddy"
+    : age < 18
+    ? "drink coke"
+    : age < 21
+    ? "drink beer"
+    : "drink whisky";
+```
+
+```js
+var peopleWithAgeDrink = function (old) {
+  if (old < 14) {
+    return "drink toddy";
+  } else if (old < 18) {
+    return "drink coke";
+  } else if (old < 21) {
+    return "drink beer";
+  } else {
+    return "drink whisky";
+  }
+};
+```
+
+![click event](../images/2022-09-02_162158_JS-functions-2_Arrow-Function-Expressions.png)
+![click event](../images/2022-09-02_161900_JS-functions-2_Arrow-Function-Expressions.png)
 
 ### Implicit Return Statements
 
