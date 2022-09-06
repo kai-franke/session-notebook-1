@@ -37,12 +37,32 @@
   - [Challenges](#Challenges-JS-Functions-2)
 
 - [Inputs and Strings](#Inputs-and-Strings)
+
   - [Strings](#Strings)
   - [Template Literals](#Template-Literals)
   - [String Properties and Methods](#String-Properties-and-Methods)
   - [Input Fields](#Input-Fields)
   - [Resources](#Resources)
   - [Challenges](#Challenges-Inputs-and-Strings)
+
+- [JS Callback Functions](#JS-Callback-Functions)
+
+  - [Callback Functions](#Callback-Functions)
+  - [Named Callback Functions](#Named-Callback-Functions)
+  - [Higher Order Functions](#Higher-Order-Functions)
+  - [Parameters in Callback Functions](#Parameters-in-Callback-Functions)
+  - [Resources](#Resources)
+  - [Challenges](#Challenges-JS-Callback-Functions)
+
+- [JS Forms](#JSForms)
+  - [Understanding the Default Behavior of Form Submit](#UnderstandingtheDefaultBehaviorofFormSubmit)
+  - [Listening to the `submit` event and preventing the Default](#ListeningtothesubmiteventandpreventingtheDefault)
+  - [The `event` Object and `event.target`](#The-event-Object-and-event.target)
+  - [Accessing Interactive Fields: `event.target.elements` and the `name` Attribute](#Accessing-Interactive-Fields)
+  - [Using Input Values](#Using-Input-Values)
+  - [Exception: Reading Values from Checkboxes](#Exception-Reading-Values-from-Checkboxes)
+  - [Resources](#Resources)
+  - [Challenges](#Challenges-JS-Callback-Functions)
 
 ---
 
@@ -1210,5 +1230,331 @@ Changing the appearance of a box when the values of sliders (color, border radiu
 - [String repeat b]()
 - [Convert a Number to a String a]()
 - [Convert a Number to a String b]()
+
+</details>
+
+[🌑👣🌕 Top 🌕👣🌑](#Top)
+<a name="JS-Callback-Functions"></a>
+
+# JS Callback Functions
+
+## Learning Objectives
+
+- Understanding the concept of callback functions
+- Using an anonymous callback function
+- Using a named function as a callback function
+- Knowing what a higher order function is
+
+---
+
+<a name="Callback-Functions"></a>
+
+## Callback Functions
+
+<details>
+A callback function is a function that is passed **as an argument** into another function.
+
+The outer function can execute this callback function at the correct moment or multiple times, for
+example:
+
+- when an event is triggered
+- when the fetched data arrived on your computer
+- for each element in an array.
+
+Callback functions are used, whenever the program itself needs to figure out **when** or **how many
+times** the function needs to be executed. We already used callback functions in **event
+listeners**:
+
+```js
+button.addEventListener("click", () => {
+  console.log("Inside the callback function.");
+});
+```
+
+Here the structure is as follows:
+
+- outer function: `addEventListener()`
+- first argument: `'click'`
+- second argument: callback function
+  ```js
+  () => {
+    console.log("Inside the callback function.");
+  };
+  ```
+
+This type of function is called **anonymous function**, since it is declared without giving it a
+name.
+
+</details>
+<a name="Named-Callback-Functions"></a>
+
+## Named Callback Functions
+
+<details>
+Any function can be used as a callback function. It just needs to be passed to another function. You
+can declare a normal function and then use the **name of the function** to pass it into another
+function:
+
+```js
+function sayHello() {
+  console.log("Hey Dude!");
+}
+button.addEventListener("click", sayHello);
+```
+
+> ❗️ Note that we do not call the function here (we wrote `sayHello` instead of `sayHello()`). We
+> only pass the function to the event listener. The function is only called when the event happens.
+
+</details>
+<a name="Higher-Order-Functions"></a>
+
+## Higher Order Functions
+
+<details>
+
+A higher order function is a function that takes a **callback function as an argument** and **calls
+the callback function** inside their body, e.g. the `addEventListener` method.
+
+```js
+// this function calls its callback function 3 times!
+function myHigherOrderFunction(callback) {
+  callback();
+  callback();
+  callback();
+}
+```
+
+We will encounter these higher order functions in future sessions:
+
+- `.then`
+- `.forEach`
+- `.map`
+- `.filter`
+
+> 💡 Don't worry, you don't have to write higher order functions yourself, you only apply them to
+> solve certain problems.
+
+</details>
+<a name="Parameters-in-Callback-Functions"></a>
+
+## Parameters in Callback Functions
+
+<details>
+A callback function can accept parameters. The values for the parameters are provided by the
+function, that calls the callback function (the "higher order function").
+
+In this example the callback function can accept a parameter to retrieve information about the
+occurred event:
+
+```js
+button.addEventListener("click", (event) => {
+  console.log("This button was clicked:", event.target);
+});
+```
+
+</details>
+<a name="Resources"></a>
+
+## Resources
+
+<details>
+- [MDN Callback Functions](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
+
+</details>
+<a name="Challenges-JS-Callback-Functions"></a>
+
+## Challenges
+
+<details>
+
+- [Example Felix](https://codesandbox.io/s/js-callback-functions-intro-example-vszgz9)
+- [Named vs. anonymous callback functions a](https://codesandbox.io/s/js-callback-f-named-vs-anonymous-callback-functions-01a-2vy13t)
+- [Named vs. anonymous callback functions b](https://codesandbox.io/s/js-callback-f-named-vs-anonymous-callback-functions-01b-4kzjzx)
+- [Callback functions with one argument a](https://codesandbox.io/s/js-callback-f-callback-functions-with-one-argument-01a-c69kxl)
+- [Callback functions with one argument b](https://codesandbox.io/s/js-callback-f-callback-functions-with-one-argument-01b-8ebzl9)
+- [Callback functions with multiple arguments a](https://codesandbox.io/s/js-callback-f-callback-functions-with-multiple-arguments-01a-eptlg6)
+- [Callback functions with multiple arguments b](https://codesandbox.io/s/js-callback-f-callback-functions-with-multiple-arguments-01b-bsd0in)
+- [Multiple callback functions a](https://codesandbox.io/s/js-callback-f-multiple-callback-functions-01a-79ec8f)
+- [Multiple callback functions b](https://codesandbox.io/s/js-callback-f-multiple-callback-functions-01b-w1jobq)
+</details>
+[🌑👣🌕 Top 🌕👣🌑](#Top)
+
+<a name="JSForms"></a>
+
+# JS Forms
+
+## Learning Objectives
+
+- knowing the default behavior of form submit
+  - understanding why to prevent this behavior with `.preventDefault()`
+- knowing how to listen to submit events: the `event` object and its `target` property
+- reading input values:
+  - `event.target.elements`
+  - `FormData`
+  - the role of `name` attributes for form fields
+
+---
+
+<a name="UnderstandingtheDefaultBehaviorofFormSubmit"></a>
+
+### Understanding the Default Behavior of Form Submit
+
+<details>
+If you click the submit button of a form, it triggers the following default behavior (without
+writing _any_ JavaScript):
+
+- The form sends a GET request with names and their values as prop inside an URL like
+  `/?firstName=value1&lastName=value2&...`.
+- The page is reloaded and thus the data is lost for us.
+
+None of them is useful. You can prevent this behavior with a method called `.preventDefault()`.
+
+</details>
+<a name="ListeningtothesubmiteventandpreventingtheDefault"></a>
+
+### Listening to the `submit` event and preventing the Default
+
+<details>
+In order to prevent this behavior of the `submit` event, you need to
+
+- inside the event listener: receive the event object as the first input parameter to the callback
+  function
+- call `event.preventDefault()`
+
+```js
+const form = document.querySelector('[data-js="form"]');
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
+By calling `event.preventDefault()`, there won't be a GET request nor is the page reloaded on
+submit.
+
+</details>
+<a name="The-event-Object-and-event.target"></a>
+
+### The `event` Object and `event.target`
+
+<details>
+The `event` object is created whenever an event is triggered. You can accept it as the first
+parameter in the callback function and thus access it inside the function body (e.g. via
+`event.preventDefault()`).
+
+For now, the most important method of the `event` object is `.preventDefault()`.
+
+`event.target` is a reference to the element to which the event originated from - in this case - the
+form.
+
+```js
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log(event.target);
+});
+// Output:
+// <form data-js="form">
+//		<fieldset>...</fieldset>
+//		...
+//		<button type="submit">Submit</button>
+//	</form>
+```
+
+</details>
+<a name="Accessing-Interactive-Fields"></a>
+
+### Accessing Interactive Fields: `event.target.elements` and the `name` Attribute
+
+<details>
+While `event.target` represents the entire form, `event.target.elements` is a collection of all form
+elements.
+
+You get access to a specific element via its `name` attribute and dot notation:
+
+```js
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formElements = event.target.elements;
+  console.log(formElements.firstName);
+  console.log(formElements.firstName.value);
+});
+```
+
+Note that
+
+- `event.target.elements` is stored in the variable `formElements` for better readability,
+- `firstName` is the string value of the corresponding `name` attribute, as in
+  `<input name="firstName"/>`, and
+- `firstName.value` returns the user input for the field with `name="firstName"`.
+</details>
+<a name="Using-Input-Values"></a>
+
+### Using Input Values
+
+<details>
+You can access all input values of the form by using `FormData()`. This constructor uses
+`event.target` and can be transformed into a usable object afterwards:
+
+```js
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+  console.log(data);
+});
+```
+
+This is very useful to easily access the input data of an entire form.
+
+> 💡 Despite the fact that using `FormData` is much less verbose, `event.target.elements` is very
+> useful if you want to access single form elements. (Spoiler alert: In case you want to focus a
+> specific field after resetting the form, for example.)
+
+</details>
+<a name="Exception-Reading-Values-from-Checkboxes"></a>
+
+### Exception: Reading Values from Checkboxes
+
+<details>
+Checkboxes have two states: checked ("true") and not checked ("false"). In contrast to other input
+types, the `value` attribute does not reflect this change, but is only used as an identifier for the
+checkbox.
+
+You can access the checkbox's state via the `.checked` property instead.
+
+Imagine the following checkbox
+
+```html
+<input type="checkbox" name="colorBlue" value="blue" />
+```
+
+and its corresponding JavaScript:
+
+```js
+console.log(formElements.colorBlue.checked); // output: true or false
+console.log(formElements.colorBlue.value); // output (always): blue
+```
+
+</details>
+<a name="Resources"></a>
+
+## Resources
+
+<details>
+
+- [Event interface](https://developer.mozilla.org/en-US/docs/Web/API/Event#properties)
+
+</details>
+<a name="Challenges-JS-Callback-Functions"></a>
+
+## Challenges
+
+<details>
+
+- [Part 1: Handle Form Submit a](https://codesandbox.io/s/js-forms-handle-form-submit-01a-3kkcsq)
+- [Part 1: Handle Form Submit b](https://codesandbox.io/s/js-forms-handle-form-submit-01b-5r6e5k)
+- [Part 2: Checkbox Input a](https://codesandbox.io/s/js-forms-part-2-checkbox-input-01a-k4ilmh)
+- [Part 2: Checkbox Input b](https://codesandbox.io/s/js-forms-part-2-checkbox-input-01b-4u6ro0)
+- [Part 3: Calculator a](https://codesandbox.io/s/js-formas-part-3-calculator-01a-htstdu)
+- [Part 3: Calculator b](https://codesandbox.io/s/js-formas-part-3-calculator-01b-bw0176)
 
 </details>
