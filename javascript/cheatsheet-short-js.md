@@ -1558,3 +1558,367 @@ console.log(formElements.colorBlue.value); // output (always): blue
 - [Part 3: Calculator b](https://codesandbox.io/s/js-formas-part-3-calculator-01b-bw0176)
 
 </details>
+
+[🌑👣🌕 Top 🌕👣🌑](#Top)
+<a name="JScreateElement"></a>
+
+# JS createElement
+
+## Learning Objectives
+
+- knowing what the DOM is
+- learning how to generate HTML in JavaScript
+- using HTML element object properties and methods
+- learning how to use `.innerHTML`
+
+---
+
+<a name="TheDOM"></a>
+
+## The DOM
+
+<details>
+The **Document Object Model** is a representation of the HTML document. Each HTML Tag is modelled as
+a **node** in a tree structure, which shows how HTML elements are nested. A computer program such as
+your JavaScript file can access and manipulate the HTML website by changing the DOM via the
+`document` object. ![the DOM](assets/DOM.png)
+</details>
+<a name="document.createElement"></a>
+
+## `document.createElement`
+
+<details>
+You can generate an HTML element with Javascript by using the `document.createElement` method. It
+expects the type of element as an argument.
+
+```js
+const article = document.createElement("article");
+const button = document.createElement("button");
+```
+
+After generating an element, you need to place the element into the DOM. For this, you can use the
+`.append` method. It places the element as the **last child** into the respective element.
+
+```js
+body.append(article); // placing the created article at the end of the body
+article.append(button); // placing the created button into the article
+```
+
+The result looks like this:
+
+```html
+<body>
+  ...
+  <article>
+    <button></button>
+  </article>
+</body>
+```
+
+</details>
+<a name="ElementPropertiesandMethods"></a>
+
+## Element Properties and Methods
+
+<details>
+As well as with queried HTML elements (via `querySelector`), we can add classes, event listeners and
+more to the created HTML elements.
+
+```js
+article.classList.add("card");
+button.addEventListener("click", () => {
+  console.log("It works!");
+});
+```
+
+The text of an element can be changed by reassigning the `.textContent` property:
+
+```js
+button.textContent = "Click me!";
+```
+
+</details>
+<a name="CommonElementPropertiesandMethods"></a>
+
+### Common Element Properties and Methods
+
+<details>
+| Property          | Effect                                                             |
+| ----------------- | ------------------------------------------------------------------ |
+| `classList`       | add, toggle or remove classes from element                         |
+| `textContent`     | get or set text inside element                                     |
+| `style`           | define inline style, e.g. `element.style.backgroundColor = "red" ` |
+| `hidden`          | boolean whether element is hidden or not                           |
+| `focus()`         | focusses the element on the website                                |
+| `hasAttribute()`  | returns true if the element has the given attribute                |
+| `querySelector()` | returns the first child that matches the given CSS selector        |
+
+> 💡 You can assign HTML attributes by using the element properties. Go to the
+> [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Element#properties) for a
+> comprehensive list of element properties.
+
+</details>
+<a name="innerHTML"></a>
+
+## `.innerHTML`
+
+<details>
+> ❗️ innerHTML can be unsafe when user input is passed into the template literal. Use it with
+> caution. Read
+> [this article](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML#replacing_the_contents_of_an_element)
+> for more information about it.
+The `innerHTML` property can be used to create the entire html layout of an element by passing the
+html code as a string. By using **template literals** the content of the html can be dynamically
+created.
+
+```js
+const cityName = "Lissabon";
+article.innerHTML = `
+	<h2> ${cityName} </h2>
+	<p class="card__content">
+		${cityName} is a very beautiful city in Portugal. 
+		Go there and enjoy the stay!
+	</p>
+	<button type='button' class="card__booking-button"> 
+		Book Trip 
+	</button>
+`;
+```
+
+This HTML code is rendered then **inside** the article element:
+
+```html
+<body>
+  ...
+  <article>
+    <h2>Lissabon</h2>
+    <p class="card__content">
+      Lissabon is a very beautiful city in Portugal. Go there and enjoy the
+      stay!
+    </p>
+    <button type="button" class="card__booking-button">Book Trip</button>
+  </article>
+</body>
+```
+
+</details>
+<a name="ResettingElementContent"></a>
+
+### Resetting Element Content
+
+<details>
+`.innerHTML` can also be used to **reset** the content of an element, e.g. a container:
+
+HTML before:
+
+```html
+<ul data-js="cardContainer">
+  <li class="card">...</li>
+  <li class="card">...</li>
+  <li class="card">...</li>
+</ul>
+```
+
+By setting the innerHTML to an empty string, the content is deleted:
+
+```js
+const cardContainer = document.querySelector('ul[data-js="cardContainer"]');
+cardContainer.innerHTML = "";
+```
+
+The result:
+
+```html
+<ul data-js="cardContainer"></ul>
+```
+
+</details>
+<a name="Resources"></a>
+
+## Resources
+
+<details>
+### Element Properties
+
+[MDN Docs about element Properties](https://developer.mozilla.org/en-US/docs/Web/API/Element#properties)
+
+### innerHTML
+
+[MDN Docs about securtiy risks with innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML#replacing_the_contents_of_an_element)
+
+</details>
+<a name="ChallengesJScreateElement"></a>
+<details>
+
+- [Example Stefan](https://codesandbox.io/s/js-create-element-example-stefan-w85we8)
+- [Example Thomas](https://codesandbox.io/s/js-create-element-example-thomas-0fjde4)
+- [Toast Messages a](https://codesandbox.io/s/js-create-element-toast-messages-01a-ttupcn)
+- [Toast Messages b](https://codesandbox.io/s/js-create-element-toast-messages-01b-n3dr6q)
+- [Social Media Post a](https://codesandbox.io/s/js-create-element-social-media-post-01a-uyg9jg)
+- [Social Media Post b](https://codesandbox.io/s/js-create-element-social-media-post-01b-qzqr9m)
+- [Product teaser a](https://codesandbox.io/s/js-create-element-product-teaser-01a-jit134)
+- [Product teaser b](https://codesandbox.io/s/js-create-element-product-teaser-01b-u5g5zh)
+
+</details>
+
+[🌑👣🌕 Top 🌕👣🌑](#Top)
+
+<a name="JSForms2"></a>
+
+# JS Forms 2
+
+<details>
+## Learning Objectives
+
+- knowing ways for client-side form validation
+- understanding the input event
+- knowing how to focus an input field programmatically
+- knowing how to reset a form
+
+---
+
+</details>
+<a name="HTMLFormValidation"></a>
+
+### HTML Form Validation
+
+<details>
+Before submitting a form, it is important to ensure all required form fields are filled out, in the
+correct format. This is called **client-side form validation**.
+
+HTML provides several form field attributes to enable validation features build into the browser.
+
+| Attribute                 | Description                                                                     |
+| ------------------------- | ------------------------------------------------------------------------------- |
+| `required`                | if present, a form field needs to be filled in before the form can be submitted |
+| `minlength` / `maxlength` | minimum and maximum length of textual data (strings)                            |
+| `min` / `max`             | minimum and maximum values of numerical input types                             |
+| `type`                    | each input type has its own prefigured validation (like `email`)                |
+| `pattern`                 | a regular expression pattern the entered data needs to follow                   |
+
+The following input field is valid if there is a string between 3 and 30 characters:
+
+```html
+<input
+  id="input-name"
+  type="text"
+  name="name"
+  minlength="3"
+  maxlength="30"
+  required
+/>
+```
+
+> ❗️ If the `required` attribute is omitted, the field is valid if it is empty or has a content
+> between 3 and 30 characters, but is invalid when entering 1 or 2 characters.
+> `type="email"` will check for an email-like format, i.e. that the input contains an `@` somewhere in
+> between.
+
+```html
+<input id="input-email" type="email" name="email" />
+```
+
+> 💡 An alternative approach to client-side form validation is writing JavaScript functionality that
+> checks a field's content. This topic might be discussed in future lessons.
+
+</details>
+<a name="TheinputEvent"></a>
+
+### The `input` Event
+
+<details>
+Occasionally you might want to process an individual field's content before the form has been
+submitted.
+
+The `input` event is fired every time when the value of a form field has been changed. For example,
+a `<textarea />` will fire this event with every keystroke.
+
+```js
+const messageField = document.querySelector('[data-js="message"]');
+messageField.addEventListener("input", (event) => {
+  console.log(event.target.value);
+});
+```
+
+> ❗️ Don't confuse the `input` event with the `change` event, which is only fired after a field's
+> content has been submitted (like pressing "enter" or removing focus from the field)
+
+</details>
+<a name="FocusInputFields"></a>
+
+### Focus Input Fields
+
+<details>
+You can focus a specific input field with the help of the `.focus()` method. This can be used to
+improve the user experience after submitting a form.
+
+```js
+const messageField = document.querySelector('[data-js="message"]');
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  // [...] handle form data
+  messageField.focus();
+});
+```
+
+Instead of the `querySelector`, this can also be achieved via the `event` object:
+
+```js
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  // [...] handle form data
+  event.target.elements.message.focus();
+});
+```
+
+This will focus a form field with the attribute `name="message"`.
+
+</details>
+<a name="ResettingForms"></a>
+
+### Resetting Forms
+
+<details>
+
+You can reset all form fields to their default value with the `.reset()` method.
+
+```js
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  // [...] handle form data
+  event.target.reset();
+});
+```
+
+This often comes in handy in combination with `.focus()`. Think of a chat: after the message was
+send, the form field is cleared and focussed again, so users can write the next message directly.
+
+</details>
+<a name="Resources"></a>
+
+## Resources
+
+<details>
+
+- [MDN web docs: Client-side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
+- [MDN web docs: input event](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
+</details>
+<a name="ChallengesJSForms2"></a>
+
+## Challenges
+
+<details>
+
+- [Formvalidation a](https://codesandbox.io/s/js-forms-formvalidation-01a-pd8938)
+- [Formvalidation b](https://codesandbox.io/s/js-forms-2-formvalidation-01b-jk9vqt)
+- [Controlled input changed to upper-case a](https://codesandbox.io/s/js-forms-2-controlled-input-changed-to-upper-case-01a-dqqfnp)
+- [Controlled input changed to upper-case b](https://codesandbox.io/s/js-forms-2-controlled-input-changed-to-upper-case-01b-9rnczk)
+- [Simple live calculator a](https://codesandbox.io/s/js-forms-2-simple-live-calculator-01a-z4z0ht)
+- [Simple live calculator b](https://codesandbox.io/s/js-forms-2-simple-live-calculator-01b-i9by1d)
+- [Advanced: Simple todolist a2](https://codesandbox.io/s/js-forms-2-advanced-simple-todolist-01a-85c47w)
+- [Advanced: Simple todolist b](https://codesandbox.io/s/js-forms-2-advanced-simple-todolist-01b-044usp)
+- [Advanced: Simple todolist b2](https://codesandbox.io/s/js-forms-2-advanced-simple-todolist-01b2-qc9yf3)
+
+</details>
+
+[🌑👣🌕 Top 🌕👣🌑](#Top)
