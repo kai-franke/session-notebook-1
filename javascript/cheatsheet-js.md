@@ -73,7 +73,7 @@
 
 - [JS Forms](#JSForms)
 
-  - [Understanding the Default Behavior of Form Submit](#UnderstandingtheDefaultBehaviorofFormSubmit)
+  - [Understanding the Default Behavior of Form Submit)[#UnderstandingtheDefaultBehaviorofFormSubmit)
   - [Listening to the `submit` event and preventing the Default](#ListeningtothesubmiteventandpreventingtheDefault)
   - [The `event` Object and `event.target`](#The-event-Object-and-event.target)
   - [Accessing Interactive Fields: `event.target.elements` and the `name` Attribute](#Accessing-Interactive-Fields)
@@ -94,12 +94,12 @@
   - (Challenges)[#ChallengesJScreateElement]
 
 - (JS Forms 2)[#JSForms2]
-- (HTML Form Validation)[#HTMLFormValidation]
-- (The `input` Event)[#TheinputEvent]
-- (Focus Input Fields)[#FocusInputFields]
-- (Resetting Forms)[#ResettingForms]
-- (Resources)[#Resources]
-- (Challenges)[#ChallengesJSForms2]
+  - (HTML Form Validation)[#HTMLFormValidation]
+  - (The `input` Event)[#TheinputEvent]
+  - (Focus Input Fields)[#FocusInputFields]
+  - (Resetting Forms)[#ResettingForms]
+  - (Resources)[#Resources]
+  - (Challenges)[#ChallengesJSForms2]
 
 <a name="Basics"></a>
 
@@ -1628,6 +1628,7 @@ writing _any_ JavaScript):
 None of them is useful. You can prevent this behavior with a method called `.preventDefault()`.
 
 </details>
+
 <a name="ListeningtothesubmiteventandpreventingtheDefault"></a>
 
 ### Listening to the `submit` event and preventing the Default
@@ -1650,6 +1651,7 @@ By calling `event.preventDefault()`, there won't be a GET request nor is the pag
 submit.
 
 </details>
+
 <a name="The-event-Object-and-event.target"></a>
 
 ### The `event` Object and `event.target`
@@ -1678,6 +1680,7 @@ form.addEventListener("submit", (event) => {
 ```
 
 </details>
+
 <a name="Accessing-Interactive-Fields"></a>
 
 ### Accessing Interactive Fields: `event.target.elements` and the `name` Attribute
@@ -1704,6 +1707,7 @@ Note that
   `<input name="firstName"/>`, and
 - `firstName.value` returns the user input for the field with `name="firstName"`.
 </details>
+
 <a name="Using-Input-Values"></a>
 
 ### Using Input Values
@@ -1728,6 +1732,7 @@ This is very useful to easily access the input data of an entire form.
 > specific field after resetting the form, for example.)
 
 </details>
+
 <a name="Exception-Reading-Values-from-Checkboxes"></a>
 
 ### Exception: Reading Values from Checkboxes
@@ -1753,6 +1758,7 @@ console.log(formElements.colorBlue.value); // output (always): blue
 ```
 
 </details>
+
 <a name="Resources"></a>
 
 ## Resources
@@ -1762,6 +1768,7 @@ console.log(formElements.colorBlue.value); // output (always): blue
 - [Event interface](https://developer.mozilla.org/en-US/docs/Web/API/Event#properties)
 
 </details>
+
 <a name="Challenges-JS-Callback-Functions"></a>
 
 ## Challenges
@@ -1778,6 +1785,7 @@ console.log(formElements.colorBlue.value); // output (always): blue
 </details>
 
 [🌑👣🌕 Top 🌕👣🌑](#Top)
+
 <a name="JScreateElement"></a>
 
 # JS createElement
@@ -1801,6 +1809,7 @@ a **node** in a tree structure, which shows how HTML elements are nested. A comp
 your JavaScript file can access and manipulate the HTML website by changing the DOM via the
 `document` object. ![the DOM](assets/DOM.png)
 </details>
+
 <a name="document.createElement"></a>
 
 ## `document.createElement`
@@ -1834,6 +1843,7 @@ The result looks like this:
 ```
 
 </details>
+
 <a name="ElementPropertiesandMethods"></a>
 
 ## Element Properties and Methods
@@ -1856,6 +1866,7 @@ button.textContent = "Click me!";
 ```
 
 </details>
+
 <a name="CommonElementPropertiesandMethods"></a>
 
 ### Common Element Properties and Methods
@@ -1876,6 +1887,7 @@ button.textContent = "Click me!";
 > comprehensive list of element properties.
 
 </details>
+
 <a name="innerHTML"></a>
 
 ## `.innerHTML`
@@ -1920,6 +1932,7 @@ This HTML code is rendered then **inside** the article element:
 ```
 
 </details>
+
 <a name="ResettingElementContent"></a>
 
 ### Resetting Element Content
@@ -1951,6 +1964,7 @@ The result:
 ```
 
 </details>
+
 <a name="Resources"></a>
 
 ## Resources
@@ -1965,7 +1979,9 @@ The result:
 [MDN Docs about securtiy risks with innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML#replacing_the_contents_of_an_element)
 
 </details>
+
 <a name="ChallengesJScreateElement"></a>
+
 <details>
 
 - [Example Stefan](https://codesandbox.io/s/js-create-element-example-stefan-w85we8)
@@ -1996,6 +2012,7 @@ The result:
 ---
 
 </details>
+
 <a name="HTMLFormValidation"></a>
 
 ### HTML Form Validation
@@ -2040,6 +2057,7 @@ The following input field is valid if there is a string between 3 and 30 charact
 > checks a field's content. This topic might be discussed in future lessons.
 
 </details>
+
 <a name="TheinputEvent"></a>
 
 ### The `input` Event
@@ -2062,6 +2080,7 @@ messageField.addEventListener("input", (event) => {
 > content has been submitted (like pressing "enter" or removing focus from the field)
 
 </details>
+
 <a name="FocusInputFields"></a>
 
 ### Focus Input Fields
@@ -2092,6 +2111,7 @@ form.addEventListener("submit", (event) => {
 This will focus a form field with the attribute `name="message"`.
 
 </details>
+
 <a name="ResettingForms"></a>
 
 ### Resetting Forms
@@ -2112,6 +2132,7 @@ This often comes in handy in combination with `.focus()`. Think of a chat: after
 send, the form field is cleared and focussed again, so users can write the next message directly.
 
 </details>
+
 <a name="Resources"></a>
 
 ## Resources
@@ -2121,6 +2142,7 @@ send, the form field is cleared and focussed again, so users can write the next 
 - [MDN web docs: Client-side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
 - [MDN web docs: input event](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
 </details>
+
 <a name="ChallengesJSForms2"></a>
 
 ## Challenges
