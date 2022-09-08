@@ -82,24 +82,24 @@
   - [Resources](#Resources)
   - [Challenges](#Challenges-JS-Callback-Functions)
 
-- (JS createElement)[#JScreateElement]
+- [JS createElement](#JScreateElement)
 
-  - (The DOM)[#TheDOM]
-  - (`document.createElement`)[#document.createElement]
-  - (Element Properties and Methods)[#ElementPropertiesandMethods]
-  - (Common Element Properties and Methods)[#CommonElementPropertiesandMethods]
-  - (`.innerHTML`)[#innerHTML]
-  - (Resetting Element Content)[#ResettingElementContent]
-  - (Resources)[#Resources]
-  - (Challenges)[#ChallengesJScreateElement]
+  - [The DOM](#TheDOM)
+  - [`document.createElement`](#document.createElement)
+  - [Element Properties and Methods](#ElementPropertiesandMethods)
+  - [Common Element Properties and Methods](#CommonElementPropertiesandMethods)
+  - [`.innerHTML`](#innerHTML)
+  - [Resetting Element Content](#ResettingElementContent)
+  - [Resources](#Resources)
+  - [Challenges](#ChallengesJScreateElement)
 
-- (JS Forms 2)[#JSForms2]
-  - (HTML Form Validation)[#HTMLFormValidation]
-  - (The `input` Event)[#TheinputEvent]
-  - (Focus Input Fields)[#FocusInputFields]
-  - (Resetting Forms)[#ResettingForms]
-  - (Resources)[#Resources]
-  - (Challenges)[#ChallengesJSForms2]
+- [JS Forms 2](#JSForms2)
+  - [HTML Form Validation]([#HTMLFormValidation)
+  - [The `input` Event](#TheinputEvent)
+  - [Focus Input Fields](#FocusInputFields)
+  - [Resetting Forms](#ResettingForms)
+  - [Resources](#Resources)
+  - [Challenges](#ChallengesJSForms2)
 
 <a name="Basics"></a>
 
