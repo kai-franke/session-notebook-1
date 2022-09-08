@@ -1797,6 +1797,7 @@ The result:
 # JS Forms 2
 
 <details>
+
 ## Learning Objectives
 
 - knowing ways for client-side form validation
