@@ -94,6 +94,7 @@
   - [Challenges](#ChallengesJScreateElement)
 
 - [JS Forms 2](#JSForms2)
+
   - [HTML Form Validation]([#HTMLFormValidation)
   - [The `input` Event](#TheinputEvent)
   - [Focus Input Fields](#FocusInputFields)
@@ -101,17 +102,27 @@
   - [Resources](#Resources)
   - [Challenges](#ChallengesJSForms2)
 
+- [JS Objects and Arrays](#JSObjectsandArrays)
+
+  - [Arrays](#Arrays)
+  - [Objects](#Objects)
+  - [Nested Objects / Arrays](#NestedObjects/Arrays)
+  - [Resources](#Resources)
+  - [Challenges](#ChallengesJSObjectsandArrays)
+
+- [JS Loops](#JSLoops)
+  - [What is a loop](#Whatisaloop)
+  - [`while`](#while)
+  - [`for`](#for)
+  - [`for...in`](#for...in)
+  - [`for...of`](#for...of)
+  - [Resources](#Resources)
+  - [Challenges](#ChallengesJSLoops)
+
+[🌑👣🌕 Top 🌕👣🌑](#Top)
+
 <a name="Basics"></a>
 
-<details>
-</details>
-<a name="Basics"></a>
-<details>
-</details>
-<a name="Basics"></a>
-<details>
-</details>
-<a name="Basics"></a>
 <details>
 </details>
 
@@ -2162,4 +2173,368 @@ send, the form field is cleared and focussed again, so users can write the next 
 
 </details>
 
+<a name="JSObjectsandArrays"></a>
+
 [🌑👣🌕 Top 🌕👣🌑](#Top)
+
+# JS Objects and Arrays
+
+## Learning Objectives
+
+- Creating, accessing, and manipulating arrays
+- Creating, accessing, and manipulating objects
+- Knowing how to find properties and methods of objects by logging
+
+---
+
+<a name="Arrays"></a>
+
+## Arrays
+
+<details>
+Arrays are a structured data type which can store multiple values in one variable.
+
+You can declare an array using `[]` square brackets (array literals):
+
+```js
+const shoppingList = ["apple", "tomato"];
+```
+
+Each item in the array has an index, which starts at 0. You can access individual items using the
+bracket notation and the item's index:
+
+```js
+shoppingList[0]; // "apple"
+shoppingList[1]; // "tomato"
+```
+
+Arrays can hold any type of value, even another array. This is called a nested array. The values of
+nested arrays can be accessed by choosing the index of the nested array first and then stating the
+index of the element inside the nested array.
+
+```js
+const nestedArray = ["a", 1, ["a", "new", "sentence"], false];
+nestedArray[2][1]; // "new"
+```
+
+You can overwrite individual values in an array:
+
+```js
+const shoppingList = ["apple", "tomato"];
+shoppingList[0] = "banana";
+shoppingList; // ["banana","tomato"];
+```
+
+### Common Array Attributes and Methods
+
+| Attribute / Method       | Effect                                           |
+| ------------------------ | ------------------------------------------------ |
+| `array.length`           | returns the number of elements in the array      |
+| `array.push(element)`    | adds `element` to the end of the array           |
+| `array.pop()`            | removes the last element of an array             |
+| `array.unshift(element)` | adds `element` as the first element of the array |
+| `array.shift()`          | removes the first element of the array           |
+
+> 💡 There are much more array methods and attributes which we will discover in later sessions. Go
+> to the
+> [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods)
+> for more information.
+
+</details>
+
+<a name="Objects"></a>
+
+## Objects
+
+<details>
+Objects are a structured data type, which couple their values not to an index, but to a unique key.
+
+You can declare an object using `{}` curly brackets (object initializer):
+
+```js
+const person = {
+  name: "Max Blub",
+  age: 21,
+  isStudent: false,
+};
+```
+
+You can access the properties using the dot notation:
+
+```js
+person.name; //"Max Blub"
+```
+
+You can also access the properties using the bracket notation:
+
+```js
+person["age"]; // 21
+```
+
+Objects can be nested:
+
+```js
+const person = {
+  name: "Max Blub",
+  age: 21,
+  isStudent: false,
+  address: {
+    street: "Berliner Str.",
+    houseNumber: 42,
+    city: "Leipzig",
+    zipCode: "12345",
+  },
+};
+```
+
+Nested values can be accessed by chaining the dot notation and/or the bracket notation together.
+
+```js
+person.address.street; // "Berliner Str."
+person.address["city"]; // "Leipzig"
+```
+
+You can change values of object properties by reassigning them using the dot or bracket notation:
+
+```js
+person.name = "Max Bla";
+person["age"] = 33;
+```
+
+You can add new properties in the same way:
+
+```js
+person.score = 15;
+```
+
+You can delete properties using the delete keyword:
+
+```js
+delete person.score;
+```
+
+</details>
+
+<a name="NestedObjects"></a>
+
+## Nested Objects / Arrays
+
+<details>
+Arrays can contain objects and vice versa:
+
+```js
+const peopleArray = [
+  {
+    name: "John",
+    age: 22,
+  },
+  {
+    name: "Alex",
+    age: 33,
+  },
+];
+```
+
+```js
+const user = {
+  userId: "1234",
+  mail: "test@mail.com",
+  shoppingCart: ["tomato", "banana", "chocolate"],
+};
+```
+
+You can access elements via chained dot / bracket notation:
+
+```js
+peopleArray[1].name; // "Alex"
+user.shoppingCart[0]; // "tomato"
+```
+
+</details>
+
+<a name="Resources"></a>
+
+## Resources
+
+<details>
+### Array
+
+[MDN Docs: Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+### Object
+
+[MDN Docs: Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+
+</details>
+
+<a name="ChallengesJSObjectsandArrays"></a>
+
+##Challenges
+
+<details>
+
+- [Arrays a](https://codesandbox.io/s/js-objects-and-arrays-arrays-01a-jec8p4)
+- [Arrays b](https://codesandbox.io/s/js-objects-and-arrays-arrays-01b-9gjuiq)
+- [Objects a](https://codesandbox.io/s/js-objects-and-arrays-objects-01a-qr42jx)
+- [Objects b](https://codesandbox.io/s/js-objects-and-arrays-objects-01b-x1c2ix)
+- [Objects and Arrays a](https://codesandbox.io/s/js-objects-and-arrays-objects-and-arrays-01a-vjem3r)
+- [Objects and Arrays b](https://codesandbox.io/s/js-objects-and-arrays-objects-and-arrays-01b-jlj8hs)
+</details>
+
+<a name="JSLoops"></a>
+
+[🌑👣🌕 Top 🌕👣🌑](#Top)
+
+# JS Loops
+
+## Learning Objectives
+
+- understanding the concept of loops
+- understanding classic `for` loops
+- understanding modern `for...in` and `for...of` loops
+- understanding `while` loops
+
+<a name="Whatisaloop"></a>
+
+## What is a loop
+
+<details>
+A loop executes a respective block of code over and over again until an end criteria is met. In
+JavaScript, two basic types of loops exist:
+
+- `while` loop: are used when a task needs to be executed until a specific criteria is met.
+- `for` loop: are commonly used when a given task needs to be executed x times or for each element
+in an object / array.
+</details>
+
+<a name="while"></a>
+
+## `while`
+
+<details>
+The while loop is the most fundamental type of loop. It repeats a code block as long as the stated
+criteria is `true`.
+
+```js
+let string = "a";
+while (string.length <= 8) {
+  console.log(string);
+  string = string + string;
+}
+// 'a'
+// 'aa'
+// 'aaaa'
+// 'aaaaaaaa'
+```
+
+In this example, the while loop repeats itself 4 times, until the string becomes too long and the
+loop criteria changes to `false`.
+
+</details>
+
+<a name="for"></a>
+
+## `for`
+
+<details>
+`for` loops are intended for repeating a task a certain number of times. They consist of three
+internal parts:
+
+- an internal counter which is increased / decreased every iteration.
+- a criteria which checks the value of the counter. As long as the criteria is `true`, the loop is
+  executed.
+- a rule how the counter is increased / decreased (in most cases it is increased by 1)
+
+```js
+for (let counter = 0; counter < 4; counter++) {
+  console.log(counter);
+}
+// 0
+// 1
+// 2
+// 3
+```
+
+The body of the for loop contains the code which is executed on each iteration. For the example
+above it is a `console.log` which logs the value of the counter on each iteration until the value of
+`counter` reached 4 and the loop is terminated.
+
+</details>
+
+<a name="for...in"></a>
+
+## `for...in`
+
+<details>
+The `for...in` is a shorthand notation to loop through all keys of an object:
+
+```js
+const user = {
+  name: "Alex",
+  age: 28,
+  email: "alex@mail.com",
+};
+for (const key in user) {
+  console.log(user[key]);
+}
+// 'Alex'
+// 28
+// 'alex@mail.com'
+```
+
+The loop has an iterator variable, in this case `key` which is assigned the respective key value in
+each iteration (first 'name', then 'age' and finally 'email').
+
+</details>
+
+<a name="for...of"></a>
+
+## `for...of`
+
+<details>
+Similar to `for...in` the `for...of` loop is a shorthand notation, but for looping through all items
+of an array.
+
+```js
+const fruits = ["apple", "banana", "melon"];
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+// 'apple'
+// 'banana'
+// 'melon'
+```
+
+This time the iterator variable `fruit` is assigned the respective array item in each iteration.
+
+</details>
+
+<a name="Resources"></a>
+
+## Resources
+
+<details>
+- [MDN article about loops and iterations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+
+</details>
+
+<a name="ChallengesJSLoops"></a>
+
+## Challenges
+
+<details>
+
+- [Example](https://codesandbox.io/s/js-loops-example-c7sl3q)
+- [For Loop and `console.log`](https://codesandbox.io/s/js-loops-for-loop-and-console-log-01a-18kk2r)
+- [For Loop and `console.log`](https://codesandbox.io/s/js-loops-for-loop-and-console-log-01b-4eepmk)
+- [Star Rating](https://codesandbox.io/s/js-loops-star-rating-01a-p1nlir)
+- [Star Rating](https://codesandbox.io/s/js-loops-star-rating-01b-mjm26n)
+- [Creating a list](https://codesandbox.io/s/js-loops-creating-a-list-01a-4mjg57)
+- [Creating a list](https://codesandbox.io/s/js-loops-creating-a-list-01b-17q3r0)
+- [Select and Navigation Bar](https://codesandbox.io/s/js-loops-select-and-navigation-bar-01a-yfwzq7)
+- [Select and Navigation Bar](https://codesandbox.io/s/js-loops-select-and-navigation-bar-01b-b4dc8e)
+- [`while`](https://codesandbox.io/s/js-loops-while-01a-4moxqr)
+- [`while`](https://codesandbox.io/s/js-loops-while-01b-qscmdx)
+- [Bonus Challenge: Nested For Loop](https://codesandbox.io/s/js-loops-bonus-challenge-nested-for-loop-01a-rr8dj4)
+- [Bonus Challenge: Nested For Loop](https://codesandbox.io/s/js-loops-bonus-challenge-nested-for-loop-01b-17ezsg)
+</details>
