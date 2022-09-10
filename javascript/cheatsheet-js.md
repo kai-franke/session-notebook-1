@@ -2002,7 +2002,7 @@ The result:
 - [Social Media Post a](https://codesandbox.io/s/js-create-element-social-media-post-01a-uyg9jg)
 - [Social Media Post b](https://codesandbox.io/s/js-create-element-social-media-post-01b-qzqr9m)
 - [Product teaser a](https://codesandbox.io/s/js-create-element-product-teaser-01a-jit134)
-- [Product teaser b](https://codesandbox.io/s/js-create-element-product-teaser-01b-u5g5zh)
+  code- [Product teaser b](https://codesandbox.io/s/js-create-element-product-teaser-01b-u5g5zh)
 
 </details>
 
@@ -2539,5 +2539,7 @@ This time the iterator variable `fruit` is assigned the respective array item in
 - [`while`](https://codesandbox.io/s/js-loops-while-01a-4moxqr)
 - [`while`](https://codesandbox.io/s/js-loops-while-01b-gymrqg)
 - [Bonus Challenge: Nested For Loop](https://codesandbox.io/s/js-loops-bonus-challenge-nested-for-loop-01a-rr8dj4)
-- [Bonus Challenge: Nested For Loop](https://codesandbox.io/s/js-loops-bonus-challenge-nested-for-loop-01b-ecmtpx)
+- [Bonus Challenge: Nested For Loop G](https://codesandbox.io/s/js-loops-bonus-challenge-nested-for-loop-01b2-1myleo?file=/js/index.js)
+- [Bonus Challenge: Nested For Loop T](https://codesandbox.io/s/js-loops-bonus-challenge-nested-for-loop-01b-ecmtpx)
+- [Bonus Challenge: Nested For Loop M](https://codesandbox.io/s/js-loops-bonus-challenge-nested-for-loop-01b3-0eedhx?file=/js/index.js)
 </details>
