@@ -2543,3 +2543,15 @@ This time the iterator variable `fruit` is assigned the respective array item in
 - [Bonus Challenge: Nested For Loop T](https://codesandbox.io/s/js-loops-bonus-challenge-nested-for-loop-01b-ecmtpx)
 - [Bonus Challenge: Nested For Loop M](https://codesandbox.io/s/js-loops-bonus-challenge-nested-for-loop-01b3-0eedhx?file=/js/index.js)
 </details>
+
+- [js-array-methods-1-color-boxes-foreach a]()
+- [js-array-methods-1-color-boxes-foreach b](https://codesandbox.io/s/js-array-methods-1-color-boxes-foreach-01b-82sxkt?file=/js/index.js)
+- [js-array-methods-2-map a]()
+- [js-array-methods-2-map b](https://codesandbox.io/s/js-array-methods-2-map-01b-267wuk?file=/index.js:897-902)
+- [js-array-methods-3-filter a]()
+- [js-array-methods-3-filter b](https://codesandbox.io/s/js-array-methods-3-filter-01b-ojyyvt?file=/index.js:1306-1361)
+- [js-array-methods-4-repetition-mapand-filter a](h)
+- [js-array-methods-4-repetition-mapand-filter b](https://codesandbox.io/s/js-array-methods-4-repetition-mapand-filter-01b-7oji10?file=/index.js)
+- []()
+- []()
+- [](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
