@@ -2544,14 +2544,25 @@ This time the iterator variable `fruit` is assigned the respective array item in
 - [Bonus Challenge: Nested For Loop M](https://codesandbox.io/s/js-loops-bonus-challenge-nested-for-loop-01b3-0eedhx?file=/js/index.js)
 </details>
 
-- [js-array-methods-1-color-boxes-foreach a]()
+## Array Methods
+
+- [js-array-methods-1-color-boxes-foreach a](https://codesandbox.io/s/js-array-methods-1-color-boxes-foreach-01a-wjpki6)
 - [js-array-methods-1-color-boxes-foreach b](https://codesandbox.io/s/js-array-methods-1-color-boxes-foreach-01b-82sxkt?file=/js/index.js)
-- [js-array-methods-2-map a]()
+- [js-array-methods-2-map a](https://codesandbox.io/s/js-array-methods-2-map-01a-knf9xm)
 - [js-array-methods-2-map b](https://codesandbox.io/s/js-array-methods-2-map-01b-267wuk?file=/index.js:897-902)
-- [js-array-methods-3-filter a]()
+- [js-array-methods-3-filter a](https://codesandbox.io/s/js-array-methods-3-filter-01a-xy2cic)
 - [js-array-methods-3-filter b](https://codesandbox.io/s/js-array-methods-3-filter-01b-ojyyvt?file=/index.js:1306-1361)
-- [js-array-methods-4-repetition-mapand-filter a](h)
+- [js-array-methods-4-repetition-mapand-filter a](https://codesandbox.io/s/js-array-methods-4-repetition-mapand-filter-01a-rn0icv)
 - [js-array-methods-4-repetition-mapand-filter b](https://codesandbox.io/s/js-array-methods-4-repetition-mapand-filter-01b-7oji10?file=/index.js)
-- []()
-- []()
 - [](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+## JS Array Methods 2
+
+- [Example Felix](https://codesandbox.io/s/array-methods-2-intro-example-felix-rolhcr)
+
+- [News Flash a](https://codesandbox.io/s/js-array-methods2-newsflash-01a-udtt0v)
+- [News Flash b](https://codesandbox.io/s/js-array-methods2-newsflash-01b-zcs12g)
+- [Fun with Flags a](https://codesandbox.io/s/js-array-methods2-fun-with-flags-01a-od52mn)
+- [Fun with Flags b](https://codesandbox.io/s/js-array-methods2-fun-with-flags-01b-vj3g35)
+- [Number Tests a](https://codesandbox.io/s/js-array-methods2-number-tests-01a-4yhq3f)
+- [Number Tests b](https://codesandbox.io/s/js-array-methods2-number-tests-01b-x9ije6?file=/index.js:645-670)
