@@ -2577,3 +2577,7 @@ This time the iterator variable `fruit` is assigned the respective array item in
 - [Bonus Challenge: Fetch and Create Cards with rick and morty](https://github.com/neuefische/cgn-web-22-4/blob/main/sessions/js-fetch/challenges-js-fetch.md)
 - [The Rick and Morty API](<(https://rickandmortyapi.com/)>)
 - [Bonus Challenge: Fetch and Create Cards with rick and morty]()
+
+## JS Unit Testing
+
+- [Challenge](https://github.com/ThomasF85/unit-testing-challenges-template)
