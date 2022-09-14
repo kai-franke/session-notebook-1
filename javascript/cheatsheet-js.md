@@ -2566,3 +2566,14 @@ This time the iterator variable `fruit` is assigned the respective array item in
 - [Fun with Flags b](https://codesandbox.io/s/js-array-methods2-fun-with-flags-01b-vj3g35)
 - [Number Tests a](https://codesandbox.io/s/js-array-methods2-number-tests-01a-4yhq3f)
 - [Number Tests b](https://codesandbox.io/s/js-array-methods2-number-tests-01b-x9ije6?file=/index.js:645-670)
+
+## JS Fetch
+
+- [Example Stefan](https://codesandbox.io/s/js-fetch-example-stefan-6n1o6l)
+- [Part 1: Star Wars Cards](https://codesandbox.io/s/js-fetch-part-1-star-wars-cards-01a-yuyotd)
+- [Part 1: Star Wars Cards](https://codesandbox.io/s/js-fetch-part-1-star-wars-cards-01b-u08xbg?file=/js/index.js)
+- [Part 2: Color clue](https://codesandbox.io/s/js-fetch-part-2-color-clue-01a-booxd3)
+- [Part 2: Color clue](https://codesandbox.io/s/js-fetch-part-2-color-clue-01b-riyqso?file=/js/index.js)
+- [Bonus Challenge: Fetch and Create Cards with rick and morty](https://github.com/neuefische/cgn-web-22-4/blob/main/sessions/js-fetch/challenges-js-fetch.md)
+- [The Rick and Morty API](<(https://rickandmortyapi.com/)>)
+- [Bonus Challenge: Fetch and Create Cards with rick and morty]()
