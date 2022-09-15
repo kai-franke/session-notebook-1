@@ -68,3 +68,22 @@
 - [Git SCM](https://git-scm.com/)
 - [Git book](https://git-scm.com/book/en/v2)
 - [Git Cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/)
+
+## Merge Conflict
+
+- navigate into your repository locally into the main branch and pull the updates from remote:
+  1. git switch main
+  2. git pull
+- switch to the feature branch that causes the merge conflict with the main branch
+  1. git switch feature-branch-name
+- merge the main branch into the feature branch
+  1. git merge main
+- you will now have to solve the merge conflict locally on the feature branch
+- after you have solved the merge conflict create a new commit on the feature branch and push to remote
+  1. git add .
+  2. git commit -m "solve merge conflict"
+  3. git push -u origin feature-branch-name
+- you should now be able to merge the feature branch into main on GitHub
+  1. (after merge) git switch main
+  2. git pull
+  3. git branch -d feature-branch-name
