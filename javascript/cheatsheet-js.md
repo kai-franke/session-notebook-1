@@ -2581,3 +2581,11 @@ This time the iterator variable `fruit` is assigned the respective array item in
 ## JS Unit Testing
 
 - [Challenge](https://github.com/ThomasF85/unit-testing-challenges-template)
+
+## Challenges: JS ES Next
+
+- [Example Stefan](https://codesandbox.io/s/js-es-next-example-stefan-51tbqw?file=/index.js)
+- [Part 1: Destructuring Objects](https://codesandbox.io/s/js-es-next-part1-destructuring-objects-01a-u2pe49)
+- [Part 1: Destructuring Objects](https://codesandbox.io/s/js-es-next-part1-destructuring-objects-01b-2zwib3?file=/index.js)
+- [Part 2: Destructuring Arrays](https://codesandbox.io/s/js-es-next-part2-destructuring-arrays-01b-7dd7nd)
+- [Part 2: Destructuring Arrays](https://codesandbox.io/s/js-es-next-part2-destructuring-arrays-01b-7dd7nd?file=/index.js)
